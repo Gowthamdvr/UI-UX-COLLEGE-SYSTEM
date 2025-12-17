@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Departments - University Name</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1c242e",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "2rem", 
+                        "xl": "3rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101922; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #283039; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b4754; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e5e7eb] dark:border-[#283039] bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-6 lg:px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">University Name</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-[#111418] dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Admissions</a>
+<a class="text-[#111418] dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Academics</a>
+<a class="text-[#111418] dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Research</a>
+<a class="text-[#111418] dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Life</a>
+<a class="text-[#111418] dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">About</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Apply Now</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e5e7eb] dark:bg-[#283039] hover:bg-[#d1d5db] dark:hover:bg-[#3b4754] transition-colors text-[#111418] dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Log In</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center px-4 md:px-10 py-5 w-full">
+<div class="flex flex-col max-w-[1200px] w-full flex-1 gap-6">
+<!-- Hero Section -->
+<div class="flex flex-col gap-3 py-6 md:py-10">
+<h1 class="text-[#111418] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Academic Departments</h1>
+<p class="text-[#637588] dark:text-[#9dabb9] text-base md:text-lg font-normal leading-normal max-w-2xl">
+                    Explore our 40+ specialized schools and faculties designed to fuel your future. Discover programs, faculty, and research opportunities.
+                </p>
+</div>
+<!-- Search & Filters -->
+<div class="flex flex-col gap-6">
+<!-- Inputs -->
+<div class="flex flex-wrap items-center gap-4">
+<label class="flex flex-col flex-[2] min-w-[280px]">
+<div class="relative w-full">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-[#d1d5db] dark:border-[#3b4754] bg-surface-light dark:bg-[#1c2127] focus:border-primary h-14 placeholder:text-[#9dabb9] px-6 pl-12 text-base font-normal leading-normal shadow-sm" placeholder="Search departments..." value=""/>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 text-[#9dabb9]">
+<span class="material-symbols-outlined">search</span>
+</div>
+</div>
+</label>
+<label class="flex flex-col flex-1 min-w-[200px]">
+<div class="relative w-full">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-[#d1d5db] dark:border-[#3b4754] bg-surface-light dark:bg-[#1c2127] focus:border-primary h-14 placeholder:text-[#9dabb9] px-6 text-base font-normal leading-normal shadow-sm cursor-pointer" list="degree-types" placeholder="Filter by degree type"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-[#9dabb9] pointer-events-none">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+<datalist id="degree-types">
+<option value="Bachelor's">
+</option><option value="Master's">
+</option><option value="PhD">
+</option><option value="Associate">
+</option></datalist>
+</div>
+</label>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary pl-5 pr-5 hover:opacity-90 transition-opacity cursor-pointer shadow-lg shadow-primary/20">
+<p class="text-white text-sm font-medium leading-normal">All Departments</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e5e7eb] dark:bg-[#283039] hover:bg-[#d1d5db] dark:hover:bg-[#3b4754] pl-5 pr-5 transition-colors cursor-pointer">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Engineering</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e5e7eb] dark:bg-[#283039] hover:bg-[#d1d5db] dark:hover:bg-[#3b4754] pl-5 pr-5 transition-colors cursor-pointer">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Business</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e5e7eb] dark:bg-[#283039] hover:bg-[#d1d5db] dark:hover:bg-[#3b4754] pl-5 pr-5 transition-colors cursor-pointer">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Arts &amp; Sciences</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e5e7eb] dark:bg-[#283039] hover:bg-[#d1d5db] dark:hover:bg-[#3b4754] pl-5 pr-5 transition-colors cursor-pointer">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Health &amp; Medicine</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e5e7eb] dark:bg-[#283039] hover:bg-[#d1d5db] dark:hover:bg-[#3b4754] pl-5 pr-5 transition-colors cursor-pointer">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Law</p>
+</button>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
+<!-- Card 1: CS -->
+<div class="group flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-[#e5e7eb] dark:border-[#283039] hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Abstract digital network visualization with blue nodes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0cZfI2zuovZViFJbNL5uKxxfBCT4hrSRsLjQaMSINMNx5ue25uaigKAsw4YwcH8ortXQaXBZbbc7BNt28UGxY2nJF6UIAuDhHsvYGNa9Qj9BSi0gPS99o3ZxOcbg37b4yd5bk9J5L2ZFIGWceNy4cOYwPZ3hrxX4bS-RE-0FkHje4AdmD1ivmIgjsSxknzzp-aRfjPRTB8R_ea24coydepX7ETVRv5CDi4T3ISoEZzVP-HV7GX5-45eVnCPPnm7T0DCzX8fN1MN_s");'></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-white uppercase tracking-wider">STEM</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">terminal</span>
+</div>
+<p class="text-[#111418] dark:text-white text-xl font-bold leading-tight">Computer Science</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm font-normal leading-normal mb-2">12 Programs • 45 Faculty • B.S., M.S., Ph.D.</p>
+<div class="mt-auto pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all">
+<span>Explore Department</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Business -->
+<div class="group flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-[#e5e7eb] dark:border-[#283039] hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern corporate office building glass facade reflection" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0Fj5jlRyrDGFMXxpA9XVHhf8JEf3F6aAQLUuYUrpJMiZsJxQ2lq3Crn0qiQRg3An5nbPVUztCgHDJwGiDWBh4ULuo8fPOwVpkwyv2N0y0wetFw2q4943xhrXnmnq8d-UKgvVKV4p83Mh-GTgC1jF6lnGkKnaPR_iL7ZnE6UXCkKtddEW6aYbKgT98LS0cfI5exiJnroxzZRYJmSBGDItSTs40LCSSD1PZPyA_auDFL6Q13q60IF2IirXx5bbP6TQBWDrp79f9xDG-");'></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-white uppercase tracking-wider">Business</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">analytics</span>
+</div>
+<p class="text-[#111418] dark:text-white text-xl font-bold leading-tight">School of Business</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm font-normal leading-normal mb-2">AACSB Accredited • MBA Available</p>
+<div class="mt-auto pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all">
+<span>Explore Department</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Arts -->
+<div class="group flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-[#e5e7eb] dark:border-[#283039] hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up of paint brushes and colorful palette" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpDFlfBiA51Azln7dzdpg60JmYoh3s-oh4Oa7MbsAPrZjOC7ONe_Hvbl3QpzYmKkq2DcLB1HGmyYERMggp6KIrCzfQd1r1DAvtXLKqOdR65x4FEuO--nTrx3ilI7ujaitHHjEIEedv5K1z_Jh5rxdxMt2_YHYp_ODheyFI2U5kiIc8uU8xO1qqK6JcXFPvivAetzulc9V6zQRCQg1c_wnlKz38umzEAwE5dYWLnCeYmXYVYyb66cmNVnYN7K5Zgyd1jQyAgEz3cgV_");'></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-white uppercase tracking-wider">Arts</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">palette</span>
+</div>
+<p class="text-[#111418] dark:text-white text-xl font-bold leading-tight">College of Fine Arts</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm font-normal leading-normal mb-2">15 Studios • Gallery Access</p>
+<div class="mt-auto pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all">
+<span>Explore Department</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Health -->
+<div class="group flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-[#e5e7eb] dark:border-[#283039] hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Medical stethoscope on a teal background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHkAwBRNBpTlsRHJ_22amfqsxKyd15RkzXAjRpR6ArTZYqg7fJcBGcZTtLMpCmV6qtjS7fnUSMxdYUkkgjh24soOpGEZUx13Y9Q_VqsvKCO3E88M9El5jG8PiAFtqbNoN5tuB2wOyeOjV37fP42egjF1IJwe--bRR6gJvA2nb9eStGjLWKwerDoYn7LTH_q99eiXrzb1-I4J9GeqlkMxvtdKCMOdlzpMC1Q71usccrTIx6KMpSGrgBABbMdOSigDj7I41AblcRfEM3");'></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-white uppercase tracking-wider">Health</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">cardiology</span>
+</div>
+<p class="text-[#111418] dark:text-white text-xl font-bold leading-tight">School of Nursing</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm font-normal leading-normal mb-2">Ranked #1 in State • Clinical Practice</p>
+<div class="mt-auto pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all">
+<span>Explore Department</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5: Engineering -->
+<div class="group flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-[#e5e7eb] dark:border-[#283039] hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Robotic arm in a high tech manufacturing facility" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6XJkBBXecVKmPuvx_wW77ijYWOPFFITMIzqi4nreBe4LJoRXaZZPij8TtGvdqSjGnEZoDqS79V9aAggiTzdeVJ9mw__aOTkSdkohr85j8N4Lqfix85tsHWGRlj_F2HMbjJOfuprx4Paa5DGjDH-M4YrIrpnO0LTghKNKeWPhYya_9bCmRyBBpXkvDFYLOug6HS0GhxZljgr7tkBh-6iNSQtVr5JcstEcMsiYlCHJb4I_eko2KVP8k3pJpKUX6P4EicvYcXDPOzRTV");'></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-white uppercase tracking-wider">STEM</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<p class="text-[#111418] dark:text-white text-xl font-bold leading-tight">Mechanical Engineering</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm font-normal leading-normal mb-2">State-of-the-art Labs • Robotics Focus</p>
+<div class="mt-auto pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all">
+<span>Explore Department</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6: Law -->
+<div class="group flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-[#e5e7eb] dark:border-[#283039] hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Columns of a classic courthouse building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrJ1QHken-320_uu4-BSJShDDPj5OAfrx8eikGFTxrEoK2jAmRHjUcYKoz-2t6UqCURrw5iURyjig8hSryz-FJD4A9x4wQz4aMePWScZ79V7DhBHCjKdlsgSaA3YdurV_x4KHnDKhIPRFabM6HKebLA-mwLMJ6JnauYj4LoFK_MtdR8tbpuDwfrwIf2Fqkhw7jLgmEuRHwNyu9nOoFKAGfD1N6xKfvFm4FA0pFLyDUCFsm4U8knLDyMaHfiswYHi1tjDXKywGr3Whc");'></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-white uppercase tracking-wider">Humanities</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">balance</span>
+</div>
+<p class="text-[#111418] dark:text-white text-xl font-bold leading-tight">School of Law</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm font-normal leading-normal mb-2">J.D. Program • Legal Clinics</p>
+<div class="mt-auto pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all">
+<span>Explore Department</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 7: Architecture -->
+<div class="group flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-[#e5e7eb] dark:border-[#283039] hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Abstract white architectural geometric structure" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUQWdRgx2DODwZWaxaziMJxuF6DcddVUpNY_92EHzsc6Yril4cT5xG5Brc7zL3sTJ-UgtUDCyFgVIhdbTQp8giWPTtD8qJFNjtDbEE4RUZBopctrqP3kFK3xKyecipWoIDgAMNrKQ-cYzpOutK1QDN8Cdw4xg2SGeCDbySAGTg44QhFItq-v9OEb5TEOUz3XJ18vSU8AbK0YPjM-7M4TJm14-3OnjHN1herVqORCbpaV26T9g3TkbISmRGE5A7RUAsrFrSN-vAOYAH");'></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-white uppercase tracking-wider">Design</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">architecture</span>
+</div>
+<p class="text-[#111418] dark:text-white text-xl font-bold leading-tight">College of Architecture</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm font-normal leading-normal mb-2">Urban Planning • Sustainable Design</p>
+<div class="mt-auto pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all">
+<span>Explore Department</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 8: Psychology -->
+<div class="group flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-[#e5e7eb] dark:border-[#283039] hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Abstract brain connections visualization" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACr-p20ibWJWTN6vmgRSFykZinh5AtRIfe72oWd4_lArC3qRI1B1cyIAEzXSUcBXim9CUAMbeS6t0UyX2pYdACdlILxutWeMiy8fF1_gnhQ6LDuMC-6VNviY7BbMoudKdp-72qGwCpAAgiPbtzwnzGEtSLpIR-AtzAtzdoVujWT57VOw5F89t8egw8Hh5un7dyR7hD1HkpwAA1Ap_IaUphbrKJLIdJJeb9zbZ4GiJE4lcLKaVFD_9Wfzpp7Z74nHKhhmk63GE9v92j");'></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-white uppercase tracking-wider">Science</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">psychology</span>
+</div>
+<p class="text-[#111418] dark:text-white text-xl font-bold leading-tight">Department of Psychology</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm font-normal leading-normal mb-2">Behavioral Labs • Research Grants</p>
+<div class="mt-auto pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all">
+<span>Explore Department</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 9: Music -->
+<div class="group flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-[#e5e7eb] dark:border-[#283039] hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Classical violin close up details" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQA5IWNFsqYAa1ZFkpUR2P4Avg4eDV2YKZg-FHrmJ699aKPrvSShjS_uY9sYvqWf_J1R1BxTcuaYHSkleVZ1tJb7IQYWtt0zOr5cb9LCHS56HaeQZJpccsmdt7DQIo8ZB_eQwrLEJGbCmLFC59bWDXY-tyLzefb6Yt7_SI0JDcy58lRpYoJ2QG33EI4mbMqKV79p94Mi8OX6Yu8NAEHfLOWFmaq-383N-ZxsxYxRP26eKx9g39O-CW0x4lJ4sfVrM0QhLYYTUKHnXz");'></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-white uppercase tracking-wider">Arts</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">music_note</span>
+</div>
+<p class="text-[#111418] dark:text-white text-xl font-bold leading-tight">School of Music</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm font-normal leading-normal mb-2">Conservatory • Performance Halls</p>
+<div class="mt-auto pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all">
+<span>Explore Department</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="flex justify-center py-8">
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-8 bg-[#e5e7eb] dark:bg-[#283039] hover:bg-[#d1d5db] dark:hover:bg-[#3b4754] text-[#111418] dark:text-white transition-colors text-base font-bold leading-normal tracking-[0.015em] shadow-sm">
+<span class="truncate">Load More Departments</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-light dark:bg-[#1c242e] border-t border-[#e5e7eb] dark:border-[#283039] py-12 px-6 lg:px-10 mt-auto">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-10">
+<div class="flex flex-col gap-4 max-w-sm">
+<div class="flex items-center gap-2 text-white">
+<div class="size-6 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold">University Name</h3>
+</div>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm">
+                    Empowering the next generation of leaders through world-class education, research, and community engagement.
+                </p>
+<div class="flex gap-4 mt-2">
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#"><span class="material-symbols-outlined">rss_feed</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+<div class="flex flex-col gap-3">
+<h4 class="text-[#111418] dark:text-white font-bold text-sm uppercase tracking-wider">Quick Links</h4>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary text-sm" href="#">Admissions</a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary text-sm" href="#">Campus Map</a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary text-sm" href="#">Directory</a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary text-sm" href="#">Events</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-[#111418] dark:text-white font-bold text-sm uppercase tracking-wider">Resources</h4>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary text-sm" href="#">Library</a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary text-sm" href="#">Career Center</a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary text-sm" href="#">IT Support</a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary text-sm" href="#">Student Portal</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-[#111418] dark:text-white font-bold text-sm uppercase tracking-wider">Contact</h4>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm">123 University Ave,<br/>City, State 12345</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm">contact@university.edu</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-sm">+1 (555) 123-4567</p>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto pt-8 mt-8 border-t border-[#e5e7eb] dark:border-[#283039] flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#637588] dark:text-[#9dabb9]">
+<p>© 2024 University Name. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Use</a>
+<a class="hover:text-primary" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+</body></html>

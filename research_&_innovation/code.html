@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>University Research &amp; Innovation</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1c2127",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101922; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #283039; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b4754; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased overflow-x-hidden">
+<div class="relative flex flex-col min-h-screen w-full">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#283039] bg-surface-light dark:bg-background-dark px-6 py-3 lg:px-10">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+<div class="size-8 flex items-center justify-center rounded bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">University Research</h2>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-primary" href="#">Research</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Admissions</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full ring-1 ring-slate-200 dark:ring-transparent">
+<div class="text-slate-400 dark:text-[#9dabb9] flex border-none bg-slate-100 dark:bg-[#283039] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg rounded-l-none border-none bg-slate-100 dark:bg-[#283039] text-slate-900 dark:text-white focus:outline-0 focus:ring-0 placeholder:text-slate-400 dark:placeholder:text-[#9dabb9] px-3 pl-2 text-sm font-normal leading-normal" placeholder="Search..." value=""/>
+</div>
+</label>
+<div class="flex items-center justify-center lg:hidden text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<div class="hidden lg:flex items-center justify-center size-10 rounded-full bg-slate-100 dark:bg-[#283039] overflow-hidden border border-slate-200 dark:border-transparent">
+<img alt="Profile" class="h-full w-full object-cover" data-alt="Professor profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbeszlQSXmqTPVG-s_QX9aEvkDTUMDTTD9ZP_IjgtQGPmtDIAsIwfe3RWOnjiSEnTi9Jd5hU_c0tKIbyYJRtuPh56sPAIyKRMpy6aXhO9gEm6tJZHVn0kmMkzDm89SPYpok-wjsYYSE4KZy_0X7T1RU099bor4Zc3Xck5R0OoQ1__KjQuiAeeRNK25zOUg2PGUUyvrLFuCzwxgAqAieSVBdIxCrAoRwlW2_9xbw0jFolSBchwsdNk7r0NM3GY38G6jG1jlkzpRzr0q"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col">
+<!-- HeroSection -->
+<div class="@container w-full">
+<div class="relative w-full">
+<div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-6 relative overflow-hidden" data-alt="Abstract blue data nodes connecting in a dark digital space representing innovation" style='background-image: linear-gradient(rgba(16, 25, 34, 0.85) 0%, rgba(16, 25, 34, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZqJ6lfvnxgc_PfUSq7qtDiZadUMg5d6-Pg0Y-ItMk0OCjRktsi8ABfxJOwo6GLCsuPmcMUc8n44U6SIwuecNv6hRN3eN4qRSaUy2XXUUc476i7AeSPel48dV1NCh9CWmWOBTv87v2JUAlXFLKSM5dGbomOeH7CcpnpLmazsYSgIlXQzyiZDhds20e7BnOLLno6s1-N4EMgzGZRlKHzrc-l2_wjVV_BZFidQW7B1xZMShOp95SO7LttR8xvVbI4IiXnsko54rYCFW8");'>
+<div class="flex flex-col gap-3 text-center z-10 max-w-3xl">
+<div class="flex items-center justify-center gap-2 mb-2">
+<span class="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider border border-primary/30">Pioneering The Future</span>
+</div>
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl md:text-6xl">
+                                Research &amp; Innovation
+                            </h1>
+<p class="text-slate-200 text-base font-normal leading-relaxed sm:text-lg max-w-2xl mx-auto">
+                                Driving global impact through groundbreaking discoveries, academic publications, and intellectual property development across 50+ disciplines.
+                            </p>
+</div>
+<div class="w-full max-w-xl z-10 mt-4">
+<label class="flex flex-col h-14 w-full shadow-lg shadow-primary/10">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden">
+<div class="text-slate-400 dark:text-[#9dabb9] flex border-y border-l border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#1c2127] items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 dark:text-white focus:outline-0 border-y border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#1c2127] placeholder:text-slate-400 dark:placeholder:text-[#9dabb9] px-3 pl-2 text-base" placeholder="Search papers, projects, or researchers..." value=""/>
+<div class="flex items-center justify-center border-y border-r border-l-0 border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#1c2127] pr-2 rounded-r-lg">
+<button class="flex cursor-pointer items-center justify-center rounded-md h-10 px-6 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                            Search
+                                        </button>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats -->
+<div class="w-full bg-surface-light dark:bg-background-dark border-b border-slate-200 dark:border-[#283039]">
+<div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-1 p-4 rounded-xl bg-slate-50 dark:bg-surface-dark border border-slate-200 dark:border-transparent">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Funding</p>
+<span class="material-symbols-outlined text-primary text-[20px]">attach_money</span>
+</div>
+<p class="text-slate-900 dark:text-white text-2xl font-bold mt-1">$142.5M</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-green-500 text-[16px]">trending_up</span>
+<p class="text-green-500 text-xs font-medium">+12% YoY</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-4 rounded-xl bg-slate-50 dark:bg-surface-dark border border-slate-200 dark:border-transparent">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Projects</p>
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+</div>
+<p class="text-slate-900 dark:text-white text-2xl font-bold mt-1">140+</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-green-500 text-[16px]">trending_up</span>
+<p class="text-green-500 text-xs font-medium">+5% new</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-4 rounded-xl bg-slate-50 dark:bg-surface-dark border border-slate-200 dark:border-transparent">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Published Papers</p>
+<span class="material-symbols-outlined text-primary text-[20px]">article</span>
+</div>
+<p class="text-slate-900 dark:text-white text-2xl font-bold mt-1">2,500+</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-green-500 text-[16px]">trending_up</span>
+<p class="text-green-500 text-xs font-medium">+8% published</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-4 rounded-xl bg-slate-50 dark:bg-surface-dark border border-slate-200 dark:border-transparent">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Patents Granted</p>
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+</div>
+<p class="text-slate-900 dark:text-white text-2xl font-bold mt-1">85</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-[16px]">horizontal_rule</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Stable</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Layout: Sidebar + Content -->
+<div class="flex-1 max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 shrink-0 space-y-8">
+<div>
+<div class="flex items-center gap-2 mb-4 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">filter_list</span>
+<h3 class="font-bold text-lg">Filters</h3>
+</div>
+<!-- Department Filter -->
+<div class="mb-6">
+<h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Department</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary/50" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">Engineering</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary/50" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">Life Sciences</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary/50" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">Computer Science</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary/50" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">Physics</span>
+</label>
+</div>
+</div>
+<!-- Year Filter -->
+<div class="mb-6">
+<h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Year</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary/50" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">2024</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary/50" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">2023</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary/50" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">2022 &amp; Older</span>
+</label>
+</div>
+</div>
+<!-- Status Filter -->
+<div>
+<h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Status</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary/50" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">Active Funding</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary/50" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">Completed</span>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Column -->
+<div class="flex-1 min-w-0">
+<!-- Tabs -->
+<div class="border-b border-slate-200 dark:border-[#3b4754] mb-8">
+<nav aria-label="Tabs" class="flex gap-8 overflow-x-auto no-scrollbar">
+<a class="border-b-[3px] border-primary pb-3 pt-2 text-primary font-bold text-sm tracking-[0.015em] whitespace-nowrap" href="#">
+                                    Projects
+                                </a>
+<a class="border-b-[3px] border-transparent pb-3 pt-2 text-slate-500 dark:text-[#9dabb9] hover:text-slate-700 dark:hover:text-white font-bold text-sm tracking-[0.015em] whitespace-nowrap transition-colors" href="#">
+                                    Publications
+                                </a>
+<a class="border-b-[3px] border-transparent pb-3 pt-2 text-slate-500 dark:text-[#9dabb9] hover:text-slate-700 dark:hover:text-white font-bold text-sm tracking-[0.015em] whitespace-nowrap transition-colors" href="#">
+                                    Patents &amp; IP
+                                </a>
+</nav>
+</div>
+<!-- Featured Card -->
+<div class="mb-8">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">star</span>
+                                Featured Research
+                            </h3>
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-lg lg:flex-row lg:items-stretch bg-white dark:bg-surface-dark border border-slate-200 dark:border-transparent">
+<div class="w-full lg:w-5/12 bg-center bg-no-repeat bg-cover min-h-[240px] relative" data-alt="Drone swarm in a forest environment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvYGFVeMzHrMtNc4WLmBmWCRcE8r9jFXtpRJzOkcqdtXNv10MLq6vsS6Z5yLFYWKSPVi7apR14ikE77Axpg47wM8eDZ85mVdlS8-LR2zGKoESvIoXm989oy8ypifkly0TlpWlQAlep1iJnlOyBTLvyBWWNVgrFMlCLJM2HyNjHFoTFmv8wHu61x3xE9D6vVYQ6K-35v98RU9wbkwyLiEbbNZiYmEA_rAH54Cldv-VbYZbpUyM5g5ErNssnfbGYaAuUjQ18EcTVbpFr");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent lg:bg-gradient-to-r"></div>
+</div>
+<div class="flex w-full flex-col justify-center gap-3 p-6 lg:p-8">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs font-semibold">Environmental Science</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">• Last Updated 2d ago</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Autonomous Climate Monitoring</h2>
+<p class="text-slate-600 dark:text-[#9dabb9] text-base leading-relaxed">
+                                        An interdisciplinary project funded by the NSF to track micro-climate changes using cooperative drone swarms equipped with hyperspectral sensors.
+                                    </p>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex -space-x-2">
+<img alt="Dr. Sarah Chen" class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-surface-dark object-cover" data-alt="Researcher portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7_3TeKir60SZD-RHl5lSH5IOreK9vh-qYn5WTj0mmr31vgAzcUeobDOn6TkSoSdX_bY1BmTLQnShelntcZZjAUGhoYjwXNZs8wmVeNxksqGQysUlQ6VcSSPFe8eRUj-8SdqNkUfCPgSveqcCbIaUUGNkjCfY4yhg8QPJ3W2AdAGwprWGEEMKMS24lbDCtNIRAtT1CDzvetdN3pG-ttiV1tLv9qWj8-DvMxPV1rW5Cl3hxSPsPTySPDS-HVIbQoxKf1Neg4s5BwaJ_"/>
+<img alt="Dr. Michael Ross" class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-surface-dark object-cover" data-alt="Researcher portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxIF9EulZk5Fy4jk6_np87Yh-s10M4qYv8ncykZnUy1Vtu--y-036f1bDTB1hRLlGVUiML582Pz9FageGwRxWKJhmhMSVo9jOgTh3VgLW8TkluNcipBg3r7h2AoQQxK_YMw9gm_adsOHddC93LJPAgnkOjAr-FdqZKkGCoOqH2fN2EuuTwWbtIQWw_B7MIFIsdTwP0sDsINhUTqe6ZcePztBuv0HwXSasigt_0jx0RDJ4TKV2aTxyoXtuehN05Cjr2ZFrkhn43Nne1"/>
+<div class="flex items-center justify-center h-8 w-8 rounded-full ring-2 ring-white dark:ring-surface-dark bg-slate-100 dark:bg-slate-700 text-xs text-slate-500 font-medium">
+                                                +4
+                                            </div>
+</div>
+<div class="text-sm">
+<p class="text-slate-900 dark:text-white font-medium">Dr. Sarah Chen</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Lead Researcher</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Progress</span>
+<div class="w-32 h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-green-500 w-[75%]"></div>
+</div>
+</div>
+<button class="bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-medium rounded-lg h-9 px-4 flex items-center gap-2">
+                                            View Details <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<!-- Card 1 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-white dark:bg-surface-dark border border-slate-200 dark:border-transparent group hover:border-primary/50 transition-all">
+<div class="h-48 bg-cover bg-center" data-alt="Microscopic view of cells" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrTbkS1sCEu5KGFtaiI3vBnynPTbRspZeECRU1axPdBoS3792K_8oFaeF0cjwqSFe6PbJOGz2jqxTT33LU-aaFdGogQ0EZM0u4zX9j0OblcMJ4WTyfGthsAuZRGhFWBfXzSLmt2SsysSH309Y78phS4pKG3Kbx0GsjOXtgpinktOHXhF7xg2Ta-K5oG7DvyHodymXg_n-NaHE-5tevjhLngPHVKLZdyOynptvmeGq4ZIYQwmmNxKIp61_PeKoZBQ_JwXFa_1DFjcg4");'>
+<div class="w-full h-full bg-black/20 group-hover:bg-transparent transition-all"></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">Biotech</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-900/50">ACTIVE</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">CRISPR Gene Editing for Crop Resilience</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 flex-1">
+                                        Developing new strains of wheat resistant to drought and high salinity through targeted gene modification techniques.
+                                    </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<img alt="Researcher" class="h-6 w-6 rounded-full object-cover" data-alt="Researcher portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChidvWWJgh5aekNfUh9EvIAGmqFjZ2a8Cd9j3AIUxzRDYkDwimnX5ynKAInEgaQ5XW3SxP6vjn1PJWyYhQlxUp4btTbpMsFAnOi-1MH6eLJkdZlR9BOaJ_1JdqP6nppVfWqjkc3J52oBMBrUqUYU5gFcvd0ra43-OUC7apW3AMRRXXH39FHnwC8YvA_TRlotG9Ifekgi1AmD-mHKQnwET_r5buaLXLMlowMp2JVqLKt2M-826RxzbeH6Sx4KPb48Ldew2EHeY7KOij"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Prof. J. Smith</span>
+</div>
+<a class="text-primary text-sm font-medium hover:underline" href="#">View Project</a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-white dark:bg-surface-dark border border-slate-200 dark:border-transparent group hover:border-primary/50 transition-all">
+<div class="h-48 bg-cover bg-center" data-alt="Quantum computer processor close up" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBrn0TUiGxKlWDyRGmI_icncZZgrVloxc6HSMM1K2wGwAdRdygx_e5-mbdBK5aEWxaF5591O8PptlO5_NuG52rWLhQ-WB6q3Ee6eGtq3_r6ObnCbIc6fpMnZPlMIR_fgIsr5sLSzCNNFjW5raEdwvXnwgCekN7khFcZOBfzpA1YKphEYPWoD9-B1IYL97adLmd2_eR9PbAuU8MVA_8dRIGU7QYyJxtE3e9NW2FXyzeWSUs6_6QiFZeLKZ9p2DO766TXUUZeI1PoqpO");'>
+<div class="w-full h-full bg-black/20 group-hover:bg-transparent transition-all"></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">Physics</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 border border-purple-200 dark:border-purple-900/50">GRANT PENDING</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Quantum Entanglement Networking</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 flex-1">
+                                        Building the infrastructure for the next generation of unhackable communication networks using entangled photon pairs.
+                                    </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<img alt="Researcher" class="h-6 w-6 rounded-full object-cover" data-alt="Researcher portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRSgwWdKsCPKzXzCpoFONkL7buJm4LJdR3BQ6STGQoeE2l_22ZtoA8AH_QzTVbanyItD_LuGSPlk0J_BGBnvUtShG7iem6USEPlMpW6sIRMG9HK83LFdxOB0dHVqAhFjw-KLdLDp95njrKk68pFOujqGj2CE69wXQx8MRUG6RZcBEUqHP_4ulse753dmmEi7ATO85lajg-4rGB06zHWF2BURvKsRTKI0-fvb60yMEAu8WpPH5k2FeAFtdYJFsB74wkj1s944ezz9Qr"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Dr. A. Gupta</span>
+</div>
+<a class="text-primary text-sm font-medium hover:underline" href="#">View Project</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Publications Section -->
+<div class="mb-12">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Recent Publications</h3>
+<a class="text-sm font-medium text-primary hover:text-blue-400 flex items-center gap-1" href="#">
+                                    View Archive <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-transparent overflow-hidden">
+<!-- Publication Row 1 -->
+<div class="p-4 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-[#232932] transition-colors group">
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500">IEEE Access</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<span class="text-xs text-slate-400 dark:text-slate-500">Oct 2023</span>
+</div>
+<h4 class="text-base font-semibold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Machine Learning Approaches for Early Detection of Alzheimer's</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Authors: K. Williams, R. Thompson, et al.</p>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<div class="flex flex-col items-end px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Citations</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">42</span>
+</div>
+<button class="text-slate-400 hover:text-primary p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Publication Row 2 -->
+<div class="p-4 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-[#232932] transition-colors group">
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500">Nature Materials</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<span class="text-xs text-slate-400 dark:text-slate-500">Sep 2023</span>
+</div>
+<h4 class="text-base font-semibold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Superconductivity in Twisted Bilayer Graphene at High Temperatures</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Authors: L. Chen, M. O'Reilly, S. Kim</p>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<div class="flex flex-col items-end px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Citations</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">156</span>
+</div>
+<button class="text-slate-400 hover:text-primary p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Publication Row 3 -->
+<div class="p-4 hover:bg-slate-50 dark:hover:bg-[#232932] transition-colors group">
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500">Journal of Modern History</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<span class="text-xs text-slate-400 dark:text-slate-500">Aug 2023</span>
+</div>
+<h4 class="text-base font-semibold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Post-War Urban Reconstruction in Eastern Europe</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Authors: P. Kowalski</p>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<div class="flex flex-col items-end px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Citations</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">12</span>
+</div>
+<button class="text-slate-400 hover:text-primary p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Patents & IP Section -->
+<div>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Latest Patents</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-4 rounded-xl bg-slate-50 dark:bg-surface-dark border border-slate-200 dark:border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-colors cursor-pointer">
+<div class="flex items-center justify-between mb-3">
+<span class="material-symbols-outlined text-orange-400 text-3xl">lightbulb</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">US-2023-999</span>
+</div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2 line-clamp-2">Method for biodegradable plastic synthesis from algae</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Granted: Jun 2023</p>
+<div class="flex items-center gap-1 text-primary text-xs font-medium">
+                                        View Patent <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-slate-50 dark:bg-surface-dark border border-slate-200 dark:border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-colors cursor-pointer">
+<div class="flex items-center justify-between mb-3">
+<span class="material-symbols-outlined text-orange-400 text-3xl">lightbulb</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400">PENDING</span>
+</div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2 line-clamp-2">Adaptive AI architecture for edge computing devices</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Filed: Jan 2024</p>
+<div class="flex items-center gap-1 text-primary text-xs font-medium">
+                                        View Filing <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-slate-50 dark:bg-surface-dark border border-slate-200 dark:border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-colors cursor-pointer">
+<div class="flex items-center justify-between mb-3">
+<span class="material-symbols-outlined text-orange-400 text-3xl">lightbulb</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">US-2022-104</span>
+</div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2 line-clamp-2">Self-healing concrete composition using bacterial spores</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Granted: Dec 2022</p>
+<div class="flex items-center gap-1 text-primary text-xs font-medium">
+                                        View Patent <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-200 dark:border-[#283039] bg-surface-light dark:bg-background-dark py-8">
+<div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">school</span>
+<span class="font-bold">University Research</span>
+</div>
+<div class="text-sm text-slate-500 dark:text-slate-400">
+                    © 2024 University Research Division. All rights reserved.
+                </div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campus Facilities - University Name</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922", // Matches the required config
+                        "card-dark": "#1c232d", // Slightly lighter for cards
+                        "border-dark": "#2a3441",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden antialiased">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/80 backdrop-blur-md">
+<div class="px-6 lg:px-10 py-3 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-white">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-tight">University Name</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-slate-300 hover:text-white text-sm font-medium transition-colors" href="#">Academics</a>
+<a class="text-slate-300 hover:text-white text-sm font-medium transition-colors" href="#">Admissions</a>
+<a class="text-white text-sm font-medium transition-colors" href="#">Facilities</a>
+<a class="text-slate-300 hover:text-white text-sm font-medium transition-colors" href="#">Research</a>
+<a class="text-slate-300 hover:text-white text-sm font-medium transition-colors" href="#">About Us</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-card-dark border border-border-dark focus-within:border-primary transition-colors">
+<div class="text-slate-400 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-transparent border-none text-white placeholder:text-slate-500 focus:ring-0 text-sm h-full px-3" placeholder="Search facilities..."/>
+</div>
+</label>
+<button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-colors shadow-lg shadow-primary/20">
+                        Apply Now
+                    </button>
+<!-- Mobile Menu Icon -->
+<button class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full max-w-[1280px] p-4 md:p-6 lg:p-8">
+<div class="relative w-full rounded-2xl overflow-hidden min-h-[500px] flex flex-col items-center justify-center text-center p-8 bg-cover bg-center" data-alt="University campus aerial view with modern buildings and green spaces at sunset" style='background-image: linear-gradient(rgba(16, 25, 34, 0.3) 0%, rgba(16, 25, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8IwhUhDxiH7LIqn5cYjXs5h6Wjql8RA2vaYWAEdfQTZxMzJiCsOqGorODHIXAeFjOWJRhtuj97r2BqeXz4e2LPlbUHRBD3BdyHdARcA6VJsZRaqNuK5sHpbixGRkbCFCt_MnMdsw1dfQnSUeyxo6WjD8D3AU-Nhpw9VV8_RugcU8a5s6ckNoxJal5jG9MllpcWaAsxm9FRZekVQh1FkHWiAm_Ph71SBK290yxNJfCV4c0J3SmrpEAPdo14srF5P91zyIVzc4okwpw");'>
+<div class="flex flex-col gap-4 max-w-3xl z-10 animate-fade-in-up">
+<h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight drop-shadow-lg">
+                            World-Class Campus Facilities
+                        </h1>
+<h2 class="text-slate-200 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+                            Everything you need to live, learn, and thrive at our university. From state-of-the-art labs to comfortable housing.
+                        </h2>
+<div class="flex flex-wrap gap-4 justify-center mt-4">
+<button class="flex items-center gap-2 h-12 px-6 rounded-lg bg-primary hover:bg-primary/90 text-white font-bold transition-all shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined">play_circle</span>
+                                Virtual Tour
+                            </button>
+<button class="flex items-center gap-2 h-12 px-6 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold border border-white/20 transition-all">
+<span class="material-symbols-outlined">map</span>
+                                Campus Map
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="w-full max-w-[1280px] px-4 md:px-6 lg:px-8 pb-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="flex flex-col gap-1 rounded-xl p-6 bg-card-dark border border-border-dark shadow-sm hover:border-primary/50 transition-colors group">
+<div class="mb-2 text-primary group-hover:scale-110 transition-transform origin-left">
+<span class="material-symbols-outlined text-3xl">apartment</span>
+</div>
+<p class="text-slate-400 text-sm font-medium">Hostels</p>
+<p class="text-white text-2xl font-bold">5 Buildings</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-6 bg-card-dark border border-border-dark shadow-sm hover:border-primary/50 transition-colors group">
+<div class="mb-2 text-primary group-hover:scale-110 transition-transform origin-left">
+<span class="material-symbols-outlined text-3xl">directions_bus</span>
+</div>
+<p class="text-slate-400 text-sm font-medium">Transport</p>
+<p class="text-white text-2xl font-bold">24/7 Shuttle</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-6 bg-card-dark border border-border-dark shadow-sm hover:border-primary/50 transition-colors group">
+<div class="mb-2 text-primary group-hover:scale-110 transition-transform origin-left">
+<span class="material-symbols-outlined text-3xl">science</span>
+</div>
+<p class="text-slate-400 text-sm font-medium">Research Labs</p>
+<p class="text-white text-2xl font-bold">12 Centers</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-6 bg-card-dark border border-border-dark shadow-sm hover:border-primary/50 transition-colors group">
+<div class="mb-2 text-primary group-hover:scale-110 transition-transform origin-left">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+</div>
+<p class="text-slate-400 text-sm font-medium">Campus Cafes</p>
+<p class="text-white text-2xl font-bold">8 Locations</p>
+</div>
+</div>
+</section>
+<!-- Main Content Container -->
+<div class="w-full max-w-[960px] flex flex-col gap-8 px-4 md:px-0 pb-20">
+<!-- Accommodation -->
+<div>
+<h2 class="text-white text-2xl font-bold px-1 pb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bed</span>
+                        Accommodation &amp; Living
+                    </h2>
+<div class="flex flex-col md:flex-row items-stretch rounded-xl overflow-hidden bg-card-dark border border-border-dark shadow-lg">
+<div class="w-full md:w-2/5 bg-cover bg-center min-h-[240px]" data-alt="Modern dormitory room with study desk and comfortable bed" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATouTBGcUId4R0OoB0l5WvyKYz1R-BrqKNY1xRKfj21xnGFJ0JFX3yreXRJueLA2P6TVJ7R8JQyzZO6Th_wCHyNvRLjYwlupOE-cszsZkffqWKnCLZQRAoMxebke0_pGgZ79b2v-nIWkKBuvjSRhv4jbTrD_lqJfhW_isVcOhiV8PJ7fCQ6FfQ-c5pQUXhxi3uDKCYDea4UiZNBtxNnG-ElxAIR46bI_aaMPn6YW_LOk1uk8qthmij3CLoKHvACx2a7FwovPCsVbPZ");'>
+</div>
+<div class="flex w-full md:w-3/5 flex-col justify-center p-6 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-white text-xl font-bold">Hostel Accommodation</h3>
+<span class="bg-green-500/20 text-green-400 text-xs font-bold px-2 py-1 rounded-full border border-green-500/30">Available</span>
+</div>
+<p class="text-slate-400 text-base leading-relaxed">
+                                Modern, secure, and comfortable living spaces designed for student success. Features include high-speed Wi-Fi, laundry services, 24/7 security, and common recreation areas.
+                            </p>
+<div class="flex gap-4 mt-2">
+<button class="h-10 px-6 rounded-lg bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-colors">
+                                    Apply for Housing
+                                </button>
+<button class="h-10 px-6 rounded-lg bg-transparent border border-border-dark hover:border-primary text-white text-sm font-medium transition-colors">
+                                    View Amenities
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Transport -->
+<div>
+<h2 class="text-white text-2xl font-bold px-1 pb-4 flex items-center gap-2 pt-4">
+<span class="material-symbols-outlined text-primary">commute</span>
+                        Transportation Services
+                    </h2>
+<div class="flex flex-col md:flex-row items-stretch rounded-xl overflow-hidden bg-card-dark border border-border-dark shadow-lg">
+<div class="w-full md:w-2/5 bg-cover bg-center min-h-[240px]" data-alt="University shuttle bus parked near campus entrance" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZmBdkQREwkMD_7WMNL5Bp0kodNK_QsG83x7XeUFh4VG323lQjyFPw7ef8n0bERtezQjinNO0nfLNfZmWVHMJ7lZeYjv_xqSDBR-ioa8DnALmJWMOSwWM7ihWApJ97XCCDj2uIrkuE1z-e-HlNsTRAIQ8QKZbzWd0XJX09mWMJ6-_NqeS6veflNDZbchL6RTD6XrK93V7cxN12a0p_wjPMmXvbmn40oDyvFz-foTwc_gKfEXHL5UoZ5oBFLtYZXaUj6KHnKd7v0b3h");'>
+</div>
+<div class="flex w-full md:w-3/5 flex-col justify-center p-6 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-white text-xl font-bold">Campus Shuttle &amp; Transport</h3>
+<div class="flex items-center gap-2 text-xs">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-slate-300">Next Bus: <span class="text-white font-bold">5 mins</span></span>
+</div>
+</div>
+<p class="text-slate-400 text-base leading-relaxed">
+                                Seamless connectivity across the campus and to the nearest city centers. Our fleet of eco-friendly buses runs every 15 minutes during peak hours.
+                            </p>
+<div class="flex gap-4 mt-2">
+<button class="h-10 px-6 rounded-lg bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-colors">
+                                    View Routes
+                                </button>
+<button class="h-10 px-6 rounded-lg bg-transparent border border-border-dark hover:border-primary text-white text-sm font-medium transition-colors">
+                                    Schedule
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Academic & Labs -->
+<div>
+<h2 class="text-white text-2xl font-bold px-1 pb-4 flex items-center gap-2 pt-4">
+<span class="material-symbols-outlined text-primary">biotech</span>
+                        Academic Infrastructure
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="bg-card-dark border border-border-dark rounded-xl p-5 hover:border-primary/40 transition-all group cursor-pointer">
+<div class="h-40 w-full rounded-lg bg-cover bg-center mb-4 relative overflow-hidden" data-alt="High tech computer laboratory with students working" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJAVC3x4w-YNTkPnC5QfRqd8Y0zkKm1R94ksmY751MQ5wukdEA2yHK4g5_NYu8g9s2uY40vhGeY7eovyEnZaJzNA5pafYQ_h7MZ2LPweH9u3xPC4vqae-8HYH_VmnkhdSN7Nu9ZsKK6T8TjRbP0fIbdrcCL3PPoSaCl561po4AVkUIgLYf3Nk7aCghJovS_Sb3Wt43YgbSj_jRUdiKbpzKZlAT4zsXgRjQV8bqQuCYdJHW0Y5BZ-j1C6DnhjHEx_vzBLZO4AfvXVQ-");'>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<h3 class="text-white text-lg font-bold mb-2 group-hover:text-primary transition-colors">Advanced Computing Center</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-4">Equipped with high-performance clusters and AI workstations available 24/7 for students.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                Learn more <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-card-dark border border-border-dark rounded-xl p-5 hover:border-primary/40 transition-all group cursor-pointer">
+<div class="h-40 w-full rounded-lg bg-cover bg-center mb-4 relative overflow-hidden" data-alt="Students conducting experiments in chemistry laboratory" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChT_QIGDE5FKk_OnIKM2Bj354Vt35VbrqH1NuQCs8-5e6cfi6pGDSGfN_ms2ooD01TmWjdRt6p4fi6Kk6lslc77suoZmDV5A5EFAwdOA8vd6m_Pf0WJZF4ow8zGOZF6k7Jz6Gx0LEbTa08nQOSjJkxo9HqKmp1CYsPJxlsCgeMtsEiMSdzarzFIElWgL-Q_Nu6qJQzdsY4VC86Fg8ZngDb8mlkbCwHDFn9ci8aP3NgCGe2dxT1aC8vlNvAPGiK9ARgkrGWXExqWfCH");'>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<h3 class="text-white text-lg font-bold mb-2 group-hover:text-primary transition-colors">Science &amp; Research Labs</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-4">State-of-the-art physics, chemistry, and biology labs fostering groundbreaking research.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                Learn more <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Testimonials -->
+<div class="pt-8">
+<h2 class="text-white text-2xl font-bold px-1 pb-6 text-center">Student Experiences</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-card-dark border border-border-dark rounded-xl p-6 relative">
+<div class="absolute -top-3 left-6 bg-primary text-white rounded-full p-1">
+<span class="material-symbols-outlined text-sm">format_quote</span>
+</div>
+<p class="text-slate-300 italic mb-4 pt-2">"The research facilities here are unmatched. Having 24/7 access to the computer center was crucial for my final year project."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-600 bg-cover bg-center" data-alt="Portrait of Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTyD0eauIbQw4ZLK0Tmj3uuABxJbDBhYROZFSkpoeBxSAjuURTO5qB5aLgaxCidiC6pYu4iGJrYsYrov0jbE46XoHFkdXUoPOsWoWtff7pJXjw3AxNyPyXD6uorbuna0SffXWaNhQJ58qlQiTAajG3eZz8KCsAL0tMXNpFFU46ap9i7ywE9cLMKlYNhplYmIe_D9JoTTlnXRTHp0mT_lDU8xjQ1NKgfbitncGtgEnKUGRwSKzFwEpelkfyhUEiQbLNd-TwzHtBjODk");'></div>
+<div>
+<p class="text-white text-sm font-bold">Sarah Jenkins</p>
+<p class="text-slate-500 text-xs">Computer Science, Class of '23</p>
+</div>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark rounded-xl p-6 relative">
+<div class="absolute -top-3 left-6 bg-primary text-white rounded-full p-1">
+<span class="material-symbols-outlined text-sm">format_quote</span>
+</div>
+<p class="text-slate-300 italic mb-4 pt-2">"Living on campus is amazing. The hostels are clean, the food is great, and the shuttle service makes getting to class super easy."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-600 bg-cover bg-center" data-alt="Portrait of David Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASnrzFsyDRPDpXKpmsjDqlCKw0NuGU8XrwgHfOpiMLi3ZcVddZfrE7ZzYdKMyfinEzhpxMHcGMQNeCosvfXbzEKCgeWM0JcVEW2r74Qy9XmZucYGrMBKQaGyF0c5oGrX3rZWWcObm3j6jQC7_xaFYcnRLIHOjbU_ReFEMFS7iRoFO7WC1WPtLL4RWoUOmlkgM7nD_QCd6aIadENztaNvYUrWbFEOAEfe9VyD0nIWg-TGs2krqTDVNlIgGyJ1sxXZHSy6tSiVHi-W02");'></div>
+<div>
+<p class="text-white text-sm font-bold">David Chen</p>
+<p class="text-slate-500 text-xs">Biotech Engineering, 3rd Year</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0b1118] border-t border-border-dark py-12 px-6">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path></svg>
+</div>
+<h3 class="text-lg font-bold">University Name</h3>
+</div>
+<p class="text-slate-400 text-sm">Empowering the next generation of leaders through world-class education and facilities.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Quick Links</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Admissions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Campus Map</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Virtual Tour</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Facilities</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Housing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Dining</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Library</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sports Complex</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Contact</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-400">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base">call</span> +1 (555) 123-4567</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base">mail</span> info@university.edu</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base">location_on</span> 123 Campus Dr, City, Country</li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-border-dark flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+<p>© 2023 University Name. All rights reserved.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="hover:text-white" href="#">Privacy Policy</a>
+<a class="hover:text-white" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Training &amp; Placement Cell</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-solid border-[#f0f2f4] dark:border-gray-800">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 flex flex-1 justify-center py-3">
+<div class="layout-content-container flex flex-col w-full max-w-[1280px] flex-1">
+<div class="flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-[#111418] dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">University T&amp;P Cell</h2>
+</div>
+<div class="hidden lg:flex items-center gap-6">
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Statistics</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Recruiters</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">For Students</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#617589] flex border-none bg-[#f0f2f4] dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] dark:bg-gray-800 focus:border-none h-full placeholder:text-[#617589] px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 text-white text-sm font-bold transition-colors">
+<span class="truncate">Login</span>
+</button>
+<button class="lg:hidden flex items-center justify-center text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<div class="w-full bg-white dark:bg-background-dark">
+<div class="flex flex-col">
+<div class="@container">
+<div class="flex flex-col min-h-[500px] md:min-h-[600px] gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 relative" data-alt="University campus building with students walking in front during sunset" style='background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuACFZyUDnBvfr8gvWi2oAH9u3RWKcTygyCCWCTi-LCEMMuAuyY0pMz_E4Q9wHrHXgQgk22K_g8C2CW70miZj5JwZNLFBTt-ZSusDTFVGCOA_j9VgOATzHfukpHH3oXCiNgw8mjaJ_hpL-MbuBRpaaoap0k-GwDNuGlVAc69H1JwpX9WvDMfwxFC4CJSi_8O3SYpqNOy3lSoJrp4wG8q2_A3iE_PTXMHxy9fRopq4hOks7uZUEPFYP8I60IJucoFsepZtyzM7x1t_nz_");'>
+<div class="flex flex-col gap-4 text-center max-w-[800px] z-10 px-4">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl lg:text-6xl drop-shadow-sm">
+                                Bridging the Gap Between Talent and Opportunity
+                            </h1>
+<h2 class="text-gray-200 text-base font-normal leading-normal md:text-lg max-w-[600px] mx-auto">
+                                Empowering students with career-ready skills and connecting them with top-tier global employers. Join the placement drive today.
+                            </h2>
+</div>
+<div class="flex flex-wrap gap-4 justify-center z-10 mt-4">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 text-white text-base font-bold transition-transform hover:scale-105">
+<span class="truncate">Student Login</span>
+</button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20 text-white text-base font-bold transition-transform hover:scale-105">
+<span class="truncate">For Recruiters</span>
+</button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white text-[#111418] hover:bg-gray-100 text-base font-bold transition-transform hover:scale-105 shadow-lg">
+<span class="truncate flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">download</span> Brochure
+                                </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Section -->
+<div class="w-full py-10 px-4 md:px-10 flex justify-center bg-background-light dark:bg-background-dark">
+<div class="w-full max-w-[1280px]">
+<div class="flex flex-wrap gap-6">
+<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#1a2632] shadow-sm border border-gray-100 dark:border-gray-800 hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start">
+<p class="text-[#617589] dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Highest Package</p>
+<span class="material-symbols-outlined text-primary">emoji_events</span>
+</div>
+<p class="text-[#111418] dark:text-white tracking-tight text-3xl font-bold leading-tight">45 LPA</p>
+<p class="text-[#078838] text-sm font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +12% from last year
+                        </p>
+</div>
+<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#1a2632] shadow-sm border border-gray-100 dark:border-gray-800 hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start">
+<p class="text-[#617589] dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Placement Rate</p>
+<span class="material-symbols-outlined text-primary">pie_chart</span>
+</div>
+<p class="text-[#111418] dark:text-white tracking-tight text-3xl font-bold leading-tight">95%</p>
+<p class="text-[#078838] text-sm font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> Consistent Growth
+                        </p>
+</div>
+<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#1a2632] shadow-sm border border-gray-100 dark:border-gray-800 hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start">
+<p class="text-[#617589] dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Recruiters</p>
+<span class="material-symbols-outlined text-primary">handshake</span>
+</div>
+<p class="text-[#111418] dark:text-white tracking-tight text-3xl font-bold leading-tight">150+</p>
+<p class="text-[#078838] text-sm font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> 15 new partners
+                        </p>
+</div>
+<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#1a2632] shadow-sm border border-gray-100 dark:border-gray-800 hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start">
+<p class="text-[#617589] dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Avg Package</p>
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<p class="text-[#111418] dark:text-white tracking-tight text-3xl font-bold leading-tight">8.5 LPA</p>
+<p class="text-[#078838] text-sm font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +10% increase
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Career Guidance Programs Section -->
+<div class="w-full py-10 px-4 md:px-10 flex justify-center bg-white dark:bg-background-dark">
+<div class="w-full max-w-[1280px]">
+<h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight text-center mb-8">Career Guidance &amp; Training</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Program 1 -->
+<div class="flex flex-col gap-4 p-6 rounded-lg border border-gray-100 dark:border-gray-800 bg-[#f8f9fa] dark:bg-[#1a2632] hover:shadow-md transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">psychology</span>
+</div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Aptitude &amp; Logic</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm">Comprehensive training modules designed to sharpen your analytical skills and logical reasoning for entrance tests.</p>
+</div>
+<!-- Program 2 -->
+<div class="flex flex-col gap-4 p-6 rounded-lg border border-gray-100 dark:border-gray-800 bg-[#f8f9fa] dark:bg-[#1a2632] hover:shadow-md transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">record_voice_over</span>
+</div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Mock Interviews</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm">One-on-one sessions with industry experts to simulate real interview scenarios and provide constructive feedback.</p>
+</div>
+<!-- Program 3 -->
+<div class="flex flex-col gap-4 p-6 rounded-lg border border-gray-100 dark:border-gray-800 bg-[#f8f9fa] dark:bg-[#1a2632] hover:shadow-md transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Soft Skills</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm">Workshops focused on communication, leadership, and teamwork to ensure you are ready for the corporate environment.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Visualization Section -->
+<div class="w-full py-10 px-4 md:px-10 flex justify-center bg-background-light dark:bg-background-dark">
+<div class="w-full max-w-[1280px]">
+<h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight text-center mb-8">Placement Statistics by Branch</h2>
+<div class="flex flex-col lg:flex-row gap-6">
+<!-- Bar Chart -->
+<div class="flex-1 rounded-xl bg-white dark:bg-[#1a2632] p-6 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex flex-col gap-2 mb-6">
+<p class="text-[#111418] dark:text-white text-lg font-medium">Placements by Department</p>
+<p class="text-[#617589] dark:text-gray-400 text-sm">Total 1200 Students Placed</p>
+</div>
+<div class="grid h-[240px] grid-flow-col gap-4 md:gap-8 grid-rows-[1fr_auto] items-end justify-items-center px-2">
+<!-- Bars -->
+<div class="flex flex-col items-center w-full gap-2 h-full justify-end group cursor-pointer">
+<div class="bg-primary/20 group-hover:bg-primary transition-all w-full rounded-t-md relative" style="height: 90%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">90%</div>
+</div>
+<p class="text-[#617589] dark:text-gray-400 text-xs font-bold uppercase">CS</p>
+</div>
+<div class="flex flex-col items-center w-full gap-2 h-full justify-end group cursor-pointer">
+<div class="bg-primary/20 group-hover:bg-primary transition-all w-full rounded-t-md relative" style="height: 85%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">85%</div>
+</div>
+<p class="text-[#617589] dark:text-gray-400 text-xs font-bold uppercase">IT</p>
+</div>
+<div class="flex flex-col items-center w-full gap-2 h-full justify-end group cursor-pointer">
+<div class="bg-primary/20 group-hover:bg-primary transition-all w-full rounded-t-md relative" style="height: 70%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">70%</div>
+</div>
+<p class="text-[#617589] dark:text-gray-400 text-xs font-bold uppercase">ECE</p>
+</div>
+<div class="flex flex-col items-center w-full gap-2 h-full justify-end group cursor-pointer">
+<div class="bg-primary/20 group-hover:bg-primary transition-all w-full rounded-t-md relative" style="height: 60%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">60%</div>
+</div>
+<p class="text-[#617589] dark:text-gray-400 text-xs font-bold uppercase">Mech</p>
+</div>
+<div class="flex flex-col items-center w-full gap-2 h-full justify-end group cursor-pointer">
+<div class="bg-primary/20 group-hover:bg-primary transition-all w-full rounded-t-md relative" style="height: 55%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">55%</div>
+</div>
+<p class="text-[#617589] dark:text-gray-400 text-xs font-bold uppercase">Civil</p>
+</div>
+</div>
+</div>
+<!-- Line Chart -->
+<div class="flex-1 rounded-xl bg-white dark:bg-[#1a2632] p-6 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex flex-col gap-2 mb-4">
+<p class="text-[#111418] dark:text-white text-lg font-medium">Growth in Offers</p>
+<div class="flex items-center gap-2">
+<p class="text-[#617589] dark:text-gray-400 text-sm">Last 5 Years</p>
+<span class="bg-green-100 text-[#078838] text-xs font-bold px-2 py-0.5 rounded-full">+12%</span>
+</div>
+</div>
+<div class="flex flex-col h-[240px] justify-between">
+<div class="w-full h-[200px] relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 500 150">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#137fec" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#137fec" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 120 C 100 120, 150 80, 250 80 S 400 20, 500 10 V 150 H 0 Z" fill="url(#chartGradient)"></path>
+<path d="M0 120 C 100 120, 150 80, 250 80 S 400 20, 500 10" fill="none" stroke="#137fec" stroke-width="3" vector-effect="non-scaling-stroke"></path>
+<!-- Points -->
+<circle cx="0" cy="120" fill="#137fec" r="4"></circle>
+<circle cx="150" cy="95" fill="#137fec" r="4"></circle>
+<circle cx="250" cy="80" fill="#137fec" r="4"></circle>
+<circle cx="380" cy="35" fill="#137fec" r="4"></circle>
+<circle cx="500" cy="10" fill="#137fec" r="4"></circle>
+</svg>
+</div>
+<div class="flex justify-between px-2 text-[#617589] dark:text-gray-400 text-xs font-bold">
+<span>2020</span>
+<span>2021</span>
+<span>2022</span>
+<span>2023</span>
+<span>2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recruiters Marquee/Grid -->
+<div class="w-full py-16 px-4 md:px-10 bg-white dark:bg-background-dark border-y border-gray-100 dark:border-gray-800">
+<div class="max-w-[1280px] mx-auto text-center">
+<h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight mb-2">Our Top Recruiters</h2>
+<p class="text-[#617589] dark:text-gray-400 mb-10 max-w-2xl mx-auto">We are proud to partner with leading global organizations that trust our talent.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70">
+<!-- Using text as logos for demonstration -->
+<div class="flex items-center gap-2 font-black text-2xl text-gray-500 hover:text-[#111418] dark:hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl">terminal</span> TechCorp
+                     </div>
+<div class="flex items-center gap-2 font-black text-2xl text-gray-500 hover:text-[#111418] dark:hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl">diamond</span> Luxe
+                     </div>
+<div class="flex items-center gap-2 font-black text-2xl text-gray-500 hover:text-[#111418] dark:hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl">bolt</span> Energy
+                     </div>
+<div class="flex items-center gap-2 font-black text-2xl text-gray-500 hover:text-[#111418] dark:hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl">flight</span> Aero
+                     </div>
+<div class="flex items-center gap-2 font-black text-2xl text-gray-500 hover:text-[#111418] dark:hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl">payments</span> FinBank
+                     </div>
+<div class="flex items-center gap-2 font-black text-2xl text-gray-500 hover:text-[#111418] dark:hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl">public</span> Global
+                     </div>
+</div>
+</div>
+</div>
+<!-- Upcoming Events Section -->
+<div class="w-full py-10 px-4 md:px-10 flex justify-center bg-background-light dark:bg-background-dark">
+<div class="w-full max-w-[1280px]">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight">Upcoming Drives &amp; Workshops</h2>
+<a class="text-primary font-bold text-sm hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Event 1 -->
+<div class="flex flex-col md:flex-row bg-white dark:bg-[#1a2632] p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm items-center gap-6">
+<div class="flex flex-col items-center justify-center bg-primary/10 text-primary rounded-lg h-20 w-20 min-w-20">
+<span class="text-xs font-bold uppercase">Oct</span>
+<span class="text-2xl font-black">24</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Infosys Campus Recruitment Drive</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm mt-1">Open for CS, IT and ECE branches. Batch 2024.</p>
+<div class="flex items-center justify-center md:justify-start gap-4 mt-2 text-xs text-gray-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 9:00 AM</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Main Auditorium</span>
+</div>
+</div>
+<button class="bg-[#f0f2f4] dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-[#111418] dark:text-white font-bold py-2 px-6 rounded-lg transition-colors w-full md:w-auto">
+                            Register
+                        </button>
+</div>
+<!-- Event 2 -->
+<div class="flex flex-col md:flex-row bg-white dark:bg-[#1a2632] p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm items-center gap-6">
+<div class="flex flex-col items-center justify-center bg-primary/10 text-primary rounded-lg h-20 w-20 min-w-20">
+<span class="text-xs font-bold uppercase">Nov</span>
+<span class="text-2xl font-black">02</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Resume Building Workshop</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm mt-1">Expert session by HR leads from top MNCs.</p>
+<div class="flex items-center justify-center md:justify-start gap-4 mt-2 text-xs text-gray-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 2:00 PM</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">videocam</span> Online (Zoom)</span>
+</div>
+</div>
+<button class="bg-[#f0f2f4] dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-[#111418] dark:text-white font-bold py-2 px-6 rounded-lg transition-colors w-full md:w-auto">
+                            Register
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 mt-auto">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 py-12">
+<div class="flex flex-col md:flex-row justify-between gap-10">
+<div class="flex flex-col gap-4 max-w-sm">
+<div class="flex items-center gap-3 text-[#111418] dark:text-white">
+<div class="size-6 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h2 class="text-lg font-bold">University T&amp;P Cell</h2>
+</div>
+<p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed">
+                            The Training &amp; Placement Cell facilitates the process of placement of students passing out from the Institute besides collaborating with leading organizations and institutes in setting up of internship and training program of students.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-10 md:gap-20">
+<div class="flex flex-col gap-4">
+<h4 class="text-[#111418] dark:text-white font-bold text-base">Quick Links</h4>
+<div class="flex flex-col gap-2">
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Our Team</a>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Placement Policy</a>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Brochure</a>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Contact Us</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#111418] dark:text-white font-bold text-base">Contact</h4>
+<div class="flex flex-col gap-2">
+<p class="text-[#617589] dark:text-gray-400 text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span> tnp@university.edu
+                                </p>
+<p class="text-[#617589] dark:text-gray-400 text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">call</span> +91 123 456 7890
+                                </p>
+<p class="text-[#617589] dark:text-gray-400 text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> Admin Block, Campus
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-100 dark:border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#617589] dark:text-gray-400 text-sm">© 2024 University Training &amp; Placement Cell. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-[#617589] dark:text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-[#617589] dark:text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined">post_add</span></a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

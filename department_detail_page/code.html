@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Department Detail Page</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1C2630",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#283039",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for modern feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #3b4754;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display transition-colors duration-200 overflow-x-hidden">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-50 w-full border-b border-border-light dark:border-border-dark bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md">
+<div class="max-w-[1280px] mx-auto px-4 lg:px-10 h-16 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight">Tech University</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Admissions</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Research</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Campus Life</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<label class="hidden lg:flex items-center bg-background-light dark:bg-background-dark rounded-xl h-10 px-3 min-w-[200px] border border-transparent focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-400" placeholder="Search..."/>
+</label>
+<button class="bg-primary hover:bg-blue-600 text-white text-sm font-bold h-10 px-6 rounded-full transition-colors whitespace-nowrap">
+                    Apply Now
+                </button>
+</div>
+</div>
+</header>
+<main class="flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Students collaborating in a modern computer lab with glowing screens" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd3FHaw_kceSULH0P2vpndfOe3Hjps9MsycylxaWIctpUq8BkNulqF_aIEH_P0s-iwffAqkE7V55sq8nffkYOITOkN0II5msiKIB2Km61MJM4ikERpgiZh6oQ91WRORFWhBLUOmFXqxn5i9otM63dpXwVM-LISNe6sEZmLdR1RSuo-hkVXjlD-4wxlQbs8eujM4kCpwxZiB5rW9aoEbmV4Z3pWpIju-RYn_11-fcMqSEyfV_ft_AiWcJ-yojoSLkRdVh8QYBUs4emw");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/95 via-background-dark/80 to-transparent"></div>
+<div class="relative w-full max-w-[1280px] mx-auto px-4 lg:px-10 py-20 lg:py-32 flex flex-col justify-end min-h-[500px]">
+<div class="max-w-2xl flex flex-col gap-4">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider w-fit border border-primary/20">
+                        School of Engineering
+                    </span>
+<h1 class="text-4xl lg:text-6xl font-black leading-tight tracking-tight text-white">
+                        Department of Computer Science &amp; Engineering
+                    </h1>
+<p class="text-lg text-slate-300 font-normal leading-relaxed">
+                        Empowering the next generation of innovators through cutting-edge research, hands-on learning, and practical application in AI, Systems, and Software.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="bg-primary hover:bg-blue-600 text-white h-12 px-8 rounded-full font-bold transition-all shadow-lg shadow-primary/25">
+                            Apply Now
+                        </button>
+<button class="bg-surface-dark/50 hover:bg-surface-dark backdrop-blur-sm border border-white/10 text-white h-12 px-8 rounded-full font-bold transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                            Download Brochure
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Tabs Navigation -->
+<div class="sticky top-16 z-40 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur border-b border-border-light dark:border-border-dark">
+<div class="max-w-[960px] mx-auto px-4 flex gap-8 overflow-x-auto no-scrollbar">
+<a class="flex items-center justify-center border-b-[3px] border-primary text-slate-900 dark:text-white py-4 whitespace-nowrap" href="#overview">
+<span class="text-sm font-bold">Overview</span>
+</a>
+<a class="flex items-center justify-center border-b-[3px] border-transparent text-slate-500 hover:text-primary dark:text-slate-400 py-4 whitespace-nowrap transition-colors" href="#faculty">
+<span class="text-sm font-bold">Faculty</span>
+</a>
+<a class="flex items-center justify-center border-b-[3px] border-transparent text-slate-500 hover:text-primary dark:text-slate-400 py-4 whitespace-nowrap transition-colors" href="#syllabus">
+<span class="text-sm font-bold">Syllabus</span>
+</a>
+<a class="flex items-center justify-center border-b-[3px] border-transparent text-slate-500 hover:text-primary dark:text-slate-400 py-4 whitespace-nowrap transition-colors" href="#facilities">
+<span class="text-sm font-bold">Facilities</span>
+</a>
+<a class="flex items-center justify-center border-b-[3px] border-transparent text-slate-500 hover:text-primary dark:text-slate-400 py-4 whitespace-nowrap transition-colors" href="#outcomes">
+<span class="text-sm font-bold">Outcomes</span>
+</a>
+</div>
+</div>
+<div class="layout-content-container w-full max-w-[960px] flex flex-col gap-16 py-12 px-4">
+<!-- Overview Section (Implied text content) -->
+<section class="flex flex-col gap-6" id="overview">
+<div class="flex flex-col gap-2">
+<h2 class="text-3xl font-bold tracking-tight">About the Department</h2>
+<div class="w-12 h-1 bg-primary rounded-full"></div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
+                    The Department of Computer Science &amp; Engineering was established to provide world-class education in computing. We focus on theoretical foundations as well as practical applications. Our curriculum is designed to keep pace with the rapidly evolving technology landscape, offering students opportunities to work on real-world projects, research initiatives, and industry collaborations.
+                </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+<div class="p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark text-center">
+<span class="block text-3xl font-black text-primary mb-1">25+</span>
+<span class="text-sm text-slate-500 dark:text-slate-400 font-medium">Years of Excellence</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark text-center">
+<span class="block text-3xl font-black text-primary mb-1">40+</span>
+<span class="text-sm text-slate-500 dark:text-slate-400 font-medium">Expert Faculty</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark text-center">
+<span class="block text-3xl font-black text-primary mb-1">12</span>
+<span class="text-sm text-slate-500 dark:text-slate-400 font-medium">Research Labs</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark text-center">
+<span class="block text-3xl font-black text-primary mb-1">98%</span>
+<span class="text-sm text-slate-500 dark:text-slate-400 font-medium">Placement Rate</span>
+</div>
+</div>
+</section>
+<!-- Faculty Section -->
+<section class="flex flex-col gap-6" id="faculty">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-2xl font-bold">Meet Our Faculty</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Learn from the industry's best minds.</p>
+</div>
+<a class="text-primary text-sm font-bold flex items-center hover:underline" href="#">View All <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+<!-- Faculty Card 1 -->
+<div class="flex flex-col items-center gap-3 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark hover:shadow-lg transition-shadow border border-transparent hover:border-border-light dark:hover:border-border-dark cursor-pointer group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-2 ring-2 ring-offset-2 ring-transparent group-hover:ring-primary ring-offset-background-light dark:ring-offset-background-dark transition-all">
+<img class="w-full h-full object-cover" data-alt="Portrait of Dr. Sarah Jenkins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf_4t_WQDszkrbv9mFwBtsfzDmmECuUIf9gH0-RwZTIII-1azRgoyjo7ORHaF_tTN66ONupTJlLnbK5e8wPDsEB5tGqem9YJ7ExvEYSTguTMlTzLuz0T65SEHhL7Tti5uSScSIMggdSeYl6ljW9PaRP7SCtm2z0nt8EBgjBHRTlIy_MSBN52KoFJnwC-40w0tkaHQ6ARuxBgGZSql7p2s9yCed8ikycM4ATQUy70brUQ8uri-5EUNoSibQ228Rc2UTEHX9ZTYG6hhG"/>
+</div>
+<div class="text-center">
+<p class="font-bold text-slate-900 dark:text-white leading-tight">Dr. Sarah Jenkins</p>
+<p class="text-primary text-xs font-medium mt-1">Head of Department</p>
+<p class="text-slate-500 text-xs mt-1">Ph.D. Stanford</p>
+</div>
+</div>
+<!-- Faculty Card 2 -->
+<div class="flex flex-col items-center gap-3 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark hover:shadow-lg transition-shadow border border-transparent hover:border-border-light dark:hover:border-border-dark cursor-pointer group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-2 ring-2 ring-offset-2 ring-transparent group-hover:ring-primary ring-offset-background-light dark:ring-offset-background-dark transition-all">
+<img class="w-full h-full object-cover" data-alt="Portrait of Prof. Alan Grant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuQyshCAuXU2NLiiGL7-os0X-5B-3GugtL4RAqmSd5NDEAdYrjFK9e7XVVengJo6WE4IucGo2I3V6AG_7l0MJY740diJjxPCDGWap0ZDEvK_S8gU4-dUONHYvQvKR1A09vmqRZLDq8KdaMzZH2Shu88WkreJGGJ2gsuHFeT1D6NZA4EA1oLORf1JDvftrMseK14uI2gwysOqTbKUkSq5gmRnvPnV1KhNeAU1D-nTupfCLEX58eVoqUKYDACW8i7PIrkqQnr9LMAJ37"/>
+</div>
+<div class="text-center">
+<p class="font-bold text-slate-900 dark:text-white leading-tight">Prof. Alan Grant</p>
+<p class="text-primary text-xs font-medium mt-1">AI Research Lead</p>
+<p class="text-slate-500 text-xs mt-1">Ph.D. MIT</p>
+</div>
+</div>
+<!-- Faculty Card 3 -->
+<div class="flex flex-col items-center gap-3 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark hover:shadow-lg transition-shadow border border-transparent hover:border-border-light dark:hover:border-border-dark cursor-pointer group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-2 ring-2 ring-offset-2 ring-transparent group-hover:ring-primary ring-offset-background-light dark:ring-offset-background-dark transition-all">
+<img class="w-full h-full object-cover" data-alt="Portrait of Dr. Emily Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2tNUoqAyVbOQxaHHRFTM7uQJ6SxRLheAe1xBFWCgyKgz1bMp-n0YMFrfZQJjBV78ofWpBcSs61jNOAsQAejgZRxw0rGKwgrqLk1qDDEHtTz6rfEJPFvYq85jw2nGF9Gho3F19lBtT5ypxMMWhdlWd-DogWAXQx0dEPz1oIqQIq2tkmmHC01c-2OifXSS7LXJDNnZX4RQQQiHWVQdxJwPIjiInUm6TGerkkoVFff9t7Eo-pgBaxP9bms65hZfZDk6923YnOjRsun1a"/>
+</div>
+<div class="text-center">
+<p class="font-bold text-slate-900 dark:text-white leading-tight">Dr. Emily Chen</p>
+<p class="text-primary text-xs font-medium mt-1">Associate Professor</p>
+<p class="text-slate-500 text-xs mt-1">Ph.D. Berkeley</p>
+</div>
+</div>
+<!-- Faculty Card 4 -->
+<div class="flex flex-col items-center gap-3 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark hover:shadow-lg transition-shadow border border-transparent hover:border-border-light dark:hover:border-border-dark cursor-pointer group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-2 ring-2 ring-offset-2 ring-transparent group-hover:ring-primary ring-offset-background-light dark:ring-offset-background-dark transition-all">
+<img class="w-full h-full object-cover" data-alt="Portrait of Prof. Michael Ross" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChp2oi6H1g9qX0U7jVUfg0R-cKczH7QZ84t0Y563fQtQb59OjwI_FzIb_EV9kAw00xmg8PHM2EvLYp6txBM6nK9gRO7aSKU0efXZW1fAv4qxCBbRh2t6TJc7YHUFO9zBleP36_3Vw4wFnlqCyrkW68Veo8LwBV4aw-mT6OPT7vEAmVL_aTWtCgzjW81TfrTgLTlGaNSFFbquGl3TtrvHqQtftQ2tqgcs_YtlI52M2Z0OBua4Hz6U_XjD581imRNznY3YM33A4gPfRi"/>
+</div>
+<div class="text-center">
+<p class="font-bold text-slate-900 dark:text-white leading-tight">Prof. Michael Ross</p>
+<p class="text-primary text-xs font-medium mt-1">Lecturer</p>
+<p class="text-slate-500 text-xs mt-1">M.Tech IIT</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Syllabus Section -->
+<section class="flex flex-col gap-6" id="syllabus">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-2xl font-bold">Curriculum &amp; Syllabus</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Comprehensive 4-year roadmap.</p>
+</div>
+<button class="bg-surface-light dark:bg-surface-dark hover:bg-slate-200 dark:hover:bg-slate-800 text-sm font-bold py-2 px-4 rounded-full border border-border-light dark:border-border-dark transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Download PDF
+                    </button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Semester Item -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-start md:items-center gap-5">
+<div class="bg-blue-100 dark:bg-blue-900/30 text-primary p-3 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">filter_1</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">First Year: Foundations</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Intro to Programming, Mathematics I, Digital Logic, Engineering Physics</p>
+</div>
+</div>
+<button class="text-slate-400 group-hover:text-primary mt-4 md:mt-0 self-end md:self-auto">
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<!-- Semester Item -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-start md:items-center gap-5">
+<div class="bg-blue-100 dark:bg-blue-900/30 text-primary p-3 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">filter_2</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">Second Year: Core Concepts</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Data Structures, Algorithms, Computer Architecture, OS</p>
+</div>
+</div>
+<button class="text-slate-400 group-hover:text-primary mt-4 md:mt-0 self-end md:self-auto">
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<!-- Semester Item -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-start md:items-center gap-5">
+<div class="bg-blue-100 dark:bg-blue-900/30 text-primary p-3 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">filter_3</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">Third Year: Specialization</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Machine Learning, Database Systems, Networks, Web Tech</p>
+</div>
+</div>
+<button class="text-slate-400 group-hover:text-primary mt-4 md:mt-0 self-end md:self-auto">
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<!-- Semester Item -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-start md:items-center gap-5">
+<div class="bg-blue-100 dark:bg-blue-900/30 text-primary p-3 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">filter_4</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">Fourth Year: Capstone &amp; Research</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Major Project, Industry Internship, Cloud Computing, Electives</p>
+</div>
+</div>
+<button class="text-slate-400 group-hover:text-primary mt-4 md:mt-0 self-end md:self-auto">
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Facilities Section -->
+<section class="flex flex-col gap-6" id="facilities">
+<div>
+<h2 class="text-2xl font-bold">Laboratories &amp; Facilities</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Hands-on experience in state-of-the-art environments.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Facility 1 -->
+<div class="relative h-64 rounded-2xl overflow-hidden group cursor-pointer lg:col-span-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Students working on circuit boards in a robotics lab" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrCYn2Ynw5mbmLplpY-RyFs_x4vjefW3iNalpAjvNvI3vYyK1-s2tcLIo-RPQiEXP6NjqQnyTsCJTArNRPAgiw58rQQUG9Bw-ZB0ad2tSQ-6qEwPiBWwOH9fbsXiWga25jUHSu7CopT6Zoy4bfrdvajTPnr6kLvbNfrqiZzPj924Z19Tx-8KzaeXWPilF2wnExl4nWJK6ivdf5a2KKY5SVd1vmSIRAxkChKrqvdIUhU2da-VxUlkTBo1BK_mMH2fGo0tN_UvAugCO5");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white font-bold text-xl">Robotics &amp; IoT Lab</h3>
+<p class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">Equipped with Arduino, Raspberry Pi, and industrial robotic arms.</p>
+</div>
+</div>
+<!-- Facility 2 -->
+<div class="relative h-64 rounded-2xl overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Dark server room with blue lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8uxPRJ_e9Eu1JUSrcn-Ef_ArI0NLM7xvYPFgtnRPoH19272FB2PCP2gL9w07sg_wf7SF3_aDtJ5nF_mKYb1NfKtPKR7gBRvquzijEuiHcsnbRKY_bOojQx1zeus9YDephD0fkJjE2Pt25y04W7h3qXb78QHwP5w-92yJteod7ckgfUeoYz0E2qQe2RtGFYuh9-7uUfgTqt5TSKdbbtIWSahJ2QJ_ojA8wmoC2YecEZUlykBUY-ItMye0xe48Hgpi2I1ONZbA70umx");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white font-bold text-xl">High Performance Computing</h3>
+<p class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">GPU Clusters for Deep Learning.</p>
+</div>
+</div>
+<!-- Facility 3 -->
+<div class="relative h-64 rounded-2xl overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="VR headset on a table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdH6kSRACRcRuadTpMMeE9yoGuK7bOK1iQOyD7f_uQ88Md0CilVPcwttgPT5leTutl3STAXN0nylDWLqstGMWiHkoy19IL82QICW9LWxhiomV6JQHa-MIzuJf3fA0AG_C1vPKKMEvA8yORUfwKBTUNKlT6Y1hy92nSXAPifUpkxnJtQRVi1Ev_Ks2RT24SCiwIr6XoqbiGw9CTBPiovybUcGX96fLO7t1yqJMcjkZHt3vD-yTYteYDNbcgHjpbP8RspYtD381SXJOW");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white font-bold text-xl">AR/VR Studio</h3>
+</div>
+</div>
+<!-- Facility 4 -->
+<div class="relative h-64 rounded-2xl overflow-hidden group cursor-pointer lg:col-span-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Modern software computer lab" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9C8aGdhCD2y9RxUg9OjVWKnfLPh1Fbd_-5628L3CKCyLBmrDwH7XOm3Lj8ccQKVDhoytn5xZlINZ8fiQtgaq0K5ZWbAA8JTIYg_u3VzTl0qAhKX0TE6_InsO-8y4E_hzMllDY4VHfjyhvG8GxPRW3IIO4g6XUWZfeNLgCug4YO8e0Lih0cAilg9Ue-O1iSEf6Qh2w3UxhPgyVYHP21ij5rZXYhE1HNx-Wwr2q4Ci5_8NDBivuwtJVzwH0NDk9lY2syJedMtfK3GTK");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white font-bold text-xl">Software Development Hub</h3>
+<p class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">Open space for hackathons and collaborative coding.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Learning Outcomes -->
+<section class="flex flex-col gap-6 pb-12" id="outcomes">
+<div>
+<h2 class="text-2xl font-bold">Program Outcomes</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">What you will achieve upon graduation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark flex flex-col gap-4">
+<div class="size-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">psychology</span>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Critical Thinking</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Ability to analyze complex engineering problems and design systemic solutions using algorithmic principles.</p>
+</div>
+</div>
+<div class="p-6 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark flex flex-col gap-4">
+<div class="size-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">work</span>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Industry Readiness</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Proficiency in modern tools and languages (Python, Java, Cloud Ops) ensuring immediate employability.</p>
+</div>
+</div>
+<div class="p-6 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark flex flex-col gap-4">
+<div class="size-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Leadership &amp; Ethics</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Understanding professional responsibilities and the ability to lead diverse teams effectively.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark py-12 px-10">
+<div class="max-w-[1280px] mx-auto flex flex-col gap-10">
+<div class="flex flex-col md:flex-row justify-between gap-10">
+<div class="flex flex-col gap-4 max-w-sm">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+</div>
+<h2 class="text-xl font-bold">Tech University</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        A leading institution dedicated to excellence in teaching, learning, and research, and to developing leaders who make a difference globally.
+                    </p>
+<div class="flex gap-4 mt-2">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div class="flex flex-wrap gap-12 lg:gap-24">
+<div class="flex flex-col gap-4">
+<h3 class="font-bold text-slate-900 dark:text-white">Quick Links</h3>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Admissions</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Academic Calendar</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Library</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Alumni</a>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-bold text-slate-900 dark:text-white">Departments</h3>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Computer Science</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Mechanical Eng.</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Business School</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Medicine</a>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-bold text-slate-900 dark:text-white">Legal</h3>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Terms of Service</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Cookie Policy</a>
+</div>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-500 dark:text-slate-500">© 2024 Tech University. All rights reserved.</p>
+<div class="flex gap-6">
+<!-- Additional footer elements if needed -->
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>University Library</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "surface-dark": "#1c2127",
+              "surface-light": "#ffffff",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 flex w-full flex-col border-b border-solid border-[#e5e7eb] dark:border-[#283039] bg-surface-light dark:bg-[#111418]">
+<div class="flex items-center justify-between whitespace-nowrap px-10 py-3 max-w-[1440px] mx-auto w-full">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H10V44H4V4Z" fill="currentColor"></path>
+<path d="M14 4H20V44H14V4Z" fill="currentColor"></path>
+<path d="M24 4H44V34C44 39.5228 39.5228 44 34 44H24V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">University Library</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Research</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Help</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Login</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex flex-col flex-1">
+<!-- Hero Section -->
+<div class="relative w-full">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-[#111418]/80 to-[#111418] z-10"></div>
+<div class="h-full w-full bg-cover bg-center" data-alt="University library interior with rows of books and warm lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhVmZ2vbmh7uMKxInRoyP6kpHO7oigatSgvtgF__qc3KEpnWfQmfRQhv7v56dcMgQZXRd_mQnk6DQ1LXWFuVJh9TYf6Lo8vnvzVKZhxCDY0magNVka282fgrIa5e10Na4ljwq2Vj7ZjREJnFUZbB34CGnRqs8dbPh3r81nzStNyCf1S8AFmftdkeJuwZ89YO37ukb_k7NAByZKff-rfgDCfEFfdbFglLeCRn1Jl-L-VjcXOduoGYTWexVpMr5_hbTl8o2YnvY620Yr");'></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-20 flex flex-col items-center justify-center px-4 py-20 md:py-32 gap-8">
+<div class="flex flex-col gap-4 text-center max-w-[800px]">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-6xl">
+                        Discover, Learn, Succeed
+                    </h1>
+<p class="text-[#9dabb9] text-lg font-normal leading-normal md:text-xl">
+                        Access millions of digital and physical resources from the heart of campus.
+                    </p>
+</div>
+<!-- Search Module -->
+<div class="w-full max-w-[720px] bg-surface-light dark:bg-[#1c2127] rounded-xl shadow-xl border border-[#e5e7eb] dark:border-[#3b4754] overflow-hidden">
+<!-- Search Tabs -->
+<div class="flex border-b border-[#e5e7eb] dark:border-[#3b4754]">
+<button class="flex-1 py-4 text-center text-sm font-bold text-primary border-b-2 border-primary bg-primary/5">
+                            All
+                        </button>
+<button class="flex-1 py-4 text-center text-sm font-medium text-[#637588] dark:text-[#9dabb9] hover:text-[#111418] dark:hover:text-white transition-colors">
+                            Books
+                        </button>
+<button class="flex-1 py-4 text-center text-sm font-medium text-[#637588] dark:text-[#9dabb9] hover:text-[#111418] dark:hover:text-white transition-colors">
+                            Articles
+                        </button>
+<button class="flex-1 py-4 text-center text-sm font-medium text-[#637588] dark:text-[#9dabb9] hover:text-[#111418] dark:hover:text-white transition-colors">
+                            Databases
+                        </button>
+</div>
+<!-- Search Input -->
+<div class="p-4 md:p-6 flex flex-col md:flex-row gap-3">
+<div class="flex-1 relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-[#9dabb9]">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full h-12 rounded-lg bg-[#f0f2f5] dark:bg-[#111418] border-none pl-10 pr-4 text-[#111418] dark:text-white placeholder-[#9dabb9] focus:ring-2 focus:ring-primary/50" placeholder="Search books, articles, journals, and more..." type="text"/>
+</div>
+<button class="h-12 px-6 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors whitespace-nowrap">
+                            Search Catalog
+                        </button>
+</div>
+<div class="px-6 pb-4 flex gap-4 text-xs text-[#637588] dark:text-[#9dabb9]">
+<a class="hover:underline" href="#">Advanced Search</a>
+<a class="hover:underline" href="#">Course Reserves</a>
+<a class="hover:underline" href="#">Browse Journals</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats & Info Section -->
+<div class="w-full bg-surface-light dark:bg-[#111418] border-b border-[#e5e7eb] dark:border-[#283039]">
+<div class="max-w-[1440px] mx-auto px-10 py-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Hours -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#283039] border border-[#e5e7eb] dark:border-[#3b4754]">
+<div class="p-3 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-sm font-medium text-[#637588] dark:text-[#9dabb9]">Today's Hours</p>
+<p class="text-xl font-bold text-[#111418] dark:text-white mt-1">7:00 AM - 2:00 AM</p>
+<p class="text-xs text-green-500 mt-1 font-medium">Open Now</p>
+</div>
+</div>
+<!-- Capacity -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#283039] border border-[#e5e7eb] dark:border-[#3b4754]">
+<div class="p-3 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<div>
+<p class="text-sm font-medium text-[#637588] dark:text-[#9dabb9]">Current Capacity</p>
+<p class="text-xl font-bold text-[#111418] dark:text-white mt-1">45% (Moderate)</p>
+<div class="w-full h-1 bg-[#3b4754] rounded-full mt-2 overflow-hidden">
+<div class="h-full bg-green-500 w-[45%]"></div>
+</div>
+</div>
+</div>
+<!-- Quick Contact -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#283039] border border-[#e5e7eb] dark:border-[#3b4754]">
+<div class="p-3 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<p class="text-sm font-medium text-[#637588] dark:text-[#9dabb9]">Need Help?</p>
+<a class="text-lg font-bold text-[#111418] dark:text-white mt-1 hover:text-primary block" href="#">Ask a Librarian</a>
+<p class="text-xs text-[#637588] dark:text-[#9dabb9] mt-1">Available 24/7</p>
+</div>
+</div>
+<!-- My Account -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#283039] border border-[#e5e7eb] dark:border-[#3b4754]">
+<div class="p-3 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">account_circle</span>
+</div>
+<div>
+<p class="text-sm font-medium text-[#637588] dark:text-[#9dabb9]">My Library</p>
+<a class="text-lg font-bold text-[#111418] dark:text-white mt-1 hover:text-primary block" href="#">View Account</a>
+<p class="text-xs text-[#637588] dark:text-[#9dabb9] mt-1">Renewals &amp; Holds</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Services Grid -->
+<section class="w-full py-16 px-10 max-w-[1440px] mx-auto">
+<div class="flex flex-col gap-4 mb-10">
+<h2 class="text-3xl font-bold text-[#111418] dark:text-white">Essential Services</h2>
+<p class="text-[#637588] dark:text-[#9dabb9]">Quick access to tools and spaces for your academic success.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<a class="group flex flex-col p-6 rounded-xl bg-white dark:bg-[#1c2127] border border-[#e5e7eb] dark:border-[#3b4754] hover:border-primary dark:hover:border-primary transition-all hover:shadow-lg" href="#">
+<div class="mb-4 text-primary bg-primary/10 w-fit p-3 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">database</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Research Databases</h3>
+<p class="text-sm text-[#637588] dark:text-[#9dabb9]">Access JSTOR, IEEE, PubMed and thousands of other academic journals.</p>
+</a>
+<!-- Card 2 -->
+<a class="group flex flex-col p-6 rounded-xl bg-white dark:bg-[#1c2127] border border-[#e5e7eb] dark:border-[#3b4754] hover:border-primary dark:hover:border-primary transition-all hover:shadow-lg" href="#">
+<div class="mb-4 text-primary bg-primary/10 w-fit p-3 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">meeting_room</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Study Room Booking</h3>
+<p class="text-sm text-[#637588] dark:text-[#9dabb9]">Reserve quiet study spaces or collaboration rooms for group work.</p>
+</a>
+<!-- Card 3 -->
+<a class="group flex flex-col p-6 rounded-xl bg-white dark:bg-[#1c2127] border border-[#e5e7eb] dark:border-[#3b4754] hover:border-primary dark:hover:border-primary transition-all hover:shadow-lg" href="#">
+<div class="mb-4 text-primary bg-primary/10 w-fit p-3 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Interlibrary Loan</h3>
+<p class="text-sm text-[#637588] dark:text-[#9dabb9]">Request books and articles from other university libraries worldwide.</p>
+</a>
+<!-- Card 4 -->
+<a class="group flex flex-col p-6 rounded-xl bg-white dark:bg-[#1c2127] border border-[#e5e7eb] dark:border-[#3b4754] hover:border-primary dark:hover:border-primary transition-all hover:shadow-lg" href="#">
+<div class="mb-4 text-primary bg-primary/10 w-fit p-3 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">laptop_chromebook</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Tech Lending</h3>
+<p class="text-sm text-[#637588] dark:text-[#9dabb9]">Borrow laptops, cameras, chargers, and other equipment.</p>
+</a>
+</div>
+</section>
+<!-- New Arrivals Section -->
+<section class="w-full py-16 bg-[#f0f2f5] dark:bg-[#1c2127]">
+<div class="max-w-[1440px] mx-auto px-10">
+<div class="flex justify-between items-end mb-10">
+<div class="flex flex-col gap-2">
+<h2 class="text-3xl font-bold text-[#111418] dark:text-white">New Acquisitions</h2>
+<p class="text-[#637588] dark:text-[#9dabb9]">Fresh additions to our physical and digital collection.</p>
+</div>
+<a class="hidden sm:flex items-center gap-1 text-primary font-bold text-sm hover:underline" href="#">
+                        View All New Arrivals
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Book Item 1 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-[2/3] w-full rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800 shadow-md transition-transform group-hover:-translate-y-1">
+<img alt="Abstract book cover with geometric shapes" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX-rwoJwQRHF5exnlOW5I0SmhDcfvzgu--q63A-n68sm4wktaeWfrHH2Uz8lkEtroNHUmnKhFSEol2YoY6-RQ_R8NhcEG183vtEcJuNNt2qlxfmR8PJUXmy9sDYNtiZxJDxTr2o67NTvycs1kNzs5XjL0b-9pkcmUDF10FOrVuKGzPmoLnHKv8GcT6EWDhxQq4XpYOfu8ZeRYUEjJkVzL9Nu6a2nNEGPBJx2j6cdcrQ5W0dIpKnhtmLQ3-htfqHsnI7y3Yb7yVQdeS"/>
+</div>
+<div>
+<h4 class="font-bold text-[#111418] dark:text-white text-sm line-clamp-2 group-hover:text-primary">The Future of AI</h4>
+<p class="text-xs text-[#637588] dark:text-[#9dabb9] mt-1">J. Smith</p>
+</div>
+</div>
+<!-- Book Item 2 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-[2/3] w-full rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800 shadow-md transition-transform group-hover:-translate-y-1">
+<img alt="Book cover displaying a vintage botanical illustration" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7O0XSX1JH52EkYVLdJujyGPuH5-abBad3bdssqlaDnX_kzl1JxRJsFIqCGhZYPDirrQq094Iaw3RG6uazffzrGQntYpSlJcnghz9oLskPDrd9sN5SW_RLGFGs8MCtbmDk2ugbOTd3VTOAy3ZFZm70mxQ7pnGsXFlHYS13lNx_mG_f6ZoxI3WOA8vk0xSjCzRj9i1QHkEHXZj2zdEYLepgdJNsj2hPAwIcmHKzt8t6l0u9VZgCWQMXkpYw96j0giGQvH3LP6mgkR7Z"/>
+</div>
+<div>
+<h4 class="font-bold text-[#111418] dark:text-white text-sm line-clamp-2 group-hover:text-primary">Modern Biology</h4>
+<p class="text-xs text-[#637588] dark:text-[#9dabb9] mt-1">Dr. R. Green</p>
+</div>
+</div>
+<!-- Book Item 3 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-[2/3] w-full rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800 shadow-md transition-transform group-hover:-translate-y-1">
+<img alt="Minimalist book cover design with bold typography" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_NAvj0BD_yvBh7P4H8m9vgh5Gqk3xEg129q2Won0mJ-O3AT0cKPALu_hsvbDw73MbasJp9BX-MzuM25Fy85HuHk1ae7FlVUVEWbS5_JvJw5X1TeSfoXV670xLQK6F14S_RSuMQL1jFL8XpsRsX4vf8BleaZHJKwiOX6tugNIuzyBk-agjzu77hwm_CMt6_mV4Fg3OF1DZkXTvrCd8A4-KrsoitNejUTf20kauDQKawdGkVEfIUeRpcGWvEj_drMokj4-G6MiGqeru"/>
+</div>
+<div>
+<h4 class="font-bold text-[#111418] dark:text-white text-sm line-clamp-2 group-hover:text-primary">Digital Ethics</h4>
+<p class="text-xs text-[#637588] dark:text-[#9dabb9] mt-1">A. Turing</p>
+</div>
+</div>
+<!-- Book Item 4 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-[2/3] w-full rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800 shadow-md transition-transform group-hover:-translate-y-1">
+<img alt="Book spine texture on a stack of books" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvIo3tnqIx6LSb2IV16TE2lZvPJR35YFaEc98NMZ3CytaFsTy_-RS9azpWyIpi071X-0p25Vv_ibmzeXB1d0_F-3cy6jKdEH5augolYFPMnGoT_gVJ_ih5rY5En2P6r0mXPA4GgPyshCCNNY4pqf-zWySpsrKZRRz7oiOuH3vN6Fa-PReVK-xi9CS1hJ8NJabYF_GgaUZHHBXSRBxEmdrPU4SBZp2_JB4QDUJ5AHV5Uj_PSxcgmCN3QHErSf5t325MLUZ-FpadFbyK"/>
+</div>
+<div>
+<h4 class="font-bold text-[#111418] dark:text-white text-sm line-clamp-2 group-hover:text-primary">World History Vol. 4</h4>
+<p class="text-xs text-[#637588] dark:text-[#9dabb9] mt-1">H. Zinn</p>
+</div>
+</div>
+<!-- Book Item 5 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-[2/3] w-full rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800 shadow-md transition-transform group-hover:-translate-y-1">
+<img alt="Grey book cover with subtle texture" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpbQk5FsCx9RZm8G728SmoVlSh9meDuvxmqlfhHqYqAWHDsVKEQlFvKBPbA600eumGOuobp9_pbfSq0FkIpoEkCMtUoFf4OuwGPk5-92sNaCY2_IDl6OC4jvQsRl-UsBy1WRJCNLu3CHal1TNEvM3JlRP9xvJ7gk5dv7SbFHqBTfMCQGtTUc5iUURRLwp10fusEMaiok4fFXLBh_ePOtH_8lVMhQXmZuWk0bfpL0FcZkVYTavWUAXGkGhGm19-y-EoUcxEPfw9P1G7"/>
+</div>
+<div>
+<h4 class="font-bold text-[#111418] dark:text-white text-sm line-clamp-2 group-hover:text-primary">Quantum Physics</h4>
+<p class="text-xs text-[#637588] dark:text-[#9dabb9] mt-1">S. Hawking</p>
+</div>
+</div>
+<!-- Book Item 6 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-[2/3] w-full rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800 shadow-md transition-transform group-hover:-translate-y-1">
+<img alt="Book cover with architectural drawings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAkTaaPEQ9_zBDqvh66TUOyoJ75htstRKetWVpAl5yAg7QzbNSZusx4DqTEIyHRbiNIrrQCKnXudJdEjWxF_oJUcmxvgMxJRSf1S-pGfDUYpZb4r60RO_UxyDrpiyGHX9yJsaUW39Iwbp8JFYndqKnh7xOfiFbVy-Is3Oa-hDrKsblTWuFCVIK0Ke2uFYNVPPNLdCylyP5Rv79ylgdePDi4a0LAiaav9pdREKgEq4VlSEv6Ght77Ya-5Y1NO_g_xuJ3y4rJe2Xd2Rh"/>
+</div>
+<div>
+<h4 class="font-bold text-[#111418] dark:text-white text-sm line-clamp-2 group-hover:text-primary">Sustainable Design</h4>
+<p class="text-xs text-[#637588] dark:text-[#9dabb9] mt-1">L. Foster</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="w-full py-20 px-10 max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row gap-8 rounded-2xl bg-gradient-to-r from-[#1c2127] to-[#111418] border border-[#3b4754] p-10 md:p-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -mr-16 -mt-16 pointer-events-none"></div>
+<div class="flex-1 flex flex-col justify-center gap-6 z-10">
+<h2 class="text-3xl md:text-4xl font-black text-white leading-tight">Expert Research Support</h2>
+<p class="text-[#9dabb9] text-lg max-w-xl">
+                        Struggling with a citation? Can't find a specific resource? Our subject specialist librarians are available for one-on-one consultations to help you succeed.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                            Book a Consultation
+                        </button>
+<button class="bg-[#283039] hover:bg-[#3b4754] text-white font-bold py-3 px-6 rounded-lg transition-colors border border-[#3b4754]">
+                            View Research Guides
+                        </button>
+</div>
+</div>
+<div class="flex-1 flex items-center justify-center md:justify-end z-10">
+<div class="relative w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-2xl border border-[#3b4754]">
+<img alt="Students studying together in a modern library space" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-t6lSM5ErG5O_l_d0ijZkNjI7on4qOPrza-WJ6KPz0RQYwbunMvhqmSW15g6z5Ycf663nb9XRyYtV1-uSPG7NLjie8AuXir8dIhiJzHlBeVxxeuPYZ6emXpBX7u73jQtOaBsuqU7_rw92ImBSoahzxfdjG_tDq9nzFU1_rfcirLgar7MHw92Mzu9sQ_3mhcE7WvyPMYZMzLMQ1t6BA-NbzBwBsjr-S3AXpOqTsA0R2IJtLn24-TowB40DhALQpvMHT2v7JY6pz5tr"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-light dark:bg-[#111418] border-t border-[#e5e7eb] dark:border-[#283039] pt-16 pb-8">
+<div class="max-w-[1440px] mx-auto px-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-[#111418] dark:text-white mb-2">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H10V44H4V4Z" fill="currentColor"></path>
+<path d="M14 4H20V44H14V4Z" fill="currentColor"></path>
+<path d="M24 4H44V34C44 39.5228 39.5228 44 34 44H24V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold">University Library</h2>
+</div>
+<p class="text-sm text-[#637588] dark:text-[#9dabb9]">
+                        123 University Ave<br/>
+                        Academic City, ST 12345<br/>
+                        (555) 123-4567
+                    </p>
+<div class="flex gap-4">
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#"><i class="material-symbols-outlined">public</i></a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#"><i class="material-symbols-outlined">mail</i></a>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-bold text-[#111418] dark:text-white mb-2">Quick Links</h3>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Catalog Search</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Database A-Z</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Journal Finder</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Course Reserves</a>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-bold text-[#111418] dark:text-white mb-2">Services</h3>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Study Room Booking</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Interlibrary Loan</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Special Collections</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Technology Lending</a>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-bold text-[#111418] dark:text-white mb-2">About Us</h3>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Mission &amp; Values</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Staff Directory</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Jobs</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Accessibility</a>
+</div>
+</div>
+<div class="border-t border-[#e5e7eb] dark:border-[#283039] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-[#637588] dark:text-[#9dabb9]">© 2023 University Library. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-[#637588] dark:text-[#9dabb9] hover:text-primary" href="#">Terms of Use</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Calendar - University of Design</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for calendar if needed */
+        .calendar-grid::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .calendar-grid::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
+        .calendar-grid::-webkit-scrollbar-track {
+            background-color: #f1f5f9;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-x-hidden min-h-screen flex flex-col">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f0f2f4] dark:border-[#2a3441] bg-white dark:bg-[#1a2634] px-10 py-3 shadow-sm">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">University of Design</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-[#111418] dark:text-[#d1d5db] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111418] dark:text-[#d1d5db] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-[#111418] dark:text-[#d1d5db] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Admissions</a>
+<a class="text-[#111418] dark:text-[#d1d5db] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Campus Life</a>
+<a class="text-[#111418] dark:text-[#d1d5db] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Research</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#617589] flex border-none bg-[#f0f2f4] dark:bg-[#2a3441] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] dark:bg-[#2a3441] focus:border-none h-full placeholder:text-[#617589] px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal" placeholder="Search events..." value=""/>
+</div>
+</label>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Student Portal</span>
+</button>
+<div class="md:hidden flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#2a3441] cursor-pointer">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center py-8 px-4 md:px-10 lg:px-20 w-full max-w-[1440px] mx-auto">
+<!-- Page Header & Controls -->
+<div class="w-full mb-8">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#e5e7eb] dark:border-[#2a3441]">
+<div class="flex flex-col gap-2">
+<h1 class="text-[#111418] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Academic Calendar</h1>
+<p class="text-[#617589] dark:text-[#9ca3af] text-base font-normal leading-normal max-w-2xl">
+                        Stay updated with important academic dates, examination schedules, and university holidays for the 2023-2024 academic year.
+                    </p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-white dark:bg-[#2a3441] border border-[#d1d5db] dark:border-[#4b5563] rounded-lg text-[#111418] dark:text-white text-sm font-bold hover:bg-gray-50 dark:hover:bg-[#374151] transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Download PDF</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Add to Calendar</span>
+</button>
+</div>
+</div>
+<!-- Filters & View Toggle -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mt-6">
+<!-- Month/Year Navigation -->
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-white dark:bg-[#1a2634] rounded-lg border border-[#e5e7eb] dark:border-[#2a3441] p-1 shadow-sm">
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f4] dark:hover:bg-[#374151] text-[#617589] dark:text-[#9ca3af]">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="px-4 text-lg font-bold text-[#111418] dark:text-white">October 2023</span>
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f4] dark:hover:bg-[#374151] text-[#617589] dark:text-[#9ca3af]">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<button class="hidden md:block text-sm font-medium text-primary hover:underline">Jump to Today</button>
+</div>
+<!-- View Switcher -->
+<div class="flex bg-[#f0f2f4] dark:bg-[#2a3441] p-1 rounded-lg">
+<button class="px-4 py-1.5 rounded-md bg-white dark:bg-[#1a2634] shadow-sm text-[#111418] dark:text-white text-sm font-medium">Month</button>
+<button class="px-4 py-1.5 rounded-md text-[#617589] dark:text-[#9ca3af] hover:text-[#111418] dark:hover:text-white text-sm font-medium transition-colors">Week</button>
+<button class="px-4 py-1.5 rounded-md text-[#617589] dark:text-[#9ca3af] hover:text-[#111418] dark:hover:text-white text-sm font-medium transition-colors">List</button>
+</div>
+</div>
+<!-- Chips Filters -->
+<div class="flex flex-wrap gap-3 mt-4">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#111418] dark:bg-white text-white dark:text-[#111418] text-sm font-medium transition-colors">
+<span>All Events</span>
+</button>
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border border-transparent hover:border-red-200 text-sm font-medium transition-colors">
+<span class="size-2 rounded-full bg-red-500"></span>
+<span>Examinations</span>
+</button>
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 border border-transparent hover:border-amber-200 text-sm font-medium transition-colors">
+<span class="size-2 rounded-full bg-amber-500"></span>
+<span>Holidays</span>
+</button>
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-transparent hover:border-emerald-200 text-sm font-medium transition-colors">
+<span class="size-2 rounded-full bg-emerald-500"></span>
+<span>Admissions</span>
+</button>
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-transparent hover:border-blue-200 text-sm font-medium transition-colors">
+<span class="size-2 rounded-full bg-blue-500"></span>
+<span>Sports</span>
+</button>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-8 w-full h-full min-h-[600px]">
+<!-- Calendar Grid (Left) -->
+<div class="xl:col-span-3 bg-white dark:bg-[#1a2634] rounded-xl border border-[#e5e7eb] dark:border-[#2a3441] shadow-sm flex flex-col overflow-hidden">
+<!-- Days Header -->
+<div class="grid grid-cols-7 border-b border-[#e5e7eb] dark:border-[#2a3441] bg-[#f9fafb] dark:bg-[#202d3d]">
+<div class="py-3 text-center text-sm font-semibold text-[#617589] dark:text-[#9ca3af]">Sun</div>
+<div class="py-3 text-center text-sm font-semibold text-[#617589] dark:text-[#9ca3af]">Mon</div>
+<div class="py-3 text-center text-sm font-semibold text-[#617589] dark:text-[#9ca3af]">Tue</div>
+<div class="py-3 text-center text-sm font-semibold text-[#617589] dark:text-[#9ca3af]">Wed</div>
+<div class="py-3 text-center text-sm font-semibold text-[#617589] dark:text-[#9ca3af]">Thu</div>
+<div class="py-3 text-center text-sm font-semibold text-[#617589] dark:text-[#9ca3af]">Fri</div>
+<div class="py-3 text-center text-sm font-semibold text-[#617589] dark:text-[#9ca3af]">Sat</div>
+</div>
+<!-- Calendar Cells -->
+<div class="grid grid-cols-7 flex-1 auto-rows-fr bg-[#e5e7eb] dark:bg-[#2a3441] gap-px">
+<!-- Previous Month Days -->
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">24</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">25</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">26</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">27</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">28</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">29</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">30</span>
+</div>
+<!-- Current Month Days -->
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">1</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">2</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-200 truncate border-l-2 border-emerald-500">
+                            Fall Admissions Open
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">3</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">4</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">5</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">6</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">7</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">8</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">9</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200 truncate border-l-2 border-red-500">
+                            Mid-term Exams Start
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">10</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200 truncate border-l-2 border-red-500">
+                            Physics 101 Exam
+                        </div>
+<div class="px-2 py-1 rounded text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200 truncate border-l-2 border-red-500">
+                            Chem 202 Exam
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">11</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200 truncate border-l-2 border-red-500">
+                            Math 301 Exam
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">12</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200 truncate border-l-2 border-red-500">
+                            History 101 Exam
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">13</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200 truncate border-l-2 border-red-500">
+                            Mid-terms End
+                        </div>
+<div class="px-2 py-1 rounded text-xs font-medium bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 truncate border-l-2 border-blue-500">
+                            Basketball Semi-Finals
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">14</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">15</span>
+</div>
+<!-- Today's Date -->
+<div class="bg-blue-50/50 dark:bg-blue-900/20 min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors cursor-pointer relative">
+<span class="size-7 flex items-center justify-center rounded-full bg-primary text-white text-sm font-bold shadow-md">16</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 truncate border-l-2 border-amber-500">
+                            Campus Cleaning Day
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">17</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">18</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">19</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-200 truncate border-l-2 border-emerald-500">
+                            Guest Lecture: AI
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">20</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">21</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">22</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">23</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">24</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 truncate border-l-2 border-amber-500">
+                            Thanksgiving Break
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">25</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 truncate border-l-2 border-amber-500">
+                            Thanksgiving Break
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">26</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 truncate border-l-2 border-amber-500">
+                            Thanksgiving Break
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">27</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">28</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">29</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">30</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-200 truncate border-l-2 border-emerald-500">
+                            Graduation Deadline
+                        </div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 group hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors cursor-pointer relative">
+<span class="text-sm font-medium text-[#111418] dark:text-white">31</span>
+<div class="px-2 py-1 rounded text-xs font-medium bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 truncate border-l-2 border-blue-500">
+                            Halloween Party
+                        </div>
+</div>
+<!-- Next Month Fillers to complete grid -->
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">1</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">2</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">3</span>
+</div>
+<div class="bg-white dark:bg-[#1a2634] min-h-[120px] p-2 flex flex-col gap-1 opacity-50">
+<span class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">4</span>
+</div>
+</div>
+</div>
+<!-- Sidebar (Right) -->
+<div class="xl:col-span-1 flex flex-col gap-6">
+<!-- Upcoming Widget -->
+<div class="bg-white dark:bg-[#1a2634] rounded-xl border border-[#e5e7eb] dark:border-[#2a3441] shadow-sm p-5">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Upcoming Events</h3>
+<a class="text-sm font-medium text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Event Item -->
+<div class="flex gap-3 items-start group cursor-pointer p-2 -mx-2 rounded-lg hover:bg-gray-50 dark:hover:bg-[#202d3d] transition-colors">
+<div class="flex flex-col items-center justify-center min-w-12 h-14 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-900/30 text-red-700 dark:text-red-300">
+<span class="text-xs font-bold uppercase">Oct</span>
+<span class="text-lg font-black leading-none">16</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Campus Cleaning Day</h4>
+<p class="text-xs text-[#617589] dark:text-[#9ca3af] mt-1">9:00 AM • Main Quad</p>
+<span class="inline-flex mt-1.5 items-center px-2 py-0.5 rounded text-[10px] font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">Holiday</span>
+</div>
+</div>
+<!-- Event Item -->
+<div class="flex gap-3 items-start group cursor-pointer p-2 -mx-2 rounded-lg hover:bg-gray-50 dark:hover:bg-[#202d3d] transition-colors">
+<div class="flex flex-col items-center justify-center min-w-12 h-14 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-100 dark:border-emerald-900/30 text-emerald-700 dark:text-emerald-300">
+<span class="text-xs font-bold uppercase">Oct</span>
+<span class="text-lg font-black leading-none">19</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Guest Lecture: AI</h4>
+<p class="text-xs text-[#617589] dark:text-[#9ca3af] mt-1">2:00 PM • Aud. B</p>
+<span class="inline-flex mt-1.5 items-center px-2 py-0.5 rounded text-[10px] font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200">Academics</span>
+</div>
+</div>
+<!-- Event Item -->
+<div class="flex gap-3 items-start group cursor-pointer p-2 -mx-2 rounded-lg hover:bg-gray-50 dark:hover:bg-[#202d3d] transition-colors">
+<div class="flex flex-col items-center justify-center min-w-12 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-900/30 text-blue-700 dark:text-blue-300">
+<span class="text-xs font-bold uppercase">Oct</span>
+<span class="text-lg font-black leading-none">24</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Thanksgiving Break</h4>
+<p class="text-xs text-[#617589] dark:text-[#9ca3af] mt-1">All Day • Campus Wide</p>
+<span class="inline-flex mt-1.5 items-center px-2 py-0.5 rounded text-[10px] font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">Holiday</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Announcements Widget -->
+<div class="bg-gradient-to-br from-primary to-[#0f67be] rounded-xl shadow-lg p-5 text-white">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined">campaign</span>
+<h3 class="text-lg font-bold">Important Notice</h3>
+</div>
+<p class="text-sm text-blue-100 leading-relaxed mb-4">
+                        Fall Semester registration closes on October 30th. Please ensure all your electives are finalized before the deadline.
+                    </p>
+<button class="w-full py-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg text-sm font-bold transition-colors">View Details</button>
+</div>
+<!-- Mini Calendar (Reference) -->
+<div class="bg-white dark:bg-[#1a2634] rounded-xl border border-[#e5e7eb] dark:border-[#2a3441] shadow-sm p-4 hidden xl:block">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm font-bold">November 2023</span>
+<div class="flex gap-1">
+<button class="size-6 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<button class="size-6 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 text-center text-xs text-[#617589] dark:text-[#9ca3af] mb-1">
+<span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+</div>
+<div class="grid grid-cols-7 text-center gap-y-1 text-xs">
+<span class="p-1 opacity-30">29</span><span class="p-1 opacity-30">30</span><span class="p-1 opacity-30">31</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">1</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">2</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">3</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">4</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">5</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">6</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">7</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">8</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">9</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">10</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">11</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">12</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">13</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">14</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">15</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">16</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">17</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">18</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">19</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">20</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">21</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">22</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">23</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">24</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">25</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">26</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">27</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">28</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">29</span>
+<span class="p-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#2a3441] rounded">30</span>
+</div>
+</div>
+<!-- Footer/Links -->
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-xs text-[#617589] dark:text-[#9ca3af] px-2">
+<a class="hover:underline" href="#">Academic Policies</a>
+<a class="hover:underline" href="#">Registrar Office</a>
+<a class="hover:underline" href="#">Help &amp; Support</a>
+<span class="block w-full mt-2 opacity-50">© 2023 University of Design</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Map Section (Decorative) -->
+<section class="w-full h-48 relative mt-10">
+<div class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent z-10"></div>
+<img alt="University Campus" class="w-full h-full object-cover object-center opacity-40 dark:opacity-20 grayscale" data-alt="University campus aerial view with green lawns and modern buildings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlO0wj_aX1ZyrqsuQHYfZ5XjkzEdvD0tDrZd2XZQW-pI5E_ZO1zJ4PRSSwnAVrWO-RfxWcM9Lftwr6OqNhILRaxaWlvW63M11B5rVM550ZIMYZuStg2ZEi3qZOLpFTRIz5pXSr1vX5GwYGpN5kql-2pKEeybuThaL_b1s_jqx19bjGA0LfSKspB0v5_U74nKRm5xdzUSMLRHB6o_GmQgTh9H4UJ2G9TW3FMj1saID41vHXz3GHvMsPjrtDhPh18hfO9PkTGMTSSzYi"/>
+<div class="absolute bottom-4 left-0 right-0 z-20 flex justify-center">
+<p class="text-sm font-medium text-[#617589] dark:text-[#9ca3af]">University of Design • 123 Academic Way, Knowledge City</p>
+</div>
+</section>
+</body></html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sports &amp; NCC / NSS - University Portal</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Lexend & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111418", // Darker background to match the style
+                        "surface-dark": "#1e2329", // Slightly lighter for cards
+                        "border-dark": "#283039",
+                        "text-secondary": "#9dabb9"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<div class="w-full flex justify-center border-b border-solid border-border-dark bg-[#111418]">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px]">
+<header class="flex items-center justify-between whitespace-nowrap px-4 py-3 md:px-10">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white cursor-pointer">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] hidden md:block">University Portal</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Admissions</a>
+<a class="text-white text-sm font-medium leading-normal text-primary" href="#">Student Life</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-[#283039]">
+<div class="text-[#9dabb9] flex border-none items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-[#9dabb9] px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Login</span>
+</button>
+</div>
+</header>
+</div>
+</div>
+<div class="flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] px-4 md:px-0">
+<!-- Hero Section -->
+<div class="@container mb-8">
+<div class="">
+<div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 relative overflow-hidden group" data-alt="Students playing football on a green field with sunlight flaring" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuARybr-9z1ulDc4bcutoQChuCXexAn4rYdxhekS9zzlTr8S4WOwmxv3NE4Fa53uFjy0to5gYECmUr-5-FYZ6MeRBC9XE735dcL6MF7MW--js9OZdWpIX9yqyTEMk-D44D4s1fQ0fqb7f-ZWQmPO0Zx-ZbkbLTVRVda8CARqozhLe7tqUpH-42eJthTpaDkkFfJ7J06nFr8trvPuOXEPvKSIIicfgQNWC6yL92qk-zeJSH781QJyYIPntQ1CLMx121LIdW4H5cX6tG80");'>
+<div class="flex flex-col gap-4 text-center z-10 max-w-[700px]">
+<div class="flex items-center justify-center gap-2 mb-2">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-primary/30">Excellence in Action</span>
+</div>
+<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+                                        Forging Character Through <span class="text-primary">Sports &amp; Service</span>
+</h1>
+<h2 class="text-white/90 text-sm md:text-lg font-normal leading-relaxed">
+                                        Join a legacy of champions. Whether on the field, in the corps, or serving the community, find your passion and build discipline.
+                                    </h2>
+</div>
+<div class="flex gap-4 z-10 mt-4">
+<button class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 text-white text-base font-bold transition-all shadow-lg shadow-blue-900/20">
+                                        Explore Activities
+                                    </button>
+<button class="flex items-center justify-center rounded-lg h-12 px-6 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-base font-bold border border-white/20 transition-all">
+                                        View Gallery
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabs -->
+<div class="mb-8 sticky top-0 z-20 bg-background-dark/95 backdrop-blur pt-2">
+<div class="flex border-b border-border-dark w-full overflow-x-auto no-scrollbar">
+<a class="flex items-center justify-center border-b-[3px] border-b-primary text-white pb-3 pt-4 px-6 min-w-fit cursor-pointer hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined mr-2 text-[20px]">sports_cricket</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Sports</p>
+</a>
+<a class="flex items-center justify-center border-b-[3px] border-b-transparent text-text-secondary pb-3 pt-4 px-6 min-w-fit cursor-pointer hover:text-white hover:border-b-white/20 transition-colors" href="#">
+<span class="material-symbols-outlined mr-2 text-[20px]">military_tech</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">NCC</p>
+</a>
+<a class="flex items-center justify-center border-b-[3px] border-b-transparent text-text-secondary pb-3 pt-4 px-6 min-w-fit cursor-pointer hover:text-white hover:border-b-white/20 transition-colors" href="#">
+<span class="material-symbols-outlined mr-2 text-[20px]">volunteer_activism</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">NSS</p>
+</a>
+</div>
+</div>
+<!-- Key Stats Section -->
+<section class="mb-10">
+<div class="flex items-center justify-between px-2 pb-4">
+<h2 class="text-white text-xl md:text-[22px] font-bold leading-tight">Year at a Glance</h2>
+<button class="text-primary text-sm font-bold hover:underline">View Full Report</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Stat Card 1 -->
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-border-dark bg-surface-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-center justify-between">
+<p class="text-text-secondary text-sm font-medium uppercase tracking-wider">Trophies</p>
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">emoji_events</span>
+</div>
+<p class="text-white text-3xl font-bold leading-tight mt-2">24</p>
+<div class="flex items-center gap-1 text-[#0bda5b] text-xs font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+4 vs last year</span>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-border-dark bg-surface-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-center justify-between">
+<p class="text-text-secondary text-sm font-medium uppercase tracking-wider">NCC Cadets</p>
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">groups</span>
+</div>
+<p class="text-white text-3xl font-bold leading-tight mt-2">120</p>
+<div class="flex items-center gap-1 text-text-secondary text-xs font-medium">
+<span>Fully Enrolled</span>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-border-dark bg-surface-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-center justify-between">
+<p class="text-text-secondary text-sm font-medium uppercase tracking-wider">Service Hours</p>
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">schedule</span>
+</div>
+<p class="text-white text-3xl font-bold leading-tight mt-2">12k+</p>
+<div class="flex items-center gap-1 text-[#0bda5b] text-xs font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>NSS Contribution</span>
+</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-border-dark bg-surface-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-center justify-between">
+<p class="text-text-secondary text-sm font-medium uppercase tracking-wider">Events</p>
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">calendar_month</span>
+</div>
+<p class="text-white text-3xl font-bold leading-tight mt-2">15</p>
+<div class="flex items-center gap-1 text-primary text-xs font-medium">
+<span>Upcoming this month</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+<!-- Main Column (Events/Fixtures) -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<h2 class="text-white text-xl font-bold leading-tight px-2">Upcoming Fixtures &amp; Camps</h2>
+<!-- Event Item 1 -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border border-border-dark bg-surface-dark p-5 hover:bg-[#252b33] transition-colors cursor-pointer">
+<div class="flex items-center gap-5">
+<div class="flex flex-col items-center justify-center rounded-lg bg-[#283039] w-14 h-14 md:w-16 md:h-16 shrink-0 border border-white/5">
+<span class="text-[10px] md:text-xs font-bold text-primary tracking-widest">OCT</span>
+<span class="text-lg md:text-2xl font-black text-white">24</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-[#283039] text-text-secondary text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider border border-white/5">Cricket</span>
+<span class="text-red-400 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400"></span> Live
+                                            </span>
+</div>
+<h3 class="text-white font-bold text-base md:text-lg">Inter-University Semi-Finals</h3>
+<p class="text-text-secondary text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                            Main Stadium • 10:00 AM
+                                        </p>
+</div>
+</div>
+<button class="w-full sm:w-auto bg-[#283039] hover:bg-[#343d48] text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors border border-white/5">
+                                    Match Center
+                                </button>
+</div>
+<!-- Event Item 2 -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border border-border-dark bg-surface-dark p-5 hover:bg-[#252b33] transition-colors cursor-pointer">
+<div class="flex items-center gap-5">
+<div class="flex flex-col items-center justify-center rounded-lg bg-[#283039] w-14 h-14 md:w-16 md:h-16 shrink-0 border border-white/5">
+<span class="text-[10px] md:text-xs font-bold text-text-secondary tracking-widest">NOV</span>
+<span class="text-lg md:text-2xl font-black text-white">02</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-[#283039] text-text-secondary text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider border border-white/5">NCC</span>
+</div>
+<h3 class="text-white font-bold text-base md:text-lg">Annual Training Camp (ATC)</h3>
+<p class="text-text-secondary text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                            Parade Ground • 06:00 AM
+                                        </p>
+</div>
+</div>
+<button class="w-full sm:w-auto bg-[#283039] hover:bg-[#343d48] text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors border border-white/5">
+                                    View Syllabus
+                                </button>
+</div>
+<!-- Event Item 3 -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border border-border-dark bg-surface-dark p-5 hover:bg-[#252b33] transition-colors cursor-pointer">
+<div class="flex items-center gap-5">
+<div class="flex flex-col items-center justify-center rounded-lg bg-[#283039] w-14 h-14 md:w-16 md:h-16 shrink-0 border border-white/5">
+<span class="text-[10px] md:text-xs font-bold text-text-secondary tracking-widest">NOV</span>
+<span class="text-lg md:text-2xl font-black text-white">15</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-[#283039] text-text-secondary text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider border border-white/5">NSS</span>
+</div>
+<h3 class="text-white font-bold text-base md:text-lg">Blood Donation Drive</h3>
+<p class="text-text-secondary text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                            Student Center • 09:00 AM
+                                        </p>
+</div>
+</div>
+<button class="w-full sm:w-auto bg-[#283039] hover:bg-[#343d48] text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors border border-white/5">
+                                    Register
+                                </button>
+</div>
+</div>
+<!-- Sidebar Column (Coordinators & Quick Links) -->
+<div class="flex flex-col gap-6">
+<!-- Coordinators -->
+<div class="rounded-xl border border-border-dark bg-surface-dark p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-white font-bold text-lg">Key Contacts</h3>
+<a class="text-primary text-xs font-bold hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Person 1 -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center border border-white/10" data-alt="Profile picture of Coach Sharma" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVAJmDpUXD1VBHg1zeKLkP5BJIzXK1AKTtll1Kpf96N9b3sdtdHtR0i2nsoIQpb_0ogvP18UtDm3V6iFVGStyfNQlPlYevR-li9WG38Dpv2nnonPnP8LEohMUOozOzISlNIeiMz5n_fEOa41VpG8lMPEtRVlolLOpIikkacYDYVXCS3czGyQNmpPkpsAbpENwLgTJzXaXit7DH9XJThWdTQ0iV5ZYv_XRKHrQbuUWLK4GrSGVGa60u6gNT1mmPpBPFv2BWbA8By_S7')"></div>
+<div class="flex-1">
+<p class="text-white text-sm font-bold">Coach Sharma</p>
+<p class="text-text-secondary text-xs">Director of Physical Ed.</p>
+</div>
+<button class="text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+</div>
+<!-- Person 2 -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center border border-white/10" data-alt="Profile picture of Lt. Col. Singh" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA93Iah2g26Mwy2EBaaEQ4nZj_UaWe5nm-Qhc6QE3BCUdStXJlYzIr5MK9Uzm-UyDZtJBSNtrFWSRZ1Mq-uuEloaKy5BcLqiozsVL22kLHV3HEzZHA1BTIV2ZJT0ufjBnY_HWApyKJOX9ql2ci9hVArGEDNL5vLhb9JYdRMpSC7uEkaVyLXceShypcOVIo8lKJlt9V6si7cYSitbaF1Rg6ns36tB1CgK51ON0-mhMthPNztZ0jvR1tvm0QgsIqvLOhzT4i1d5GN5pTl')"></div>
+<div class="flex-1">
+<p class="text-white text-sm font-bold">Lt. Col. Singh</p>
+<p class="text-text-secondary text-xs">NCC Officer</p>
+</div>
+<button class="text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+</div>
+<!-- Person 3 -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center border border-white/10" data-alt="Profile picture of Dr. Rao" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjwuWOijEWTEQsUAJgksdwqCV8Nv-kkV10yCjP-l4ClJSqjDcBx64etxrBPmBKKi9g-jNtnPOoLnRCHYDCUiaumUwBFfkR_K2WIDXRl8eryJ-FKEpUwuwo7Zm_IGHDUqnA35q1_A1oZlcgvKZb0fOL97LYxR-piPQPqCfweXaxGtlZjlofwPAslHac0Juz0BmMGhGkg8R1YXgelFknT0Z8ztDJc1g20yWMdC_FQOi51vLSYzTm2chjTfXW_5wOnBVSrXJAt80esCRr')"></div>
+<div class="flex-1">
+<p class="text-white text-sm font-bold">Dr. Rao</p>
+<p class="text-text-secondary text-xs">NSS Coordinator</p>
+</div>
+<button class="text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Notice -->
+<div class="rounded-xl bg-gradient-to-br from-[#1e2329] to-[#111418] border border-border-dark p-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl text-white">campaign</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-2 relative z-10">Selection Trials</h3>
+<p class="text-text-secondary text-sm mb-4 relative z-10">Basketball &amp; Football team selections start next week.</p>
+<button class="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-bold py-2 rounded-lg transition-colors relative z-10">
+                                    Download Schedule
+                                </button>
+</div>
+</div>
+</div>
+<!-- Gallery Section -->
+<section class="mb-12">
+<div class="flex items-center justify-between px-2 pb-4">
+<h2 class="text-white text-xl font-bold leading-tight">Gallery</h2>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-dark border border-border-dark hover:border-primary text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-dark border border-border-dark hover:border-primary text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square md:aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark relative group">
+<img alt="Athletes running on track" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Athletes running on track during a competition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFSxwFmnLEigNBGinw4MoThm-MvK52mpvByMh6EpE5bOUR6MdE6o-hg0d5oWE_bKIHEsUvjcbOvI-xyjFm_oZNIyJ8A0GenAqct5tHuv7VbQiYyPugGXA0ClaJ9Pm1c4KIsPVJ8ugRusO80M-ADHXZ2rZ3lLCv8xo4fEm_m3Y8PBCS_gdLqAUsbGuxFg_1xKc7qKhSROSNM44bLhk3AkMiCH2pBb1aDmAcpAhoBpQ9FXc7Wv2HDNjhFfhTyhZGF1YdDtyZuOorjPdG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="text-white text-xs font-bold">Annual Sports Meet '23</p>
+</div>
+</div>
+<div class="aspect-square md:aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark relative group">
+<img alt="Group of people doing yoga outdoors" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Students performing yoga outdoors on grass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbcp2v9Hz9CKW1U9tvsOA_6soOmvA-I9ukzk8z2k-kq05PuXrWf4ymOfLcboigwLAx-rt9ujUDg01uSdV7lJ2Y6JbLZfNur4wnE6Ce9W9AgiY3QTNrlND5L58hWNiFn1mNklE0OCqEE-nL4wdjTGpnQSz-5opeKrQwOaQbGdmUJYMkOWRM6X3h06HLB8SlRD8SfBSD4E4mdZ7oWroacOEKX_OSfJTYTqPSqYB9TyfQtM9G1FRD2LwNJJ419DIWSjrH2R5zgDvK7DaH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="text-white text-xs font-bold">International Yoga Day</p>
+</div>
+</div>
+<div class="aspect-square md:aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark relative group">
+<img alt="Basketball player dunking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Basketball player jumping towards the hoop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtZhJjJ1xK10UCZWaYj47W6OZ7JazRKvzITFqxJTnJdN3hfpS2wx6KTJmmyXOqrVXJSuUaPpoGL5tiii3glPkPgJ-7AdJ1y7TOP5fc7q8EjV2Lf77-A7MP9z2GJi5oeII1AhF4HTu6IMWLa-DUdHtWryMHZbvudShquuHbF9L00cGZSFyYh27UKlFRnWNUTo36mXwdFRpmKce2byeuV9g26HWcoO392hS_QLX_qE0etXYZfKD43Hadmm8_sAucqcawgEqbNEXhPtuc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="text-white text-xs font-bold">Inter-College Basketball</p>
+</div>
+</div>
+<div class="aspect-square md:aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark relative group">
+<img alt="People planting trees" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Hands planting saplings in soil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0tL52DckFnqp_iN3lOIWMHWj9JKKj5e87IvuZExsmckdt1iv347p_niqix-Jd74xRkBlnwJAacA_ss4lGGGjaG3o42myax7D_s7wIwbHt2rHx4HCHLQts3rwagDOke-Ru44eyW7ftEw1lbZJQIxz2Twf_kD_rqlG5qv0oXpiD0FRMxAVTCzo4WmP-vnQZ5iGNJ6lOTPl7I29wBJjP6Dfifgz9nBsEoiuPRLnUeSGaJDCrHJNACKf5OTleCo60_LmITKYjDGV33gh1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="text-white text-xs font-bold">NSS Tree Plantation</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<div class="mb-10">
+<div class="rounded-xl bg-primary p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-xl shadow-blue-900/20">
+<!-- Abstract decorative circle -->
+<div class="absolute -right-10 -top-10 w-64 h-64 rounded-full bg-white/10 blur-3xl"></div>
+<div class="absolute -left-10 -bottom-10 w-64 h-64 rounded-full bg-black/10 blur-3xl"></div>
+<div class="relative z-10 text-center md:text-left">
+<h2 class="text-white text-2xl md:text-3xl font-bold mb-2">Ready to make your mark?</h2>
+<p class="text-white/90 text-sm md:text-base max-w-md">Register for the upcoming season trials or join the NCC/NSS wing today. Build skills that last a lifetime.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 relative z-10">
+<button class="bg-white text-primary hover:bg-gray-100 font-bold px-8 py-3 rounded-lg shadow-lg transition-colors">
+                                    Register Now
+                                </button>
+<button class="bg-blue-700 text-white hover:bg-blue-800 border border-blue-600 font-bold px-8 py-3 rounded-lg transition-colors">
+                                    Contact Us
+                                </button>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="border-t border-border-dark pt-8 pb-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary">school</span>
+<span class="font-bold">University Portal</span>
+</div>
+<div class="text-text-secondary text-sm">
+                                © 2023 University Portal. All rights reserved.
+                            </div>
+<div class="flex gap-6">
+<a class="text-text-secondary hover:text-white text-sm transition-colors" href="#">Privacy</a>
+<a class="text-text-secondary hover:text-white text-sm transition-colors" href="#">Terms</a>
+<a class="text-text-secondary hover:text-white text-sm transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

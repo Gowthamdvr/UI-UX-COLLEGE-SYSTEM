@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Dashboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-10 py-3 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Tech University</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-sm font-bold text-primary leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Schedule</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Grades</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Library</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 sm:gap-6 items-center">
+<div class="hidden sm:flex items-center gap-4">
+<button class="relative text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 size-2 bg-red-500 rounded-full border border-white dark:border-[#101922]"></span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold leading-none text-slate-900 dark:text-white">Alex Morgan</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Computer Science</p>
+</div>
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-700 shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGrf00N6WaeH67TaNBqjQOrfL40u9vctJxKH5LtZeYM1gtVdxHSEb0gurDXIRo-1Xy9f10rxpNnnnjTg16wavdw0GOLy_xCywrzYWOgB9sbgH9w_7ywpe5bI_crzy-tumvpMPzPWYyxQK6sEoz3E7OjZpBSdY1hbQN-t0L32_4kpyGtTMjQazgrno3skFVSqeIaml74y8eKIDkJvBw2b874-0KBCjT1fg56fSdzHnS0WK2NEknq7XqoQZ_VQ7_bUTJUBQrjcI4NyR4");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center">
+<div class="w-full max-w-7xl px-4 md:px-10 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-3 flex flex-col gap-6">
+<div class="bg-white dark:bg-[#1e293b] rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center text-center">
+<div class="size-24 rounded-full bg-cover bg-center border-4 border-primary/10 mb-4" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGrf00N6WaeH67TaNBqjQOrfL40u9vctJxKH5LtZeYM1gtVdxHSEb0gurDXIRo-1Xy9f10rxpNnnnjTg16wavdw0GOLy_xCywrzYWOgB9sbgH9w_7ywpe5bI_crzy-tumvpMPzPWYyxQK6sEoz3E7OjZpBSdY1hbQN-t0L32_4kpyGtTMjQazgrno3skFVSqeIaml74y8eKIDkJvBw2b874-0KBCjT1fg56fSdzHnS0WK2NEknq7XqoQZ_VQ7_bUTJUBQrjcI4NyR4");'></div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Alex Morgan</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-1">Student ID: 20248932</p>
+<p class="text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full mt-2">B.Sc. Computer Science</p>
+<div class="w-full h-[1px] bg-slate-100 dark:bg-slate-700 my-6"></div>
+<div class="w-full flex flex-col gap-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500 dark:text-slate-400">Semester</span>
+<span class="font-bold text-slate-900 dark:text-white">6th</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500 dark:text-slate-400">CGPA</span>
+<span class="font-bold text-slate-900 dark:text-white">3.85</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500 dark:text-slate-400">Credits Earned</span>
+<span class="font-bold text-slate-900 dark:text-white">92/120</span>
+</div>
+</div>
+<button class="w-full mt-6 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                View Full Profile
+                            </button>
+</div>
+<div class="bg-white dark:bg-[#1e293b] rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Today's Schedule</h3>
+<div class="flex flex-col gap-4">
+<div class="flex gap-3 relative pb-4 border-l-2 border-primary pl-4 before:content-[''] before:absolute before:left-[-5px] before:top-0 before:size-2.5 before:rounded-full before:bg-primary">
+<div>
+<p class="text-xs font-bold text-primary mb-0.5">09:00 AM - 10:30 AM</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Data Structures</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Room 304 • Prof. Alan Turing</p>
+</div>
+</div>
+<div class="flex gap-3 relative pb-4 border-l-2 border-slate-200 dark:border-slate-700 pl-4 before:content-[''] before:absolute before:left-[-5px] before:top-0 before:size-2.5 before:rounded-full before:bg-slate-300 dark:before:bg-slate-600">
+<div>
+<p class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-0.5">11:00 AM - 12:30 PM</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Web Development</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Lab 2 • Prof. Ada Lovelace</p>
+</div>
+</div>
+<div class="flex gap-3 relative border-l-2 border-slate-200 dark:border-slate-700 pl-4 before:content-[''] before:absolute before:left-[-5px] before:top-0 before:size-2.5 before:rounded-full before:bg-slate-300 dark:before:bg-slate-600">
+<div>
+<p class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-0.5">02:00 PM - 03:30 PM</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Database Systems</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Room 101 • Prof. Codd</p>
+</div>
+</div>
+</div>
+<a class="block text-center mt-5 text-sm text-primary font-medium hover:underline" href="#">View Full Schedule</a>
+</div>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="rounded-xl overflow-hidden relative bg-cover bg-center p-8 flex flex-col justify-center min-h-[180px]" style='background-image: linear-gradient(90deg, #137fec 0%, rgba(19, 127, 236, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbM_jN028M8p_Xkhz69bAiMbifbOCdp8nh_2cb0jTE-s0hcKY9qnkQdy51OiWTBsawa3yXMI7E3L9oVHC3Rb3eJd9i0jb6dEFcCCQFXcqiWyP31upLTTbwGs6bKKoojd-XKbhGqRMSFmADQli_XJFsLGHaDRFEv5uwg9J8HBfCHGqlPdNK2zAZmIpjv_Icyrr6caDOyGDWMHJmAASbrKToMW57S29Ey3I4NpgptYNyuMYiv5eruhpssyx7oAtW1fE-l1QI3XtglFt1");'>
+<h1 class="text-2xl md:text-3xl font-bold text-white mb-2">Welcome back, Alex! 👋</h1>
+<p class="text-white/90 text-sm md:text-base max-w-md">You have 2 assignments due this week and 1 new announcement from the Computer Science department.</p>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center justify-center text-center gap-1">
+<div class="size-10 rounded-full bg-green-50 dark:bg-green-900/20 text-green-600 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">92%</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Attendance</p>
+</div>
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center justify-center text-center gap-1">
+<div class="size-10 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined">assignment</span>
+</div>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">12</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Pending Tasks</p>
+</div>
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center justify-center text-center gap-1">
+<div class="size-10 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-600 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined">grade</span>
+</div>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">3.8</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sem GPA</p>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1e293b] rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="flex items-center justify-between p-6 border-b border-slate-100 dark:border-slate-700/50">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Recent Results</h3>
+<button class="text-sm text-primary font-medium hover:underline">View Transcript</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left">
+<thead class="text-xs text-slate-500 dark:text-slate-400 uppercase bg-slate-50 dark:bg-[#111418]">
+<tr>
+<th class="px-6 py-3 font-medium">Course Code</th>
+<th class="px-6 py-3 font-medium">Subject</th>
+<th class="px-6 py-3 font-medium">Type</th>
+<th class="px-6 py-3 font-medium text-right">Grade</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-700/50">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4 font-medium text-slate-900 dark:text-white">CS301</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">Data Structures &amp; Algo</td>
+<td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Midterm</span></td>
+<td class="px-6 py-4 text-right font-bold text-green-600">A (92)</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4 font-medium text-slate-900 dark:text-white">CS304</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">Database Systems</td>
+<td class="px-6 py-4"><span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">Quiz 2</span></td>
+<td class="px-6 py-4 text-right font-bold text-green-600">A- (88)</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4 font-medium text-slate-900 dark:text-white">MAT202</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">Linear Algebra</td>
+<td class="px-6 py-4"><span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-orange-900 dark:text-orange-300">Assignment</span></td>
+<td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">B+ (85)</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4 font-medium text-slate-900 dark:text-white">ENG101</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">Technical Writing</td>
+<td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Midterm</span></td>
+<td class="px-6 py-4 text-right font-bold text-green-600">A (95)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Current Courses</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm group hover:border-primary/50 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-3">
+<div class="size-10 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center text-indigo-600">
+<span class="material-symbols-outlined">code</span>
+</div>
+<span class="text-xs font-bold bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-1 rounded">CS301</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Data Structures</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Prof. Alan Turing</p>
+<div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-1.5 mb-2">
+<div class="bg-indigo-500 h-1.5 rounded-full" style="width: 75%"></div>
+</div>
+<div class="flex justify-between text-xs text-slate-500 dark:text-slate-400">
+<span>Progress</span>
+<span class="font-medium text-indigo-600">75%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm group hover:border-primary/50 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-3">
+<div class="size-10 rounded-lg bg-pink-50 dark:bg-pink-900/20 flex items-center justify-center text-pink-600">
+<span class="material-symbols-outlined">language</span>
+</div>
+<span class="text-xs font-bold bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-1 rounded">CS205</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Web Development</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Prof. Ada Lovelace</p>
+<div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-1.5 mb-2">
+<div class="bg-pink-500 h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+<div class="flex justify-between text-xs text-slate-500 dark:text-slate-400">
+<span>Progress</span>
+<span class="font-medium text-pink-600">45%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 flex flex-col gap-6">
+<div class="bg-white dark:bg-[#1e293b] rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Attendance</h3>
+<div class="flex items-center justify-center relative size-40 mx-auto mb-4">
+<svg class="size-full rotate-[-90deg]" viewBox="0 0 36 36">
+<path class="text-slate-100 dark:text-slate-700" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-width="3"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-slate-900 dark:text-white">92%</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Overall</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center text-sm">
+<span class="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+<span class="size-2 rounded-full bg-green-500"></span> Present
+                            </span>
+<span class="font-bold">45 Days</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+<span class="size-2 rounded-full bg-red-500"></span> Absent
+                            </span>
+<span class="font-bold">4 Days</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+<span class="size-2 rounded-full bg-yellow-500"></span> Late
+                            </span>
+<span class="font-bold">2 Days</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1e293b] rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Assignments Due</h3>
+<div class="flex flex-col gap-4">
+<div class="p-3 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-lg">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-sm font-bold text-red-700 dark:text-red-400">Algorithm Analysis</h4>
+<span class="text-xs font-bold bg-red-200 dark:bg-red-900 text-red-800 dark:text-red-200 px-1.5 py-0.5 rounded">Today</span>
+</div>
+<p class="text-xs text-red-600/80 dark:text-red-400/80 mb-2">CS301 • 11:59 PM</p>
+<button class="w-full py-1.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded transition-colors">Submit Now</button>
+</div>
+<div class="p-3 bg-slate-50 dark:bg-[#111418] border border-slate-200 dark:border-slate-700 rounded-lg">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Database Project</h4>
+<span class="text-xs font-bold bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-1.5 py-0.5 rounded">2 Days</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">CS304 • Group Work</p>
+<button class="w-full py-1.5 border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold rounded transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1e293b] rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Quick Links</h3>
+<div class="grid grid-cols-2 gap-3">
+<a class="flex flex-col items-center justify-center p-3 rounded-lg bg-slate-50 dark:bg-[#111418] hover:bg-primary/5 hover:text-primary transition-colors text-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">book</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center p-3 rounded-lg bg-slate-50 dark:bg-[#111418] hover:bg-primary/5 hover:text-primary transition-colors text-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">payments</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary">Fees</span>
+</a>
+<a class="flex flex-col items-center justify-center p-3 rounded-lg bg-slate-50 dark:bg-[#111418] hover:bg-primary/5 hover:text-primary transition-colors text-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">calendar_month</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary">Exam</span>
+</a>
+<a class="flex flex-col items-center justify-center p-3 rounded-lg bg-slate-50 dark:bg-[#111418] hover:bg-primary/5 hover:text-primary transition-colors text-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">help</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary">Support</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-white dark:bg-[#1e293b] border-t border-slate-200 dark:border-slate-800 py-8 px-4 md:px-10 mt-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-primary">school</span>
+<h3 class="text-lg font-bold">Tech University</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 Tech University. Student Portal v2.4</p>
+<div class="flex gap-6 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Help Center</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

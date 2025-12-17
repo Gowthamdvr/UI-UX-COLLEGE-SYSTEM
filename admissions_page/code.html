@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>University Admissions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#dbe0e6] dark:border-[#30363d] bg-white dark:bg-[#101922] px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Lumina University</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-[#111418] dark:text-[#dbe0e6] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Admissions</a>
+<a class="text-[#111418] dark:text-[#dbe0e6] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Campus Life</a>
+<a class="text-[#111418] dark:text-[#dbe0e6] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Research</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#617589] flex border-none bg-[#f0f2f4] dark:bg-[#202932] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] dark:bg-[#202932] focus:border-none h-full placeholder:text-[#617589] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Student Portal</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col">
+<!-- Hero Section -->
+<div class="@container w-full">
+<div class="relative flex min-h-[500px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-8 md:p-16 text-center" data-alt="Students walking on a modern university campus green with a bright sky" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIh82J7TFDt17jYnWlAud6nxyaA1lH8ZxW7IX6_94yMrXX_-CQ-tIo1VPojABtvKAjYu8667B8VZvLTvU2oou5JYGEboOnj43cYuBzCTCml1TT6xeJxc0QdcXZzEMn1fnkIo-y2mf1kcK1o9pmgJm_VY-xwWGbNPQlgnIpw_V6VHKrxN6wdJ0aFxxeWvRGMaZKzOBh2p1ZbuzwGH5BMQMFaKx0_0MveIomu2wmAb6XGc3D_MjA4vG8KfmNdrGib51ACKEytAoADWYG");'>
+<div class="flex flex-col gap-4 max-w-3xl animate-fade-in-up">
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                            Begin Your Academic Journey
+                        </h1>
+<h2 class="text-white/90 text-base md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
+                            Applications for the Fall 2024 semester are now open. Discover your potential and shape your future with our world-class programs.
+                        </h2>
+</div>
+<div class="flex gap-4 flex-wrap justify-center mt-4">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 transition-colors text-white text-base font-bold shadow-lg">
+                            Apply Now
+                        </button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 transition-colors text-white text-base font-bold">
+                            Download Brochure
+                        </button>
+</div>
+</div>
+</div>
+<!-- Sticky Tabs -->
+<div class="sticky top-[65px] z-40 bg-white/95 dark:bg-[#101922]/95 backdrop-blur shadow-sm border-b border-[#dbe0e6] dark:border-[#30363d]">
+<div class="max-w-[960px] mx-auto px-4 sm:px-10">
+<div class="flex overflow-x-auto no-scrollbar gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-[#111418] dark:text-white py-4 whitespace-nowrap group" href="#eligibility">
+<p class="text-sm font-bold tracking-[0.015em]">Eligibility</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#617589] hover:text-primary py-4 whitespace-nowrap transition-colors group" href="#process">
+<p class="text-sm font-bold tracking-[0.015em] group-hover:text-[#111418] dark:group-hover:text-white">Admission Process</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#617589] hover:text-primary py-4 whitespace-nowrap transition-colors group" href="#dates">
+<p class="text-sm font-bold tracking-[0.015em] group-hover:text-[#111418] dark:group-hover:text-white">Important Dates</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#617589] hover:text-primary py-4 whitespace-nowrap transition-colors group" href="#documents">
+<p class="text-sm font-bold tracking-[0.015em] group-hover:text-[#111418] dark:group-hover:text-white">Documents</p>
+</a>
+</div>
+</div>
+</div>
+<div class="flex justify-center py-10 px-4 md:px-10">
+<div class="max-w-[960px] flex-1 flex flex-col gap-16">
+<!-- Section: Eligibility -->
+<section class="scroll-mt-32" id="eligibility">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-[#111418] dark:text-white text-3xl font-bold leading-tight">Eligibility Criteria</h2>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-base">Find the specific requirements for your desired level of study.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="flex flex-col gap-4 rounded-xl border border-[#dbe0e6] dark:border-[#30363d] bg-white dark:bg-[#1a232d] p-6 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">school</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold">Undergraduate</h3>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-sm leading-relaxed">
+                                            High school diploma or equivalent with a minimum GPA of 3.0. Standardized test scores (SAT/ACT) are optional for 2024.
+                                        </p>
+<a class="text-primary text-sm font-bold mt-2 hover:underline" href="#">View Details</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-4 rounded-xl border border-[#dbe0e6] dark:border-[#30363d] bg-white dark:bg-[#1a232d] p-6 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">history_edu</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold">Graduate</h3>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-sm leading-relaxed">
+                                            Bachelor's degree from an accredited institution. GRE/GMAT scores may be required depending on the specific program.
+                                        </p>
+<a class="text-primary text-sm font-bold mt-2 hover:underline" href="#">View Details</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-4 rounded-xl border border-[#dbe0e6] dark:border-[#30363d] bg-white dark:bg-[#1a232d] p-6 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">public</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold">International</h3>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-sm leading-relaxed">
+                                            TOEFL (min 90) or IELTS (min 7.0) scores. Certified translations of transcripts and proof of financial support required.
+                                        </p>
+<a class="text-primary text-sm font-bold mt-2 hover:underline" href="#">View Details</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Process -->
+<section class="scroll-mt-32" id="process">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<h2 class="text-[#111418] dark:text-white text-3xl font-bold leading-tight">Admission Process</h2>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-base">Follow these steps to complete your application.</p>
+</div>
+<div class="relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-[#dbe0e6] dark:bg-[#30363d] z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col gap-4 bg-background-light dark:bg-background-dark md:items-center md:text-center">
+<div class="flex items-center gap-4 md:flex-col md:gap-4">
+<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-lg border-4 border-white dark:border-[#101922]">
+<span class="text-xl font-bold">1</span>
+</div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Register</h3>
+</div>
+<p class="text-sm text-[#617589] dark:text-[#9aa0a6] pl-[80px] md:pl-0">Create an account on our student portal to start your application.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col gap-4 bg-background-light dark:bg-background-dark md:items-center md:text-center">
+<div class="flex items-center gap-4 md:flex-col md:gap-4">
+<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#1a232d] text-primary border-2 border-[#dbe0e6] dark:border-[#30363d] shadow-sm">
+<span class="text-xl font-bold">2</span>
+</div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Fill Form</h3>
+</div>
+<p class="text-sm text-[#617589] dark:text-[#9aa0a6] pl-[80px] md:pl-0">Complete personal details, academic history, and essay questions.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col gap-4 bg-background-light dark:bg-background-dark md:items-center md:text-center">
+<div class="flex items-center gap-4 md:flex-col md:gap-4">
+<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#1a232d] text-primary border-2 border-[#dbe0e6] dark:border-[#30363d] shadow-sm">
+<span class="text-xl font-bold">3</span>
+</div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Payment</h3>
+</div>
+<p class="text-sm text-[#617589] dark:text-[#9aa0a6] pl-[80px] md:pl-0">Pay the non-refundable application fee securely online.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col gap-4 bg-background-light dark:bg-background-dark md:items-center md:text-center">
+<div class="flex items-center gap-4 md:flex-col md:gap-4">
+<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#1a232d] text-primary border-2 border-[#dbe0e6] dark:border-[#30363d] shadow-sm">
+<span class="text-xl font-bold">4</span>
+</div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Submit</h3>
+</div>
+<p class="text-sm text-[#617589] dark:text-[#9aa0a6] pl-[80px] md:pl-0">Review your application and submit before the deadline.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Important Dates -->
+<section class="scroll-mt-32" id="dates">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-[#111418] dark:text-white text-3xl font-bold leading-tight">Important Dates</h2>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-base">Mark your calendar with these critical deadlines.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Highlighted Date -->
+<div class="flex items-center gap-4 rounded-lg bg-primary p-5 shadow-lg col-span-1 md:col-span-2 text-white">
+<div class="flex flex-col items-center justify-center rounded bg-white/20 backdrop-blur-sm h-16 w-16 text-center">
+<span class="text-xs font-bold uppercase tracking-wider opacity-80">Nov</span>
+<span class="text-2xl font-bold">15</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-lg font-bold">Early Decision Deadline</h3>
+<p class="text-white/80 text-sm">Binding decision for priority applicants.</p>
+</div>
+<div class="ml-auto">
+<span class="hidden sm:inline-block rounded-full bg-white text-primary px-3 py-1 text-xs font-bold uppercase tracking-wide">Closing Soon</span>
+</div>
+</div>
+<!-- Regular Date -->
+<div class="flex items-center gap-4 rounded-lg border border-[#dbe0e6] dark:border-[#30363d] bg-white dark:bg-[#1a232d] p-5">
+<div class="flex flex-col items-center justify-center rounded bg-[#f0f2f4] dark:bg-[#202932] h-14 w-14 text-center text-[#111418] dark:text-white">
+<span class="text-[10px] font-bold uppercase text-[#617589] dark:text-[#9aa0a6]">Jan</span>
+<span class="text-xl font-bold">15</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-[#111418] dark:text-white font-bold text-base">Regular Decision</h3>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-sm">Standard application deadline.</p>
+</div>
+</div>
+<!-- Regular Date -->
+<div class="flex items-center gap-4 rounded-lg border border-[#dbe0e6] dark:border-[#30363d] bg-white dark:bg-[#1a232d] p-5">
+<div class="flex flex-col items-center justify-center rounded bg-[#f0f2f4] dark:bg-[#202932] h-14 w-14 text-center text-[#111418] dark:text-white">
+<span class="text-[10px] font-bold uppercase text-[#617589] dark:text-[#9aa0a6]">Mar</span>
+<span class="text-xl font-bold">01</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-[#111418] dark:text-white font-bold text-base">Financial Aid Priority</h3>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-sm">Deadline for scholarship consideration.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Documents & Financial Aid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 scroll-mt-32" id="documents">
+<!-- Documents List -->
+<div class="flex flex-col gap-6">
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight">Document Checklist</h2>
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-[#1a232d] border border-[#dbe0e6] dark:border-[#30363d]">
+<span class="material-symbols-outlined text-green-600">check_circle</span>
+<span class="text-[#111418] dark:text-white text-sm font-medium">Official High School Transcripts</span>
+</li>
+<li class="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-[#1a232d] border border-[#dbe0e6] dark:border-[#30363d]">
+<span class="material-symbols-outlined text-green-600">check_circle</span>
+<span class="text-[#111418] dark:text-white text-sm font-medium">Letters of Recommendation (2)</span>
+</li>
+<li class="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-[#1a232d] border border-[#dbe0e6] dark:border-[#30363d]">
+<span class="material-symbols-outlined text-green-600">check_circle</span>
+<span class="text-[#111418] dark:text-white text-sm font-medium">Personal Statement / Essay</span>
+</li>
+<li class="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-[#1a232d] border border-[#dbe0e6] dark:border-[#30363d]">
+<span class="material-symbols-outlined text-[#617589]">radio_button_unchecked</span>
+<span class="text-[#111418] dark:text-white text-sm font-medium">Portfolio (Art &amp; Design majors only)</span>
+</li>
+</ul>
+</div>
+<!-- Financial Aid Teaser -->
+<div class="flex flex-col gap-6">
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight">Financial Aid</h2>
+<div class="flex flex-col flex-1 justify-between rounded-xl bg-[#eef6ff] dark:bg-[#132435] p-6 border border-primary/20">
+<div class="flex flex-col gap-3">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold">Scholarships &amp; Grants</h3>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-sm leading-relaxed">
+                                        We are committed to making education affordable. Over 85% of our students receive some form of financial aid. Explore our merit-based and need-based opportunities.
+                                    </p>
+</div>
+<div class="mt-6">
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline" href="#">
+                                        Explore Financial Aid
+                                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#101922] border-t border-[#dbe0e6] dark:border-[#30363d] pt-16 pb-8 px-10 mt-auto">
+<div class="max-w-[960px] mx-auto flex flex-col gap-10">
+<div class="flex flex-col md:flex-row justify-between gap-8">
+<div class="flex flex-col gap-4 max-w-sm">
+<div class="flex items-center gap-2 text-[#111418] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+</div>
+<h2 class="text-lg font-bold">Lumina University</h2>
+</div>
+<p class="text-[#617589] dark:text-[#9aa0a6] text-sm">
+                                123 Academic Avenue, Knowledge City, ED 45678<br/>
+                                admissions@lumina.edu | (555) 123-4567
+                            </p>
+<div class="flex gap-4 mt-2">
+<a class="text-[#617589] hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">public</i></a>
+<a class="text-[#617589] hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">alternate_email</i></a>
+<a class="text-[#617589] hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">call</i></a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div class="flex flex-col gap-3">
+<h4 class="text-[#111418] dark:text-white font-bold text-sm">Admissions</h4>
+<a class="text-[#617589] dark:text-[#9aa0a6] text-sm hover:text-primary" href="#">Apply Now</a>
+<a class="text-[#617589] dark:text-[#9aa0a6] text-sm hover:text-primary" href="#">Tuition &amp; Fees</a>
+<a class="text-[#617589] dark:text-[#9aa0a6] text-sm hover:text-primary" href="#">Visit Us</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-[#111418] dark:text-white font-bold text-sm">Academics</h4>
+<a class="text-[#617589] dark:text-[#9aa0a6] text-sm hover:text-primary" href="#">Degrees</a>
+<a class="text-[#617589] dark:text-[#9aa0a6] text-sm hover:text-primary" href="#">Faculty</a>
+<a class="text-[#617589] dark:text-[#9aa0a6] text-sm hover:text-primary" href="#">Library</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-[#f0f2f4] dark:border-[#30363d]">
+<p class="text-[#9aa0a6] text-xs">© 2024 Lumina University. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-[#9aa0a6] text-xs hover:text-[#111418] dark:hover:text-white" href="#">Privacy Policy</a>
+<a class="text-[#9aa0a6] text-xs hover:text-[#111418] dark:hover:text-white" href="#">Terms of Service</a>
+<a class="text-[#9aa0a6] text-xs hover:text-[#111418] dark:hover:text-white" href="#">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+</main>
+<!-- Floating Action Button for Mobile -->
+<div class="fixed bottom-6 right-6 z-50 md:hidden">
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+<span class="material-symbols-outlined">edit_document</span>
+</button>
+</div>
+</div>
+</body></html>

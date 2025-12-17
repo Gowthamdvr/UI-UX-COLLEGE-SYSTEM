@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News &amp; Announcements</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-10 py-3 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white cursor-pointer">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Tech University</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-primary" href="#">News</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Admissions</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Campus Life</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 sm:gap-8">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#283039]">
+<div class="text-slate-400 dark:text-[#9dabb9] flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg bg-transparent border-none focus:ring-0 text-sm pl-2 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-[#9dabb9]" placeholder="Search news..."/>
+</div>
+</label>
+<div class="flex gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Login</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center">
+<div class="w-full max-w-7xl px-4 md:px-10 py-6">
+<div class="@container">
+<div class="flex flex-col gap-6 md:gap-8 min-h-[400px] rounded-xl overflow-hidden relative items-center justify-center p-8 md:p-12 text-center bg-cover bg-center" data-alt="University campus exterior with students walking" style='background-image: linear-gradient(rgba(16, 25, 34, 0.7) 0%, rgba(16, 25, 34, 0.85) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbM_jN028M8p_Xkhz69bAiMbifbOCdp8nh_2cb0jTE-s0hcKY9qnkQdy51OiWTBsawa3yXMI7E3L9oVHC3Rb3eJd9i0jb6dEFcCCQFXcqiWyP31upLTTbwGs6bKKoojd-XKbhGqRMSFmADQli_XJFsLGHaDRFEv5uwg9J8HBfCHGqlPdNK2zAZmIpjv_Icyrr6caDOyGDWMHJmAASbrKToMW57S29Ey3I4NpgptYNyuMYiv5eruhpssyx7oAtW1fE-l1QI3XtglFt1");'>
+<div class="flex flex-col gap-4 max-w-3xl z-10">
+<div class="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm w-fit mx-auto">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Latest Updates</span>
+</div>
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                            News &amp; Announcements
+                        </h1>
+<h2 class="text-slate-200 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
+                            Stay informed with the latest stories, research breakthroughs, and campus updates from Tech University.
+                        </h2>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 z-10 mt-4">
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-white text-base font-bold tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-lg shadow-primary/30">
+                            Subscribe to Newsletter
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-7xl px-4 md:px-10 py-8">
+<div class="flex justify-between items-end mb-8 px-2">
+<div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Featured Stories</h2>
+<p class="text-slate-500 dark:text-slate-400">Top headlines from across the campus.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 group cursor-pointer">
+<div class="relative h-[400px] rounded-xl overflow-hidden mb-4">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqTdNbiSxc3MkBTWQ7uu5CtJFH57QPRAoLLZCjq-Yj1UNp_hDd6DsxhQnY8P-Th5D5FYVAAB3-E3d8aPA-pNHJizYwiybLK9Ob_IXEE9J_A6RoeeGl9gnPxDtqJ7KjK8_3TdkfoUB0mOPZ6xOKSHbc2-_IoGJXLXXyeDKZhyb2pG9Oq1NyWuc-OZ1zJpcb3S-3RK9qaDKKsE0d0GjUyABZEPH32CeybNyqLO_tp5UblXT3Q6BryOCPiQ1AtTX9uoWt6FpNS0forHz-");'></div>
+<div class="absolute bottom-0 left-0 p-6 z-20 w-full">
+<span class="inline-block px-3 py-1 rounded bg-primary text-white text-xs font-bold mb-3">RESEARCH</span>
+<h3 class="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight group-hover:underline decoration-2 underline-offset-4">
+                                University Researchers Secure $5M Grant for Sustainable Energy Project
+                            </h3>
+<div class="flex items-center gap-4 text-slate-300 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">calendar_today</span> Oct 24, 2023</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 5 min read</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="h-48 w-full rounded-xl overflow-hidden relative">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGrf00N6WaeH67TaNBqjQOrfL40u9vctJxKH5LtZeYM1gtVdxHSEb0gurDXIRo-1Xy9f10rxpNnnnjTg16wavdw0GOLy_xCywrzYWOgB9sbgH9w_7ywpe5bI_crzy-tumvpMPzPWYyxQK6sEoz3E7OjZpBSdY1hbQN-t0L32_4kpyGtTMjQazgrno3skFVSqeIaml74y8eKIDkJvBw2b874-0KBCjT1fg56fSdzHnS0WK2NEknq7XqoQZ_VQ7_bUTJUBQrjcI4NyR4");'></div>
+</div>
+<div>
+<span class="text-xs font-bold text-primary uppercase tracking-wide">Campus Life</span>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mt-1 group-hover:text-primary transition-colors">
+                                New Student Center Opens Doors to Innovative Collaborative Spaces
+                            </h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2 line-clamp-2">The state-of-the-art facility features study pods, a maker space, and 24/7 access for all students.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="h-48 w-full rounded-xl overflow-hidden relative">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfeiasW70OdYGzi6JSGJA_oaJ8aaRWjWP_Aj6WGAoV5tv8vtatcMMBt2bnxfttj1zaZfYJ6u2mbm1luQtp2TzpMf8qNJcx0KArtGscgZR8F-369KF33wDB_3ys9l2vPTdDcsqS-prRdXHLN5e5eauwP22CmBEJcFYtF4T45zQbmxGxn3zEMz9s6GlzQa-YKy2QxTILKMxMFqKqQkzTAOqHZD1fad4wAUvZluh2p-yX9-Vf1FvmpWCFmcy_Ukc93aPQueQWr4Y8L2eK");'></div>
+</div>
+<div>
+<span class="text-xs font-bold text-primary uppercase tracking-wide">Arts &amp; Culture</span>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mt-1 group-hover:text-primary transition-colors">
+                                Annual Autumn Art Exhibition Showcases Student Talent
+                            </h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2 line-clamp-2">Visit the gallery this week to see sculptures, paintings, and digital installations by the senior class.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-7xl px-4 md:px-10 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Latest Updates</h2>
+<div class="flex gap-2">
+<button class="text-sm font-medium text-slate-500 hover:text-primary px-3 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">All</button>
+<button class="text-sm font-medium text-primary px-3 py-1 rounded bg-primary/10 transition-colors">Academic</button>
+<button class="text-sm font-medium text-slate-500 hover:text-primary px-3 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Sports</button>
+<button class="text-sm font-medium text-slate-500 hover:text-primary px-3 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Events</button>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-5 p-5 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="w-full sm:w-48 h-32 rounded-lg bg-cover bg-center shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2CU74KPAxwD6jKyorrrzzwJtlZLM1lwADnZwHckA-Llft1GMud-8axJW9qIHk3foposgsT8QPHk9IqUNxarfZc27is7QVusVE7fClF3Kt7GC7zErtvRqj144vzDG8-7h94fOmKvizirn7Xv2r8YHTW8dnRnptyovz8XoECnaSb3zY7V_TpSHb3QYGYer3izVt4Xh2Z7E3VlSo9krTkx9byLwzovBNAI79nWVjlqgMC3Mbe34KEyVbCc0fIpu0ghyaTK4koD_68zCe");'></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Sustainability</span>
+<span class="text-xs text-slate-400">Oct 23, 2023</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
+                                Campus Sustainability Week Kicks Off with Keynote
+                            </h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
+                                Join us for a week of eco-friendly workshops, a farmers market, and a special lecture on climate resilience.
+                            </p>
+</div>
+<div class="mt-3 flex items-center text-primary text-sm font-bold">
+                            Read More <span class="material-symbols-outlined text-sm ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-5 p-5 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="w-full sm:w-48 h-32 rounded-lg bg-cover bg-center shrink-0 grayscale hover:grayscale-0 transition-all" style='background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1REPvNz2Kl4H9n1f56r2u1qnilWTNTwu3FzPPSpC_9yVOOQ5vOxVyTOiMkZ-87zcoAsK2CHHr7cvDEmz7Oqo8LDpyYL_T1IlFRcxRqLtgEaYsYkUyM_SSG93YgZ4v6r6913NXn5hBiGijIANQccXx7M_qhoj_9fZU37RI-IGR3YCIQHmu_rxquAlIyCGTahpjma3fQ8dzrRS13RfNP6wyk5JjwRO4gWCr5H0SfGfBZO61WJLWH6_G3XuUohsJ8Lc5suJkLLBWTgph");'></div>
+<div class="w-full sm:w-48 h-32 rounded-lg bg-cover bg-center shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbM_jN028M8p_Xkhz69bAiMbifbOCdp8nh_2cb0jTE-s0hcKY9qnkQdy51OiWTBsawa3yXMI7E3L9oVHC3Rb3eJd9i0jb6dEFcCCQFXcqiWyP31upLTTbwGs6bKKoojd-XKbhGqRMSFmADQli_XJFsLGHaDRFEv5uwg9J8HBfCHGqlPdNK2zAZmIpjv_Icyrr6caDOyGDWMHJmAASbrKToMW57S29Ey3I4NpgptYNyuMYiv5eruhpssyx7oAtW1fE-l1QI3XtglFt1");'></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Admissions</span>
+<span class="text-xs text-slate-400">Oct 21, 2023</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
+                                Fall Open House Draws Record Attendance
+                            </h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
+                                Prospective students and their families explored campus facilities and met with faculty during this weekend's event.
+                            </p>
+</div>
+<div class="mt-3 flex items-center text-primary text-sm font-bold">
+                            Read More <span class="material-symbols-outlined text-sm ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-5 p-5 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="w-full sm:w-48 h-32 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 text-slate-400">
+<span class="material-symbols-outlined text-4xl">article</span>
+</div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Faculty</span>
+<span class="text-xs text-slate-400">Oct 19, 2023</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
+                                Professor Dr. Harrison Publishes New Book on Quantum Computing
+                            </h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
+                                The Physics department celebrates the release of "Quantum Futures," exploring the practical applications of quantum mechanics.
+                            </p>
+</div>
+<div class="mt-3 flex items-center text-primary text-sm font-bold">
+                            Read More <span class="material-symbols-outlined text-sm ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-4">
+<button class="px-6 py-3 bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold rounded-lg transition-colors shadow-sm">
+                        Load More Stories
+                    </button>
+</div>
+</div>
+<div class="flex flex-col gap-8">
+<div class="bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-xl p-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[100px] text-red-600">campaign</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4 text-red-600 dark:text-red-400">
+<span class="material-symbols-outlined animate-bounce">notifications_active</span>
+<h3 class="text-lg font-bold uppercase tracking-wider">Important Notices</h3>
+</div>
+<ul class="flex flex-col gap-4">
+<li class="pb-4 border-b border-red-200 dark:border-red-900/30 last:border-0 last:pb-0">
+<a class="group" href="#">
+<p class="text-xs text-red-500 dark:text-red-300 font-bold mb-1">DUE: OCT 30</p>
+<p class="text-sm font-medium text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Fall Semester Course Withdrawal Deadline</p>
+</a>
+</li>
+<li class="pb-4 border-b border-red-200 dark:border-red-900/30 last:border-0 last:pb-0">
+<a class="group" href="#">
+<p class="text-xs text-red-500 dark:text-red-300 font-bold mb-1">MAINTENANCE</p>
+<p class="text-sm font-medium text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Library Portal Downtime Scheduled for Sunday</p>
+</a>
+</li>
+<li class="last:pb-0">
+<a class="group" href="#">
+<p class="text-xs text-red-500 dark:text-red-300 font-bold mb-1">HEALTH</p>
+<p class="text-sm font-medium text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Flu Shot Clinic Available at Student Health Center</p>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Upcoming Events</h3>
+<a class="text-xs font-bold text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-3">
+<div class="bg-slate-100 dark:bg-slate-800 rounded-lg p-2 text-center min-w-[50px] border border-slate-200 dark:border-slate-700">
+<span class="block text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase">Nov</span>
+<span class="block text-lg font-bold text-slate-900 dark:text-white">02</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white hover:text-primary cursor-pointer transition-colors">Tech Innovations Webinar</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">10:00 AM • Online</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-slate-100 dark:bg-slate-800 rounded-lg p-2 text-center min-w-[50px] border border-slate-200 dark:border-slate-700">
+<span class="block text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase">Nov</span>
+<span class="block text-lg font-bold text-slate-900 dark:text-white">05</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white hover:text-primary cursor-pointer transition-colors">Guest Speaker Series: AI Ethics</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">2:00 PM • Lecture Hall A</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-slate-100 dark:bg-slate-800 rounded-lg p-2 text-center min-w-[50px] border border-slate-200 dark:border-slate-700">
+<span class="block text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase">Nov</span>
+<span class="block text-lg font-bold text-slate-900 dark:text-white">12</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white hover:text-primary cursor-pointer transition-colors">Career Fair Fall 2023</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">9:00 AM • Student Union</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 border border-primary/10 rounded-xl p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Subscribe to Daily News</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Get the latest university updates delivered directly to your inbox every morning.</p>
+<div class="flex flex-col gap-3">
+<input class="w-full rounded-lg bg-white dark:bg-[#111418] border border-slate-200 dark:border-slate-700 px-3 py-2 text-sm text-slate-900 dark:text-white focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="Enter your email" type="email"/>
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-2 rounded-lg transition-colors text-sm">Sign Up</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-white dark:bg-[#1e293b] border-t border-slate-200 dark:border-slate-800 py-12 px-4 md:px-10 mt-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white mb-4">
+<span class="material-symbols-outlined text-primary">school</span>
+<h3 class="text-lg font-bold">Tech University</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                    Empowering students, creating knowledge, and serving our community.
+                </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">News Categories</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Academics &amp; Research</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Campus Life</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sports &amp; Athletics</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Arts &amp; Culture</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Media Relations</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Press Releases</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Expert Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Facts &amp; Figures</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Brand Guidelines</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Contact</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] mt-0.5">location_on</span>
+<span>123 University Blvd,<br/>College Town, CT 06520</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">email</span>
+<span>news@techuni.edu</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 Tech University. All rights reserved.</p>
+<div class="flex gap-6 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

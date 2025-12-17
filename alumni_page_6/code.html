@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login Page (Student / Staff)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+        }
+        .dark .glass-panel {
+            background: rgba(30, 41, 59, 0.95);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white flex flex-col min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-10 py-3 bg-white dark:bg-background-dark z-20 relative">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Tech University</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Admissions</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Campus Life</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Research</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 sm:gap-8">
+<div class="flex gap-4">
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors" href="#">
+<span class="truncate">Help Desk</span>
+</a>
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-lg shadow-primary/20" href="#">
+<span class="truncate">Apply Now</span>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col relative">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute inset-0 bg-slate-900/60 dark:bg-slate-950/70 backdrop-blur-[2px] z-10"></div>
+<div class="w-full h-full bg-cover bg-center scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbM_jN028M8p_Xkhz69bAiMbifbOCdp8nh_2cb0jTE-s0hcKY9qnkQdy51OiWTBsawa3yXMI7E3L9oVHC3Rb3eJd9i0jb6dEFcCCQFXcqiWyP31upLTTbwGs6bKKoojd-XKbhGqRMSFmADQli_XJFsLGHaDRFEv5uwg9J8HBfCHGqlPdNK2zAZmIpjv_Icyrr6caDOyGDWMHJmAASbrKToMW57S29Ey3I4NpgptYNyuMYiv5eruhpssyx7oAtW1fE-l1QI3XtglFt1");'></div>
+</div>
+<div class="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 p-6 md:p-12">
+<div class="hidden lg:flex flex-col max-w-lg text-white">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 w-fit mb-6 backdrop-blur-md">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+</span>
+<span class="text-xs font-medium tracking-wide">System Operational</span>
+</div>
+<h1 class="text-5xl font-black leading-tight tracking-tight mb-6">
+                        Welcome to the <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-400">University Portal</span>
+</h1>
+<p class="text-lg text-blue-50/90 leading-relaxed mb-10">
+                        Your secure gateway to academic resources, administrative tools, and campus services. Please log in with your university credentials to access your personalized dashboard.
+                    </p>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors cursor-default">
+<div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-200">
+<span class="material-symbols-outlined">library_books</span>
+</div>
+<div>
+<h3 class="font-bold text-sm">Coursework</h3>
+<p class="text-xs text-blue-100/70">Access Canvas &amp; Materials</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors cursor-default">
+<div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-200">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<h3 class="font-bold text-sm">Schedules</h3>
+<p class="text-xs text-blue-100/70">View Timetables &amp; Events</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors cursor-default">
+<div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-200">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div>
+<h3 class="font-bold text-sm">Financials</h3>
+<p class="text-xs text-blue-100/70">Tuition &amp; Aid Status</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors cursor-default">
+<div class="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center text-orange-200">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h3 class="font-bold text-sm">Webmail</h3>
+<p class="text-xs text-blue-100/70">University Communication</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-md glass-panel rounded-2xl shadow-2xl overflow-hidden border border-slate-200/50 dark:border-slate-700/50 backdrop-blur-xl">
+<div class="grid grid-cols-2 border-b border-slate-200 dark:border-slate-700/50">
+<button class="relative py-4 text-sm font-bold tracking-wide text-primary bg-blue-50/50 dark:bg-blue-500/10 hover:bg-blue-50 dark:hover:bg-blue-500/20 transition-colors">
+<span class="flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">school</span>
+                                Student
+                            </span>
+<div class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></div>
+</button>
+<button class="py-4 text-sm font-bold tracking-wide text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<span class="flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+                                Staff / Faculty
+                            </span>
+</button>
+</div>
+<div class="p-8">
+<div class="text-center mb-8">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Welcome Back</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Enter your credentials to access the Student Portal.</p>
+</div>
+<form class="flex flex-col gap-5">
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase text-slate-500 dark:text-slate-400 tracking-wider ml-1" for="username">
+                                    NetID or Email
+                                </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-50 dark:bg-[#111418] border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" id="username" placeholder="e.g. jdoe23" type="text"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase text-slate-500 dark:text-slate-400 tracking-wider ml-1" for="password">
+                                    Password
+                                </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-50 dark:bg-[#111418] border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary bg-slate-50 dark:bg-[#111418] dark:border-slate-600" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-slate-800 dark:group-hover:text-slate-200 transition-colors">Remember me</span>
+</label>
+<a class="text-sm font-semibold text-primary hover:text-blue-600 hover:underline transition-colors" href="#">Forgot Password?</a>
+</div>
+<button class="mt-2 w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 rounded-lg shadow-lg shadow-primary/25 transition-all transform active:scale-[0.98] flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px]">login</span>
+                                Secure Login
+                            </button>
+</form>
+<div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700/50 flex flex-col gap-4 text-center">
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                                First time here? <a class="font-bold text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-primary transition-colors" href="#">Activate your NetID</a>
+</p>
+<div class="flex items-center justify-center gap-6 text-xs text-slate-400 dark:text-slate-500">
+<a class="hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">IT Support</a>
+<span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<a class="hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">Privacy Policy</a>
+<span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<a class="hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">System Status</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-white dark:bg-[#1e293b] border-t border-slate-200 dark:border-slate-800 py-12 px-4 md:px-10 z-20 relative">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white mb-4">
+<span class="material-symbols-outlined text-primary">school</span>
+<h3 class="text-lg font-bold">Tech University</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                        Empowering minds, fostering innovation, and building a brighter future for our global community.
+                    </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Quick Links</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Directory</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Academic Calendar</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Library</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Campus Map</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Support</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">IT Help Desk</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Reset Password</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Account Recovery</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Report an Issue</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Contact</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] mt-0.5">location_on</span>
+<span>123 University Blvd,<br/>College Town, CT 06520</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">email</span>
+<span>helpdesk@techuni.edu</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 Tech University. All rights reserved.</p>
+<div class="flex gap-6 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

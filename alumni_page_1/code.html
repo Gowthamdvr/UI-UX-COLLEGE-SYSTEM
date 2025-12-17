@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alumni Page</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-10 py-3 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Tech University</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Directory</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Events</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Give Back</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 sm:gap-8">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#283039]">
+<div class="text-slate-400 dark:text-[#9dabb9] flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg bg-transparent border-none focus:ring-0 text-sm pl-2 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-[#9dabb9]" placeholder="Find alumni..."/>
+</div>
+</label>
+<div class="flex gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Login</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-lg shadow-primary/20">
+<span class="truncate">Register</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center">
+<!-- Hero Section -->
+<div class="w-full max-w-7xl px-4 md:px-10 py-6">
+<div class="@container">
+<div class="flex flex-col gap-6 md:gap-8 min-h-[480px] rounded-xl overflow-hidden relative items-center justify-center p-8 md:p-12 text-center bg-cover bg-center" data-alt="University campus exterior with students walking" style='background-image: linear-gradient(rgba(16, 25, 34, 0.7) 0%, rgba(16, 25, 34, 0.85) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbM_jN028M8p_Xkhz69bAiMbifbOCdp8nh_2cb0jTE-s0hcKY9qnkQdy51OiWTBsawa3yXMI7E3L9oVHC3Rb3eJd9i0jb6dEFcCCQFXcqiWyP31upLTTbwGs6bKKoojd-XKbhGqRMSFmADQli_XJFsLGHaDRFEv5uwg9J8HBfCHGqlPdNK2zAZmIpjv_Icyrr6caDOyGDWMHJmAASbrKToMW57S29Ey3I4NpgptYNyuMYiv5eruhpssyx7oAtW1fE-l1QI3XtglFt1");'>
+<div class="flex flex-col gap-4 max-w-3xl z-10">
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                                Welcome Home, Alumni
+                            </h1>
+<h2 class="text-slate-200 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
+                                Reconnect with your peers, inspire the next generation, and grow with the global Tech University community.
+                            </h2>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 z-10 mt-4">
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-white text-base font-bold tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-lg shadow-primary/30">
+                                Join the Network
+                            </button>
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-base font-bold tracking-[0.015em] hover:bg-white/20 transition-colors">
+                                View Events
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Section -->
+<div class="w-full max-w-7xl px-4 md:px-10 py-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="p-2 bg-primary/10 w-fit rounded-lg text-primary mb-2">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Active Alumni</p>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">50k+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="p-2 bg-primary/10 w-fit rounded-lg text-primary mb-2">
+<span class="material-symbols-outlined">school</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Scholarships Raised</p>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">$2M</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="p-2 bg-primary/10 w-fit rounded-lg text-primary mb-2">
+<span class="material-symbols-outlined">public</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Global Chapters</p>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">120+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="p-2 bg-primary/10 w-fit rounded-lg text-primary mb-2">
+<span class="material-symbols-outlined">event</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Annual Events</p>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">300+</p>
+</div>
+</div>
+</div>
+<!-- Success Stories -->
+<div class="w-full max-w-7xl px-4 md:px-10 py-12">
+<div class="flex justify-between items-end mb-8 px-2">
+<div>
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Success Stories</h2>
+<p class="text-slate-500 dark:text-slate-400">See what our graduates are achieving around the world.</p>
+</div>
+<a class="hidden sm:flex items-center gap-1 text-primary font-bold hover:underline" href="#">
+                        View All Stories <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Story Card 1 -->
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all cursor-pointer shadow-sm hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" data-alt="Portrait of Jane Doe, a CEO" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGrf00N6WaeH67TaNBqjQOrfL40u9vctJxKH5LtZeYM1gtVdxHSEb0gurDXIRo-1Xy9f10rxpNnnnjTg16wavdw0GOLy_xCywrzYWOgB9sbgH9w_7ywpe5bI_crzy-tumvpMPzPWYyxQK6sEoz3E7OjZpBSdY1hbQN-t0L32_4kpyGtTMjQazgrno3skFVSqeIaml74y8eKIDkJvBw2b874-0KBCjT1fg56fSdzHnS0WK2NEknq7XqoQZ_VQ7_bUTJUBQrjcI4NyR4");'></div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Jane Doe '15</h3>
+<p class="text-sm font-medium text-primary mb-2">CEO at TechStart</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-3">
+                                From her dorm room to the boardroom, Jane's journey has been nothing short of inspiring. She founded TechStart to help...
+                            </p>
+</div>
+</div>
+<!-- Story Card 2 -->
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all cursor-pointer shadow-sm hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" data-alt="Portrait of John Smith, Research Lead" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqTdNbiSxc3MkBTWQ7uu5CtJFH57QPRAoLLZCjq-Yj1UNp_hDd6DsxhQnY8P-Th5D5FYVAAB3-E3d8aPA-pNHJizYwiybLK9Ob_IXEE9J_A6RoeeGl9gnPxDtqJ7KjK8_3TdkfoUB0mOPZ6xOKSHbc2-_IoGJXLXXyeDKZhyb2pG9Oq1NyWuc-OZ1zJpcb3S-3RK9qaDKKsE0d0GjUyABZEPH32CeybNyqLO_tp5UblXT3Q6BryOCPiQ1AtTX9uoWt6FpNS0forHz-");'></div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">John Smith '10</h3>
+<p class="text-sm font-medium text-primary mb-2">Research Lead at BioGen</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-3">
+                                John's groundbreaking work in renewable energy has earned him international recognition and the prestigious Nobel...
+                            </p>
+</div>
+</div>
+<!-- Story Card 3 -->
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all cursor-pointer shadow-sm hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" data-alt="Portrait of Emily Chen, Visual Artist" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfeiasW70OdYGzi6JSGJA_oaJ8aaRWjWP_Aj6WGAoV5tv8vtatcMMBt2bnxfttj1zaZfYJ6u2mbm1luQtp2TzpMf8qNJcx0KArtGscgZR8F-369KF33wDB_3ys9l2vPTdDcsqS-prRdXHLN5e5eauwP22CmBEJcFYtF4T45zQbmxGxn3zEMz9s6GlzQa-YKy2QxTILKMxMFqKqQkzTAOqHZD1fad4wAUvZluh2p-yX9-Vf1FvmpWCFmcy_Ukc93aPQueQWr4Y8L2eK");'></div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Emily Chen '18</h3>
+<p class="text-sm font-medium text-primary mb-2">Visual Artist</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-3">
+                                Emily's latest gallery exhibition in New York City explores the intersection of digital media and traditional...
+                            </p>
+</div>
+</div>
+<!-- Story Card 4 -->
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all cursor-pointer shadow-sm hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" data-alt="Portrait of Michael Brown, Founder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2CU74KPAxwD6jKyorrrzzwJtlZLM1lwADnZwHckA-Llft1GMud-8axJW9qIHk3foposgsT8QPHk9IqUNxarfZc27is7QVusVE7fClF3Kt7GC7zErtvRqj144vzDG8-7h94fOmKvizirn7Xv2r8YHTW8dnRnptyovz8XoECnaSb3zY7V_TpSHb3QYGYer3izVt4Xh2Z7E3VlSo9krTkx9byLwzovBNAI79nWVjlqgMC3Mbe34KEyVbCc0fIpu0ghyaTK4koD_68zCe");'></div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Michael Brown '08</h3>
+<p class="text-sm font-medium text-primary mb-2">Founder of EcoBuild</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-3">
+                                Transforming urban landscapes through sustainable architecture, Michael is reshaping how we think about city living...
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Two Column Section: Events & Networking -->
+<div class="w-full max-w-7xl px-4 md:px-10 py-12 flex flex-col lg:flex-row gap-8">
+<!-- Events Widget -->
+<div class="flex-1 flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Upcoming Events</h2>
+<button class="text-sm font-bold text-primary hover:underline">View Calendar</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Event Item -->
+<div class="flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/30 transition-colors">
+<div class="flex-shrink-0 w-full sm:w-24 h-24 rounded-lg bg-slate-100 dark:bg-slate-800 flex flex-col items-center justify-center text-center border border-slate-200 dark:border-slate-700">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">OCT</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white">15</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Annual Alumni Gala</h3>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Grand Ballroom, University Center</span>
+</div>
+<div class="flex gap-3">
+<button class="text-xs font-bold text-white bg-primary hover:bg-blue-600 px-3 py-1.5 rounded transition-colors">RSVP</button>
+<button class="text-xs font-bold text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white px-3 py-1.5 rounded border border-slate-200 dark:border-slate-700 transition-colors">Details</button>
+</div>
+</div>
+</div>
+<!-- Event Item -->
+<div class="flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/30 transition-colors">
+<div class="flex-shrink-0 w-full sm:w-24 h-24 rounded-lg bg-slate-100 dark:bg-slate-800 flex flex-col items-center justify-center text-center border border-slate-200 dark:border-slate-700">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">NOV</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white">02</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Tech Innovations Webinar</h3>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+<span>Online (Zoom)</span>
+</div>
+<div class="flex gap-3">
+<button class="text-xs font-bold text-white bg-primary hover:bg-blue-600 px-3 py-1.5 rounded transition-colors">Register</button>
+<button class="text-xs font-bold text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white px-3 py-1.5 rounded border border-slate-200 dark:border-slate-700 transition-colors">Details</button>
+</div>
+</div>
+</div>
+<!-- Event Item -->
+<div class="flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/30 transition-colors">
+<div class="flex-shrink-0 w-full sm:w-24 h-24 rounded-lg bg-slate-100 dark:bg-slate-800 flex flex-col items-center justify-center text-center border border-slate-200 dark:border-slate-700">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">NOV</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white">12</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Class of '14 Reunion</h3>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">local_bar</span>
+<span>Downtown Rooftop Lounge</span>
+</div>
+<div class="flex gap-3">
+<button class="text-xs font-bold text-white bg-primary hover:bg-blue-600 px-3 py-1.5 rounded transition-colors">RSVP</button>
+<button class="text-xs font-bold text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white px-3 py-1.5 rounded border border-slate-200 dark:border-slate-700 transition-colors">Details</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Networking & Registration Card -->
+<div class="lg:w-[400px] flex flex-col gap-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Alumni Network</h2>
+<div class="bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Update Your Profile</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Stay connected and receive the latest updates tailored to your career and location.</p>
+<div class="flex flex-col gap-4">
+<div class="grid grid-cols-2 gap-4">
+<input class="w-full rounded-lg bg-slate-50 dark:bg-[#111418] border border-slate-200 dark:border-slate-700 px-3 py-2 text-sm text-slate-900 dark:text-white focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="First Name" type="text"/>
+<input class="w-full rounded-lg bg-slate-50 dark:bg-[#111418] border border-slate-200 dark:border-slate-700 px-3 py-2 text-sm text-slate-900 dark:text-white focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="Last Name" type="text"/>
+</div>
+<select class="w-full rounded-lg bg-slate-50 dark:bg-[#111418] border border-slate-200 dark:border-slate-700 px-3 py-2 text-sm text-slate-500 dark:text-slate-400 focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+<option>Class Year</option>
+<option>2023</option>
+<option>2022</option>
+<option>2021</option>
+<option>2020</option>
+</select>
+<input class="w-full rounded-lg bg-slate-50 dark:bg-[#111418] border border-slate-200 dark:border-slate-700 px-3 py-2 text-sm text-slate-900 dark:text-white focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="Current Company" type="text"/>
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg transition-colors mt-2">Update Profile</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<a class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#283039] transition-all group" href="#">
+<div class="p-3 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">work</span>
+</div>
+<span class="text-sm font-medium text-slate-900 dark:text-white">Jobs Board</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#283039] transition-all group" href="#">
+<div class="p-3 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">diversity_3</span>
+</div>
+<span class="text-sm font-medium text-slate-900 dark:text-white">Mentorship</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#283039] transition-all group" href="#">
+<div class="p-3 rounded-full bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 group-hover:bg-green-600 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">public</span>
+</div>
+<span class="text-sm font-medium text-slate-900 dark:text-white">Find Chapters</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#283039] transition-all group" href="#">
+<div class="p-3 rounded-full bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">card_membership</span>
+</div>
+<span class="text-sm font-medium text-slate-900 dark:text-white">Benefits</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-white dark:bg-[#1e293b] border-t border-slate-200 dark:border-slate-800 py-12 px-4 md:px-10 mt-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white mb-4">
+<span class="material-symbols-outlined text-primary">school</span>
+<h3 class="text-lg font-bold">Tech University</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                        Connecting alumni, fostering growth, and building the future together.
+                    </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Quick Links</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Directory</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Events Calendar</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Career Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Transcripts</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Get Involved</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Become a Mentor</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Start a Chapter</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Volunteer</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Donate</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Contact</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] mt-0.5">location_on</span>
+<span>123 University Blvd,<br/>College Town, CT 06520</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">email</span>
+<span>alumni@techuni.edu</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 Tech University. All rights reserved.</p>
+<div class="flex gap-6 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

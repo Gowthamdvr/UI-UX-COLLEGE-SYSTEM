@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>University Result Portal</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1c242e",
+                        "border-dark": "#283039",
+                        "input-dark": "#1c2127",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display min-h-screen flex flex-col overflow-x-hidden antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-[#e5e7eb] dark:border-border-dark bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 sm:px-10 py-3">
+<div class="mx-auto max-w-7xl flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">University Portal</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-6">
+<a class="text-[#111418] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111418] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-[#111418] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Student Portal</a>
+</nav>
+<div class="h-6 w-px bg-[#e5e7eb] dark:bg-border-dark"></div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-4 bg-primary/10 text-primary hover:bg-primary/20 transition-colors text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Logout</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-primary/20 cursor-pointer" data-alt="User profile avatar with abstract gradient background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiNUxLaG8G1wCwgFp7vmT2nbQE2VavxzTiO1smDpId5QShV0lHB7_SigKRA8HCZRB6b356K1Cwtg-F4DAdDORlJ_g_b06kaaOZHXVKSpFTrLB79XadZUDAnyf5Ikj8t_FGxcDzo58OGjpNBrEyLcwaEjDCIkHlJbeeup6LGCW0iQRpVeAW5EuFyXym0vtEZ0DZPPDrizUCKuvTkLMqx2xLL1LAVuLi50QS_ShH0P_aFY6GWT5vbCP4SXBuU8LPdqax7wEeviT_b2cY");'>
+</div>
+</div>
+</div>
+<!-- Mobile Menu Icon (Visual only) -->
+<div class="md:hidden text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center justify-center px-4 py-10 sm:px-6 lg:px-8 relative">
+<!-- Background Pattern -->
+<div class="absolute inset-0 z-0 opacity-30 pointer-events-none" style="background-image: radial-gradient(#137fec 1px, transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(to bottom, black, transparent);">
+</div>
+<div class="w-full max-w-lg relative z-10 flex flex-col gap-6">
+<!-- Page Heading -->
+<div class="flex flex-col gap-2 text-center">
+<div class="inline-flex items-center justify-center gap-2 text-primary font-bold tracking-wide uppercase text-xs mb-2">
+<span class="material-symbols-outlined text-sm">lock</span> Secure Access
+                </div>
+<h1 class="text-[#111418] dark:text-white text-4xl sm:text-5xl font-black leading-tight tracking-[-0.033em]">
+                    Student Result Portal
+                </h1>
+<p class="text-[#637588] dark:text-[#9dabb9] text-base font-normal leading-normal max-w-md mx-auto">
+                    Enter your credentials below to verify your identity and access your academic grades for the current term.
+                </p>
+</div>
+<!-- Central Lookup Card -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl shadow-xl border border-[#e5e7eb] dark:border-border-dark p-6 sm:p-8">
+<form class="flex flex-col gap-5" onsubmit="event.preventDefault();">
+<!-- Student ID Input -->
+<label class="flex flex-col gap-2">
+<span class="text-[#111418] dark:text-white text-sm font-semibold leading-normal flex items-center gap-1">
+                            Student Registration Number
+                        </span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#9dabb9]">badge</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#d1d5db] dark:border-[#3b4754] bg-[#f9fafb] dark:bg-input-dark h-14 placeholder:text-[#9dabb9] pl-12 pr-4 text-base font-normal leading-normal transition-all" placeholder="e.g., 2023-CS-001" required="" type="text"/>
+</div>
+</label>
+<!-- DOB Input -->
+<label class="flex flex-col gap-2">
+<span class="text-[#111418] dark:text-white text-sm font-semibold leading-normal">Date of Birth</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#9dabb9]">calendar_today</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#d1d5db] dark:border-[#3b4754] bg-[#f9fafb] dark:bg-input-dark h-14 placeholder:text-[#9dabb9] pl-12 pr-4 text-base font-normal leading-normal transition-all" onblur="(this.type='text')" onfocus="(this.type='date')" placeholder="DD / MM / YYYY" required="" type="text"/>
+</div>
+</label>
+<!-- Semester Select -->
+<label class="flex flex-col gap-2">
+<span class="text-[#111418] dark:text-white text-sm font-semibold leading-normal">Select Semester</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#9dabb9] z-10 pointer-events-none">school</span>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#d1d5db] dark:border-[#3b4754] bg-[#f9fafb] dark:bg-input-dark h-14 placeholder:text-[#9dabb9] pl-12 pr-10 text-base font-normal leading-normal appearance-none transition-all cursor-pointer">
+<option disabled="" selected="" value="">Select term</option>
+<option value="fall2023">Fall 2023</option>
+<option value="spring2024">Spring 2024</option>
+<option value="summer2024">Summer 2024</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-[#9dabb9] pointer-events-none">expand_more</span>
+</div>
+</label>
+<!-- Submit Button -->
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 bg-primary hover:bg-blue-600 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-blue-500/20 transition-all active:scale-[0.98]">
+<span class="truncate">View Results</span>
+<span class="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+</button>
+<!-- Links -->
+<div class="flex items-center justify-between mt-2 px-2">
+<a class="text-sm font-medium text-[#637588] dark:text-[#9dabb9] hover:text-primary transition-colors" href="#">Forgot ID?</a>
+<a class="text-sm font-medium text-[#637588] dark:text-[#9dabb9] hover:text-primary transition-colors" href="#">Contact Registrar</a>
+</div>
+</form>
+</div>
+<!-- Footer for Card -->
+<div class="text-center">
+<p class="text-xs text-[#637588] dark:text-[#9dabb9]/60">
+                    By accessing this portal, you agree to the University's 
+                    <a class="underline hover:text-primary" href="#">Privacy Policy</a> and 
+                    <a class="underline hover:text-primary" href="#">Terms of Service</a>.
+                </p>
+</div>
+</div>
+</main>
+<!-- Site Footer -->
+<footer class="border-t border-[#e5e7eb] dark:border-border-dark bg-white dark:bg-background-dark py-6">
+<div class="mx-auto max-w-7xl px-4 sm:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 text-[#637588] dark:text-[#9dabb9]">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span class="text-sm">Official University Portal © 2024</span>
+</div>
+<div class="flex gap-6">
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary transition-colors" href="#">
+<span class="sr-only">Facebook</span>
+<svg class="h-5 w-5 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="text-[#637588] dark:text-[#9dabb9] hover:text-primary transition-colors" href="#">
+<span class="sr-only">Twitter</span>
+<svg class="h-5 w-5 fill-current" viewbox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

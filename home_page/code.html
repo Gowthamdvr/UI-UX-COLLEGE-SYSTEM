@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>University Home Page</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1c242e", // Slightly lighter than background-dark for cards
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased overflow-x-hidden">
+<div class="relative flex flex-col min-h-screen w-full">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-background-dark/95 backdrop-blur-md border-b border-white/10 px-4 md:px-10 py-3">
+<div class="max-w-7xl mx-auto flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight">University Name</h2>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Admissions</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Academics</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Research</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Campus Life</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4 md:gap-8">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full bg-surface-dark border border-white/10 focus-within:border-primary transition-colors">
+<div class="text-gray-400 flex items-center justify-center pl-4 pr-2">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-gray-500 text-sm font-normal leading-normal" placeholder="Search"/>
+</div>
+</label>
+<button class="flex items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary hover:bg-primary/90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-[0_0_15px_rgba(19,127,236,0.4)]">
+<span class="truncate">Apply Now</span>
+</button>
+<button class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="@container">
+<div class="p-4 md:p-6 lg:p-8">
+<div class="flex min-h-[600px] flex-col gap-8 rounded-lg overflow-hidden bg-cover bg-center bg-no-repeat items-center justify-center p-8 md:p-16 text-center relative group" data-alt="Students walking on a modern university campus green with futuristic buildings in the background" style='background-image: linear-gradient(rgba(16, 25, 34, 0.4) 0%, rgba(16, 25, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuArEdwHIzk7Vt7Pfwptu8Fd00zeCLS-bKimkH2rROQFBKUfaAgtYKr6NA-sLff5wyTMiYB_mCLzcmsPu7uEEVYGFEbI7YWT4Vs7Kpq-Kq6AdoKYqVPnieqYVKjSKpEiSLq-vB-d7sQ6ziCxH3TmRwTmxlpJs9u4MmcsM4K7KfRYEq2JFXbOBbJgogKi63okHB_vvHuB55ndQkPbCcRYrKERmS8INLIQHtLLsHqfuCK8Xry3s4aPkicGtj2DutQh6c_IZXwgZVMUOEjG");'>
+<!-- Animated background accent -->
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-90"></div>
+<div class="relative flex flex-col gap-6 max-w-3xl z-10">
+<h1 class="text-white text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tighter drop-shadow-xl">
+                                Shape Your Future at University Name
+                            </h1>
+<h2 class="text-gray-200 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+                                Join a community of innovators, leaders, and thinkers. Applications for Fall 2024 are now open.
+                            </h2>
+<div class="flex flex-wrap gap-4 justify-center mt-4">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-full h-12 px-8 bg-primary hover:bg-blue-600 hover:-translate-y-1 transition-all duration-300 text-white text-base font-bold leading-normal tracking-wide shadow-lg shadow-blue-900/50">
+<span class="truncate">Apply Now</span>
+</button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-full h-12 px-8 bg-transparent border border-white/30 hover:bg-white/10 backdrop-blur-sm text-white text-base font-bold leading-normal tracking-wide transition-all">
+<span class="truncate">Virtual Tour</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-8 md:py-12 bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 md:px-10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-surface-dark border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">trending_up</span>
+<p class="text-gray-400 text-sm font-medium uppercase tracking-wider">Employment Rate</p>
+</div>
+<p class="text-white text-4xl font-black tracking-tight group-hover:text-primary transition-colors">98%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-surface-dark border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">groups</span>
+<p class="text-gray-400 text-sm font-medium uppercase tracking-wider">Student Ratio</p>
+</div>
+<p class="text-white text-4xl font-black tracking-tight group-hover:text-primary transition-colors">20:1</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-surface-dark border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">school</span>
+<p class="text-gray-400 text-sm font-medium uppercase tracking-wider">Majors</p>
+</div>
+<p class="text-white text-4xl font-black tracking-tight group-hover:text-primary transition-colors">120+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-surface-dark border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">diversity_3</span>
+<p class="text-gray-400 text-sm font-medium uppercase tracking-wider">Clubs &amp; Orgs</p>
+</div>
+<p class="text-white text-4xl font-black tracking-tight group-hover:text-primary transition-colors">50+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Announcements (Carousel) -->
+<section class="py-12 bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col gap-6">
+<div class="flex items-center justify-between px-2">
+<h2 class="text-white text-3xl font-bold leading-tight tracking-tight">Latest Announcements</h2>
+<a class="text-primary text-sm font-bold hover:underline flex items-center gap-1" href="#">
+                            View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="flex overflow-x-auto pb-6 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory gap-6">
+<!-- Card 1 -->
+<div class="flex-shrink-0 w-80 md:w-[22rem] snap-start group cursor-pointer">
+<div class="flex flex-col h-full gap-4 bg-surface-dark rounded-lg p-3 hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
+<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden relative" data-alt="Scientists working with advanced equipment in a modern laboratory" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrB2ekb9KvRVof9Vt6R8iHIAS-JAqxeAr_pAMwgsdQPv1w6bDAYD7Pe1b051FD0Haxx4TCytb7mAryTZbfIQZdBHKb6vLiOifAsxiWz-HP9mhAmQUWsCyYG5wyMhhiN233juKxEfngui0ragIrkoLrtzuxgNLtqJuqfxq4sN_oAm56pPxsK8poGVRfQosTNxCZjZXLUPggzr6XNTAwykVmH_HWzAGVVou0Gufmt8aoBc7ngnXlEwQRzSJXgF32Px15tAh5iGukX5eb");'>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+<span class="absolute top-3 left-3 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Science</span>
+</div>
+<div class="px-1 flex flex-col gap-2">
+<p class="text-gray-400 text-xs font-medium uppercase tracking-wide">Oct 24, 2023</p>
+<h3 class="text-white text-lg font-bold leading-snug group-hover:text-primary transition-colors">Research Breakthrough in AI Lab</h3>
+<p class="text-gray-400 text-sm line-clamp-2">Our team has discovered a new method for neural network processing that could revolutionize the industry.</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex-shrink-0 w-80 md:w-[22rem] snap-start group cursor-pointer">
+<div class="flex flex-col h-full gap-4 bg-surface-dark rounded-lg p-3 hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
+<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden relative" data-alt="Students cheering at a sports stadium during a championship game" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGK3Z-Bie22K_hGSRtpsdVq3CnfrybHd_WtlYDNT1GfpD3_uDgkiZuC58QjRjHlYbbjA_DeMBK-A_j4xjIaR9UDklGEJUP7GFerScZYmGnyFPzmIli4aJjncM7Muyuio3uBzFpPVL6wEScHJMWho-hVlyGl8c74Q9JMDirLaTkDtxu_zzyQCUPXtv3sABAKzKNxOL9LMZBlbZVU4L8MeAaZYaXpcqWGuj5lxVDuMWYXdL3NKah5Cytb2pLSo4MFrm0lF58cSUvls6-");'>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+<span class="absolute top-3 left-3 bg-orange-500/90 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Athletics</span>
+</div>
+<div class="px-1 flex flex-col gap-2">
+<p class="text-gray-400 text-xs font-medium uppercase tracking-wide">Oct 22, 2023</p>
+<h3 class="text-white text-lg font-bold leading-snug group-hover:text-primary transition-colors">Varsity Team Wins National Championship</h3>
+<p class="text-gray-400 text-sm line-clamp-2">After a grueling season, our varsity team brought home the trophy in a stunning overtime victory.</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex-shrink-0 w-80 md:w-[22rem] snap-start group cursor-pointer">
+<div class="flex flex-col h-full gap-4 bg-surface-dark rounded-lg p-3 hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
+<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden relative" data-alt="A speaker presenting to a large audience in a university auditorium" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcsdpD_gZ4MCnxrAchbF1_9LlJlX2CgYSm7mlgNZZ5Ty018pf6w6xVAYy2as0FjXQKxpauNJ7nh6r6mbAB8wK6H_l0liT8WB59vxP2k-brC4w94I3KB0mxhdBYJ6i7mv54UeNyeWsWrteeaeU-L8qqS0GNccoPjEWrOkQMYt4wF3zN4O2aAKjzyvaugejahyzm5RYoF0lrtLh9KSF9rl-NkWWT5r68jAqRJxW9UJ9Dreyjw717ND2StvFNt50-fvjy1Jn-9p5XeUmX");'>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+<span class="absolute top-3 left-3 bg-purple-500/90 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Events</span>
+</div>
+<div class="px-1 flex flex-col gap-2">
+<p class="text-gray-400 text-xs font-medium uppercase tracking-wide">Oct 20, 2023</p>
+<h3 class="text-white text-lg font-bold leading-snug group-hover:text-primary transition-colors">Guest Lecture Series: Future Economy</h3>
+<p class="text-gray-400 text-sm line-clamp-2">Nobel laureate Dr. Smith discusses the impact of digital currencies on global markets.</p>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex-shrink-0 w-80 md:w-[22rem] snap-start group cursor-pointer">
+<div class="flex flex-col h-full gap-4 bg-surface-dark rounded-lg p-3 hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
+<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden relative" data-alt="Students studying together in a modern library with books and laptops" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7CM7YEubfdHnp5gyuMrhBske45BNoD9mVx-8BWkVk8EncvhwTZSZY-4i3QkL0rCyxBTdUnysggRaeeeEoeNOmYZO9KI_YuNr6vJcQkHpLU7SOiyVwfk_PC60-cd9Ni5gzPNGzu8t4epGiVQd_d-eO7Nyb0nX6D-Iu-xAXnwkLJQgCGiAOYfw0DrMQeCiNcKTJunezewMdHoHDnzcWQPrnaQfxRONxsAcPaWp1uBU5aBCxjlOWs-GyG6L8t0aviniq8JhmLp2qjlbK");'>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+<span class="absolute top-3 left-3 bg-green-500/90 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Academic</span>
+</div>
+<div class="px-1 flex flex-col gap-2">
+<p class="text-gray-400 text-xs font-medium uppercase tracking-wide">Oct 18, 2023</p>
+<h3 class="text-white text-lg font-bold leading-snug group-hover:text-primary transition-colors">New Library Wing Opens</h3>
+<p class="text-gray-400 text-sm line-clamp-2">The state-of-the-art study center is now open 24/7 for all students during finals week.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlights Grid (Bento Box) -->
+<section class="py-12 bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 md:px-10">
+<div class="mb-8 px-2">
+<h2 class="text-white text-3xl font-bold leading-tight tracking-tight">Experience Campus Life</h2>
+<p class="text-gray-400 mt-2">Discover the diverse opportunities waiting for you.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[240px]">
+<!-- Large Item -->
+<div class="group relative md:col-span-2 md:row-span-2 rounded-lg overflow-hidden cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A diverse group of university students collaborating on an engineering project" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRvhSPcDQmgb2yDPVzLtCrdbeRbc1S2qxzHf_CogigZXKDh9bFY1_OzpgIH4Do1YE_r85HH4EZL13nU5Bl-1ms-UKW3-W-edjSeU0KbBxP3UX3eRTc74kAdrx-VGKrmEhcXDkPFk36X9Lgar0B4K_cMRsJo2aLaIKv0VK_v_3F0LSf1n2sJXdflblfCnRHb7p-QNT9O4i2tOhrPyb03aAksvPFEhOXQEiu9dQPuAJAVi56AA-PeGT_fY6nke9apUlzdyYnzxgkhUtN");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">Academics</span>
+<h3 class="text-white text-3xl font-bold mb-2">Engineering &amp; Innovation</h3>
+<p class="text-gray-300 text-sm max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">World-class labs and hands-on learning environments where you can build the future.</p>
+</div>
+<span class="absolute top-4 right-4 bg-white/10 backdrop-blur-md p-2 rounded-full text-white group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined">arrow_outward</span>
+</span>
+</div>
+<!-- Tall Item -->
+<div class="group relative md:col-span-1 md:row-span-2 rounded-lg overflow-hidden cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An artist painting on a canvas in a sunlit studio" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqdBu6k3G8481iPUZO83L97kJNigX1uG0GLVMf5T-pZG2eB9AcIyIZEw2M-jeHIVLKayhqn_w_dRnwa3vPDrZBnA22UhF4LS4NzpGfIb4dcmD8gV8Lt3j1Wa9pEUlJOyVj-ZYFUmitmeyhhMy-ATbqza2buxM1GtXjdsxmmMWOhtzPBP61wEQBveZP3M23n9gEFEF9q0rx8MeZIptQqphi-jQTQA7QkOGsVwCboYy1HGTy3PSMEGUPgbkHjBvRCmi7zwB7Be0tGzgR");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<span class="bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">Arts</span>
+<h3 class="text-white text-2xl font-bold">Creative Arts</h3>
+</div>
+</div>
+<!-- Wide Item -->
+<div class="group relative md:col-span-2 rounded-lg overflow-hidden cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Students playing soccer on a professional field" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAWY3SuxgYHdUvQQzW0pRtNnEm0ITUVz34pKvSpmbA5F_1LbTABDEEdQ-eE6LPZeXWun7QPIwfOgbRt8kyrUIbkkB8ugbhTTTXJIUG82k6Ld861UpWT9V4S3G4eZ4MVgqG9ZKQ0zKo4E7WO5JckDbQSm13J0PozYsXfccoKnteWeWQ8eZfWQV8pbty7tlHTVhjqmDGOEdyqCSn2dlUPec1egyJUuSap-FS3NK-g9ayXXcQ5JwWCJ3qR276GzVWb5qsOt4o6cQ_8ymx");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 flex items-end justify-between w-full">
+<div>
+<h3 class="text-white text-2xl font-bold">Athletics Program</h3>
+<p class="text-gray-300 text-sm">Champions are made here.</p>
+</div>
+</div>
+</div>
+<!-- Small Item -->
+<div class="group relative md:col-span-1 rounded-lg overflow-hidden cursor-pointer bg-surface-dark border border-white/5 flex flex-col justify-center items-center text-center p-6 hover:border-primary/50 transition-colors">
+<div class="bg-primary/20 p-4 rounded-full mb-4 group-hover:bg-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">travel_explore</span>
+</div>
+<h3 class="text-white text-xl font-bold mb-1">Study Abroad</h3>
+<p class="text-gray-400 text-sm">Programs in 40+ countries</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dark border-t border-white/10 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 md:px-10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Brand -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<h2 class="text-white text-xl font-bold">University Name</h2>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                            Empowering the next generation of leaders through innovative education and world-class research.
+                        </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">public</span></a> <!-- representing social web -->
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-4">
+<h3 class="text-white font-bold text-sm uppercase tracking-wider">Admissions</h3>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Undergraduate</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Graduate</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Financial Aid</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Apply Now</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-4">
+<h3 class="text-white font-bold text-sm uppercase tracking-wider">Academics</h3>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Majors &amp; Minors</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Research</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Libraries</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Academic Calendar</a>
+</div>
+<!-- Links Column 3 -->
+<div class="flex flex-col gap-4">
+<h3 class="text-white font-bold text-sm uppercase tracking-wider">Connect</h3>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Contact Us</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Directory</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">News &amp; Events</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Careers</a>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 text-xs">© 2024 University Name. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-gray-500 hover:text-white text-xs" href="#">Privacy Policy</a>
+<a class="text-gray-500 hover:text-white text-xs" href="#">Terms of Service</a>
+<a class="text-gray-500 hover:text-white text-xs" href="#">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

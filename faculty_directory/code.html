@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Faculty Directory</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1c2630", // Custom surface color for cards
+                        "surface-light": "#ffffff", // Custom surface color for light mode
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "2rem", 
+                        "xl": "3rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101922;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #283039;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f4a56;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white min-h-screen flex flex-col font-display antialiased">
+<!-- Top Navigation Bar -->
+<div class="border-b border-solid border-[#e5e7eb] dark:border-[#283039] bg-white dark:bg-[#101922]">
+<div class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<header class="flex items-center justify-between h-16 sm:h-20 gap-4">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight">University Name</h2>
+</div>
+<!-- Desktop Navigation -->
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Admissions</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Research</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Campus Life</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<button class="flex items-center justify-center rounded-full h-10 px-6 bg-primary hover:bg-blue-600 text-white text-sm font-bold transition-colors">
+                        Apply Now
+                    </button>
+</div>
+<!-- Mobile Menu Button -->
+<div class="lg:hidden">
+<button class="p-2 text-current">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+</div>
+</div>
+<!-- Main Content Layout -->
+<main class="flex-1 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+<div class="flex flex-col gap-8">
+<!-- Page Heading -->
+<div class="flex flex-col gap-3 max-w-4xl">
+<h1 class="text-4xl sm:text-5xl font-black tracking-tight leading-tight">Faculty Directory</h1>
+<p class="text-[#637588] dark:text-[#9dabb9] text-lg leading-relaxed max-w-2xl">
+                    Browse our academic staff profiles, filter by department, or search by research interests to find the right contact for your needs.
+                </p>
+</div>
+<!-- Search and Filter Section -->
+<div class="flex flex-col gap-4 bg-white dark:bg-[#1c2630] p-4 rounded-2xl shadow-sm border border-[#e5e7eb] dark:border-[#283039]">
+<!-- Search Bar -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#9dabb9]">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="block w-full h-12 pl-12 pr-4 rounded-xl bg-[#f6f7f8] dark:bg-[#283039] border-none text-base placeholder-[#9dabb9] focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-[#101922] transition-colors" placeholder="Search by name, title, or department..." type="text"/>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar items-center">
+<span class="text-sm font-medium text-[#637588] dark:text-[#9dabb9] mr-2 whitespace-nowrap">Filter by:</span>
+<button class="group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[#e5e7eb] dark:border-[#283039] bg-transparent hover:bg-[#f6f7f8] dark:hover:bg-[#283039] px-4 transition-colors">
+<span class="text-sm font-medium">Department</span>
+<span class="material-symbols-outlined text-lg">keyboard_arrow_down</span>
+</button>
+<button class="group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[#e5e7eb] dark:border-[#283039] bg-transparent hover:bg-[#f6f7f8] dark:hover:bg-[#283039] px-4 transition-colors">
+<span class="text-sm font-medium">Tenure Status</span>
+<span class="material-symbols-outlined text-lg">keyboard_arrow_down</span>
+</button>
+<button class="group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[#e5e7eb] dark:border-[#283039] bg-transparent hover:bg-[#f6f7f8] dark:hover:bg-[#283039] px-4 transition-colors">
+<span class="text-sm font-medium">Availability</span>
+<span class="material-symbols-outlined text-lg">keyboard_arrow_down</span>
+</button>
+<button class="group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[#e5e7eb] dark:border-[#283039] bg-transparent hover:bg-[#f6f7f8] dark:hover:bg-[#283039] px-4 transition-colors">
+<span class="text-sm font-medium">Research Interest</span>
+<span class="material-symbols-outlined text-lg">keyboard_arrow_down</span>
+</button>
+<button class="ml-auto text-sm font-medium text-primary hover:text-blue-400 whitespace-nowrap px-2">
+                        Reset Filters
+                    </button>
+</div>
+</div>
+<!-- Faculty Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+<!-- Card 1 -->
+<div class="group flex flex-col bg-white dark:bg-[#1c2630] rounded-2xl overflow-hidden border border-[#e5e7eb] dark:border-[#283039] hover:border-primary/50 transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/5">
+<div class="p-6 flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-full border-4 border-[#f6f7f8] dark:border-[#283039] shadow-sm group-hover:scale-105 transition-transform" data-alt="Professional headshot of a female professor smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMMPPTHMRJrIL4qLFQ1IE-o1P4RF_cijme7fLvxz-F64uxIo14aoxQs3NMUQYHQ_gY1b93NvJ-eswrs3DluKNmvysDBptlzA2WEWlh0Duq2Wv6odfNxRiwo1wxwvRqK8ywEO-VMlp-1Yed6shCp79pSnL0kgEQnutneMwI8E95nNNmwoaEs-VgRytKQPn3QVNrjnwrAl4b4v29bk5Y6qo5VOi6C-1lTgP15zfM3TdKVTmf1eq0tJdXGVKMzPXWUvaVAKNnGRimQ5SP");'>
+</div>
+<div class="absolute bottom-1 right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white dark:border-[#1c2630]" title="Available on Campus"></div>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Dr. Sarah Jenkins</h3>
+<p class="text-primary text-sm font-medium">Associate Professor</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-xs uppercase tracking-wide font-semibold mt-1">Physics Dept.</p>
+</div>
+<div class="flex flex-wrap gap-2 justify-center mt-2">
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Quantum Mechanics</span>
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Astrophysics</span>
+</div>
+</div>
+<div class="p-4 border-t border-[#e5e7eb] dark:border-[#283039] bg-[#fcfcfd] dark:bg-[#222c36] flex justify-between items-center gap-2">
+<div class="flex gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Email">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Call">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+</div>
+<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col bg-white dark:bg-[#1c2630] rounded-2xl overflow-hidden border border-[#e5e7eb] dark:border-[#283039] hover:border-primary/50 transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/5">
+<div class="p-6 flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-full border-4 border-[#f6f7f8] dark:border-[#283039] shadow-sm group-hover:scale-105 transition-transform" data-alt="Professional headshot of a male professor in a suit" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBM8gJ9gJtYpIQw19C5UlaZjrgu8_proWzTMReO3fw7DZh2Hi9ucfA_CFqyEKTDeJiIjEXy373I-_HxUU9KaZYUPRMdYFJbIAHyPbyubSnPIiqONviC0cv0ULhU_oMgTEWwLSPaLyyiXYJcloPckEopnIN5jsezuu8KGtid4UNcrnO9km1H6alN44P3DaaO6IwzHE1gjJZUdk1R77ULwxxbkK1r3g1B_ihaNo0rI1VIsS69KBH3_Sz_vd8GhmGkVfX-sRdSnpQKATdm");'>
+</div>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Prof. Michael Chen</h3>
+<p class="text-primary text-sm font-medium">Department Chair</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-xs uppercase tracking-wide font-semibold mt-1">Computer Science</p>
+</div>
+<div class="flex flex-wrap gap-2 justify-center mt-2">
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">AI / ML</span>
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Data Systems</span>
+</div>
+</div>
+<div class="p-4 border-t border-[#e5e7eb] dark:border-[#283039] bg-[#fcfcfd] dark:bg-[#222c36] flex justify-between items-center gap-2">
+<div class="flex gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Email">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Call">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+</div>
+<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col bg-white dark:bg-[#1c2630] rounded-2xl overflow-hidden border border-[#e5e7eb] dark:border-[#283039] hover:border-primary/50 transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/5">
+<div class="p-6 flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-full border-4 border-[#f6f7f8] dark:border-[#283039] shadow-sm group-hover:scale-105 transition-transform" data-alt="Professional headshot of a young female lecturer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_ulp4OTHCHXWaGMTx7IeH3sqXiccn1uci5IfOJ3nsOxuRA4wUHE7ga2BcCoXsn6sVbZiRuP2b67c6Ms74as8btDLrh-F8HD6wOIz0cMnjVTmfEMA6G_7m-knqah9Np16v75VN9glrrvpFJ0AglLDrt1XTzEsgKEkuBYY91R0253wXPk2-s1DHN86SQUSFdvvjJaZWdg6jqqzmu74QOY7AcXHMg8WQQ1by1mOU4bnPve9MYlU76yRPitVFpBRDi7hDLW77yEAa5MRA");'>
+</div>
+<div class="absolute bottom-1 right-1 w-5 h-5 bg-amber-500 rounded-full border-2 border-white dark:border-[#1c2630]" title="On Sabbatical"></div>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Dr. Emily R. Thorne</h3>
+<p class="text-primary text-sm font-medium">Assistant Professor</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-xs uppercase tracking-wide font-semibold mt-1">Biology</p>
+</div>
+<div class="flex flex-wrap gap-2 justify-center mt-2">
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Genetics</span>
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Microbiology</span>
+</div>
+</div>
+<div class="p-4 border-t border-[#e5e7eb] dark:border-[#283039] bg-[#fcfcfd] dark:bg-[#222c36] flex justify-between items-center gap-2">
+<div class="flex gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Email">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+</div>
+<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group flex flex-col bg-white dark:bg-[#1c2630] rounded-2xl overflow-hidden border border-[#e5e7eb] dark:border-[#283039] hover:border-primary/50 transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/5">
+<div class="p-6 flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-full border-4 border-[#f6f7f8] dark:border-[#283039] shadow-sm group-hover:scale-105 transition-transform" data-alt="Professional headshot of a male professor with beard" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGAxQBaG4RbuhkpcdhXdrJPnE8v-TnqbhktDQF4kT36ZleB03rprOUTdF6tJsQ2ENM1eQYDWuB1NbJ7pDbzyqMRsS0lv7uly6zCRyNeZ7tJdLV92WyL309QB6L1RHEfH1SJy_8yw6mdN-SyahCep76A0DGsAt7pHp7S2u1WS8E4kgTtOyS1kG8fM1oGFbFQOLqvdMI8tSdfsbVn2JmHewOSRZ4RP5lrgpl-1ZMIdTSpk1kJI73qZ4DYq-ATDBjmgQM5ICVd6tEu-TP");'>
+</div>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Dr. Alan Grant</h3>
+<p class="text-primary text-sm font-medium">Professor</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-xs uppercase tracking-wide font-semibold mt-1">Paleontology</p>
+</div>
+<div class="flex flex-wrap gap-2 justify-center mt-2">
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Fossils</span>
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Geology</span>
+</div>
+</div>
+<div class="p-4 border-t border-[#e5e7eb] dark:border-[#283039] bg-[#fcfcfd] dark:bg-[#222c36] flex justify-between items-center gap-2">
+<div class="flex gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Email">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Call">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+</div>
+<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group flex flex-col bg-white dark:bg-[#1c2630] rounded-2xl overflow-hidden border border-[#e5e7eb] dark:border-[#283039] hover:border-primary/50 transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/5">
+<div class="p-6 flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-full border-4 border-[#f6f7f8] dark:border-[#283039] shadow-sm group-hover:scale-105 transition-transform" data-alt="Professional headshot of a smiling man with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLcKIixa2w9-ozl3mZ00Wd4E1Eu_O-ZshaI7cwj-0Y06w7EEf4VtRHPHRRPVcxmAd047ZPLjO6mLKXFa7HQlKR-oE054xplwYPTXB0O3xT6kcGtP_FAkCuYE_MOxWBmQyncA7IJXlSAfwKC07laX-My2100ftRAC2waaggrd-n-Wnd_feBwMOr8I4PqSwTWXHQpjaFmXPKo7wppGWPzSIPAB_30202lmRazxMc5niSaM66fM9ROeh5iKvpFv-svoXPA_970-yiklv_");'>
+</div>
+<div class="absolute bottom-1 right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white dark:border-[#1c2630]" title="Available on Campus"></div>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Dr. James Wilson</h3>
+<p class="text-primary text-sm font-medium">Lecturer</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-xs uppercase tracking-wide font-semibold mt-1">Mathematics</p>
+</div>
+<div class="flex flex-wrap gap-2 justify-center mt-2">
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Topology</span>
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Algebra</span>
+</div>
+</div>
+<div class="p-4 border-t border-[#e5e7eb] dark:border-[#283039] bg-[#fcfcfd] dark:bg-[#222c36] flex justify-between items-center gap-2">
+<div class="flex gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Email">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+</div>
+<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group flex flex-col bg-white dark:bg-[#1c2630] rounded-2xl overflow-hidden border border-[#e5e7eb] dark:border-[#283039] hover:border-primary/50 transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/5">
+<div class="p-6 flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-full border-4 border-[#f6f7f8] dark:border-[#283039] shadow-sm group-hover:scale-105 transition-transform" data-alt="Professional headshot of a woman in academic attire" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmJJ_1DMiU-FsYZD8Y-Yec8VkdClqU_A-upFfgLdRavWOgBgJdQ3dufWjUCuclT_Em20MAQw9suDv2aKQA61JP9-xpzYMBK8yoqaia0pD9_mUC_G1N1vAyCYwBs5hPkCBwnJFXL5AHhhuIPO1gXrp35SMrGmMQUHyLLZziITM2JFjqCEu7Q6ZA7F-3l6cyBFUhhwvqsqSWUnUtSQ8Ngog1i-EPiz2g9YbL2lDfFMWQAEt-459jU6YOIchlvJxE0RNpZr9J5ZbrotNK");'>
+</div>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Prof. Anita Patel</h3>
+<p class="text-primary text-sm font-medium">Professor</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-xs uppercase tracking-wide font-semibold mt-1">Economics</p>
+</div>
+<div class="flex flex-wrap gap-2 justify-center mt-2">
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Macroeconomics</span>
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Policy</span>
+</div>
+</div>
+<div class="p-4 border-t border-[#e5e7eb] dark:border-[#283039] bg-[#fcfcfd] dark:bg-[#222c36] flex justify-between items-center gap-2">
+<div class="flex gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Email">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Call">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+</div>
+<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="group flex flex-col bg-white dark:bg-[#1c2630] rounded-2xl overflow-hidden border border-[#e5e7eb] dark:border-[#283039] hover:border-primary/50 transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/5">
+<div class="p-6 flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-full border-4 border-[#f6f7f8] dark:border-[#283039] shadow-sm group-hover:scale-105 transition-transform" data-alt="Professional headshot of a visiting scholar man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBM7zDWMow2mcKwxnFClD7_xos5EX6xYfafuOHcac1SrQ3TicDHLf8wdgxbzGaR-Z-nX4AANbiN2t4bPfYH9tSRNZ8gfO3pVKpCZwSAa7XbK7TIYyD0yDIL77M18IRrqKuF3jqz1psSsf99wTa51Tt8mqPjxUPh_xcxDRXuQGsQshqAGKJKhsTALBsYQaCnXgSv3LR8aZHizNpoFopk2CRHhr14NppNWjGhEXQpnISVXSc30XZo3z20tcpY3RTzxjqGYB_tlGJybJPO");'>
+</div>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Dr. Robert Ford</h3>
+<p class="text-primary text-sm font-medium">Visiting Scholar</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-xs uppercase tracking-wide font-semibold mt-1">History</p>
+</div>
+<div class="flex flex-wrap gap-2 justify-center mt-2">
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Medieval</span>
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">European</span>
+</div>
+</div>
+<div class="p-4 border-t border-[#e5e7eb] dark:border-[#283039] bg-[#fcfcfd] dark:bg-[#222c36] flex justify-between items-center gap-2">
+<div class="flex gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Email">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+</div>
+<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="group flex flex-col bg-white dark:bg-[#1c2630] rounded-2xl overflow-hidden border border-[#e5e7eb] dark:border-[#283039] hover:border-primary/50 transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/5">
+<div class="p-6 flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-full border-4 border-[#f6f7f8] dark:border-[#283039] shadow-sm group-hover:scale-105 transition-transform" data-alt="Professional headshot of a female lecturer with bright background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC78iYqmrJIsZIwOr6WqXLEcErKHRZIiUXift7k0EKfaLNObejvBYd7Citjac8mirD84AjmJqw9mj5fuZEIEcSCYAZI4L4mrlSh7qYfiY6VHuP2Z0kj37rQ5nSPKc8UdFHwBBoCBn880EaJlyGvUv2r7HI7-biXzt8jAPuh2Cawl_D_hFIvZiNajZPdHuxOiGY6BGma2vkw6gUI9CmemHb29lf90mQG2Q-sQeZy8tcD8ck5RuJdPqDsIUfkDNjeUIL8cE9YV76uGmfm");'>
+</div>
+<div class="absolute bottom-1 right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white dark:border-[#1c2630]" title="Available on Campus"></div>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Prof. Lisa Ray</h3>
+<p class="text-primary text-sm font-medium">Associate Professor</p>
+<p class="text-[#637588] dark:text-[#9dabb9] text-xs uppercase tracking-wide font-semibold mt-1">Chemistry</p>
+</div>
+<div class="flex flex-wrap gap-2 justify-center mt-2">
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Organic</span>
+<span class="px-3 py-1 bg-[#f6f7f8] dark:bg-[#283039] rounded-full text-xs font-medium text-[#637588] dark:text-[#9dabb9]">Research</span>
+</div>
+</div>
+<div class="p-4 border-t border-[#e5e7eb] dark:border-[#283039] bg-[#fcfcfd] dark:bg-[#222c36] flex justify-between items-center gap-2">
+<div class="flex gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Email">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-[#637588] dark:text-[#9dabb9] hover:bg-white dark:hover:bg-[#283039] hover:text-primary transition-colors" title="Call">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+</div>
+<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center pt-8">
+<button class="h-10 px-8 rounded-full border border-[#e5e7eb] dark:border-[#283039] bg-white dark:bg-[#1c2630] text-sm font-bold text-[#111418] dark:text-white hover:bg-[#f6f7f8] dark:hover:bg-[#283039] transition-colors">
+                    Load More Faculty
+                </button>
+</div>
+</div>
+</main>
+</body></html>
